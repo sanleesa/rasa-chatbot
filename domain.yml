@@ -1,0 +1,99 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - bot_challenge
+  - diploma
+  - program
+  - course
+  - query
+
+entities:
+  - program
+  - degree
+  - course
+  - query
+
+slots:
+  program:
+    type: text
+    influence_conversation: true
+  degree:
+    type: text
+    influence_conversation: true
+  course:
+    type: text
+    influence_conversation: true
+  query:
+    type: text
+    influence_conversation: true
+
+responses:
+  utter_greet:
+  - text: "Hey!"
+  - text: "Hello!"
+  - text: "Hi!"
+
+  utter_ask_program_form_program:
+  - text: "Hi, which program are you looking for?"
+    buttons:
+      - title: "Undergraduate"
+        payload: "Undergraduate"
+      - title: "Postgraduate"
+        payload: "Postgraduate"
+      - title: "Postgraduate Diploma"
+        payload: "PostgraduateDiploma"
+      - title: "Diploma"
+        payload: '/diploma{"program":"diploma"}'
+      - title: "Phd"
+        payload: "Phd"
+
+  utter_ask_diploma_form_course:
+    - text: "Which course are you looking for?"
+      buttons:
+        - title: "Aviation, Hospitality & Customer Service"
+          payload: "/query{\"degree\":\"aviation\", \"course\":\"na\"}"
+
+  utter_ask_query_form_query:
+    - text: "What would you like to know about?"
+      buttons:
+        - title: "Subject"
+          payload: "Subject"
+        - title: "Fees"
+          payload: "Fees"
+        - title: "Eligibility"
+          payload: "Eligibility"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+forms:
+  program_form:
+    program:
+    - type: from_entity
+      entity: program
+
+  diploma_form:
+    course:
+    - type: from_entity
+      entity: course
+      
+  query_form:
+    query:
+    - type: from_entity
+      entity: query
+
+actions:
+  - utter_ask_program_form_program
+  - utter_ask_diploma_form_course
+  - utter_ask_query_form_query
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

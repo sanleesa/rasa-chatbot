@@ -1,0 +1,23 @@
+version: "2.0"
+
+stories:
+
+- story: user greets
+  steps:
+  - intent: greet
+  - action: program_form
+  - active_loop: null
+  
+- story: user selected diploma program
+  steps:
+  - intent: diploma
+  - action: diploma_form
+  - active_loop: null
+
+- story: user selected the course
+  steps:
+  - intent: query
+  - action: query_form
+  - slot_was_set:
+      - query
+  - active_loop: null
