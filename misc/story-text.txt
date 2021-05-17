@@ -1,0 +1,7 @@
+- story: user selected the course
+  steps:
+  - intent: query
+  - action: query_form
+  - slot_was_set:
+      - query
+  - active_loop: null
