@@ -6,18 +6,27 @@ stories:
   steps:
   - intent: greet
   - action: program_form
+  - slot_was_set:
+      - program
+      - degree
+      - course
+      - query
+  - action: action_handle_query
   - active_loop: null
   
-- story: user selected diploma program
-  steps:
-  - intent: diploma
-  - action: diploma_form
-  - active_loop: null
+# - story: user selected diploma program
+#   steps:
+#   - intent: diploma
+#   - action: diploma_form
+#   - slot_was_set:
+#       - degree
+#   - active_loop: null
 
-- story: user selected the course
+- story: user selected the query
   steps:
   - intent: query
   - action: query_form
   - slot_was_set:
       - query
+  - action: action_handle_query
   - active_loop: null

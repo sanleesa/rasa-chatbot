@@ -6,16 +6,21 @@ intents:
   - affirm
   - deny
   - bot_challenge
-  - diploma
   - program
   - course
   - query
+  - diploma
+  - post_graduate_diploma
+  - under_graduate
+  - post_graduate
+  - phd
+  - degree
 
 entities:
-  - program
-  - degree
-  - course
-  - query
+  - ent_program
+  - ent_degree
+  - ent_course
+  - ent_query
 
 slots:
   program:
@@ -41,21 +46,21 @@ responses:
   - text: "Hi, which program are you looking for?"
     buttons:
       - title: "Undergraduate"
-        payload: "Undergraduate"
+        payload: "undergraduate"
       - title: "Postgraduate"
-        payload: "Postgraduate"
+        payload: "postgraduate"
       - title: "Postgraduate Diploma"
-        payload: "PostgraduateDiploma"
+        payload: "postgraduatediploma"
       - title: "Diploma"
-        payload: '/diploma{"program":"diploma"}'
+        payload: "diploma"
       - title: "Phd"
-        payload: "Phd"
+        payload: "phd"
 
-  utter_ask_diploma_form_course:
-    - text: "Which course are you looking for?"
-      buttons:
-        - title: "Aviation, Hospitality & Customer Service"
-          payload: "/query{\"degree\":\"aviation\", \"course\":\"na\"}"
+  # utter_ask_diploma_form_degree:
+  #   - text: "Which course are you looking for?"
+  #     buttons:
+  #       - title: "Aviation, Hospitality & Customer Service"
+  #         payload: "/query{\"degree\":\"aviation\", \"course\":\"na\"}"
 
   utter_ask_query_form_query:
     - text: "What would you like to know about?"
@@ -77,22 +82,35 @@ forms:
   program_form:
     program:
     - type: from_entity
-      entity: program
-
-  diploma_form:
+      entity: ent_program
+    degree:
+    - type: from_entity
+      entity: ent_degree
     course:
     - type: from_entity
-      entity: course
+      entity: ent_course
+    query:
+    - type: from_entity
+      entity: ent_query
+
+  diploma_form:
+    degree:
+    - type: from_entity
+      entity: ent_degree
       
   query_form:
     query:
     - type: from_entity
-      entity: query
+      entity: ent_query
 
 actions:
   - utter_ask_program_form_program
-  - utter_ask_diploma_form_course
+  - action_ask_degree
+  - action_ask_course
+  # - utter_ask_diploma_form_degree
   - utter_ask_query_form_query
+  - action_handle_query
+  #- action_handle_program
 
 session_config:
   session_expiration_time: 60

@@ -64,18 +64,49 @@ nlu:
 
 - intent: diploma
   examples: |
-    - [diploma](program)
-    - i want details on [diploma](program) programs
-    - i want information on [diploma](program) programs
+    - [diploma](ent_program)
+    - i want details on [diploma](ent_program) programs
+    - i want information on [diploma](ent_program) programs
+
+- intent: under_graduate
+  examples: |
+    - [undergraduate](ent_program)
+    - i want details on [undergraduate](ent_program) programs
+    - i want information on [undergraduate](ent_program) programs
+
+- intent: phd
+  examples: |
+    - [phd](ent_program)
+    - i want details on [phd](ent_program) programs
+    - i want information on [phd](ent_program) programs
+
+- intent: post_graduate_diploma
+  examples: |
+    - [postgraduatediploma](ent_program)
+    - i want details on [postgraduatediploma](ent_program) programs
+    - i want information on [postgraduatediploma](ent_program) programs
+
+- intent: post_graduate
+  examples: |
+    - [postgraduate](ent_program)
+    - i want details on [postgraduate](ent_program) programs
+    - i want information on [postgraduate](ent_program) programs
 
 - intent: query
   examples: |
-    - i want to know [subject](query) details
-    - I would like to know [subject](query) details for [BSc](degree) [computer science](course) from the [undergraduate program](program)
-    - give me [subject](query) details
+    - i want to know [subject](ent_query) details
+    - give me [subject](ent_query) details
 
 - intent: course
   examples: |
-    - i want to know [course](course) details
-    - give me [course](course) details
-    - i want to know details for [computer science](course)
+    - i want to know [course](ent_course) details
+    - give me [course](ent_course) details
+    - i want to know details for [computer science](ent_course)
+
+- intent: degree
+  examples: |
+    - i want to know [degree](ent_degree) details
+    - give me [degree](ent_degree) details
+    - i want to know details for [bvoc](ent_degree)
+    - [BA](ent_degree)
+    - [ba](ent_degree)
