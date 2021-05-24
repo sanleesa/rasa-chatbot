@@ -42,19 +42,19 @@ responses:
   - text: "Hello!"
   - text: "Hi!"
 
-  utter_ask_program_form_program:
-  - text: "Hi, which program are you looking for?"
-    buttons:
-      - title: "Undergraduate"
-        payload: "undergraduate"
-      - title: "Postgraduate"
-        payload: "postgraduate"
-      - title: "Postgraduate Diploma"
-        payload: "postgraduatediploma"
-      - title: "Diploma"
-        payload: "diploma"
-      - title: "Phd"
-        payload: "phd"
+  # utter_ask_program_form_program:
+  # - text: "Hi, which program are you looking for?"
+  #   buttons:
+  #     - title: "Undergraduate"
+  #       payload: "undergraduate"
+  #     - title: "Postgraduate"
+  #       payload: "postgraduate"
+  #     - title: "Postgraduate Diploma"
+  #       payload: "postgraduatediploma"
+  #     - title: "Diploma"
+  #       payload: "diploma"
+  #     - title: "Phd"
+  #       payload: "phd"
 
   # utter_ask_diploma_form_degree:
   #   - text: "Which course are you looking for?"
@@ -62,15 +62,15 @@ responses:
   #       - title: "Aviation, Hospitality & Customer Service"
   #         payload: "/query{\"degree\":\"aviation\", \"course\":\"na\"}"
 
-  utter_ask_query_form_query:
-    - text: "What would you like to know about?"
-      buttons:
-        - title: "Subject"
-          payload: "Subject"
-        - title: "Fees"
-          payload: "Fees"
-        - title: "Eligibility"
-          payload: "Eligibility"
+  # utter_ask_query_form_query:
+  #   - text: "What would you like to know about?"
+  #     buttons:
+  #       - title: "Subject"
+  #         payload: "Subject"
+  #       - title: "Fees"
+  #         payload: "Fees"
+  #       - title: "Eligibility"
+  #         payload: "Eligibility"
 
   utter_goodbye:
   - text: "Bye"
@@ -93,23 +93,25 @@ forms:
     - type: from_entity
       entity: ent_query
 
-  diploma_form:
-    degree:
-    - type: from_entity
-      entity: ent_degree
+  # diploma_form:
+  #   degree:
+  #   - type: from_entity
+  #     entity: ent_degree
       
-  query_form:
-    query:
-    - type: from_entity
-      entity: ent_query
+  # query_form:
+  #   query:
+  #   - type: from_entity
+  #     entity: ent_query
 
 actions:
-  - utter_ask_program_form_program
+  - action_ask_program
   - action_ask_degree
   - action_ask_course
-  # - utter_ask_diploma_form_degree
-  - utter_ask_query_form_query
+  - action_ask_query
   - action_handle_query
+  #- utter_ask_program_form_program
+  #- utter_ask_diploma_form_degree
+  #- utter_ask_query_form_query
   #- action_handle_program
 
 session_config:

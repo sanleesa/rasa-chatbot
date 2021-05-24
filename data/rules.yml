@@ -11,3 +11,16 @@ rules:
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
+
+- rule: user asks about 
+  condition:
+    - active_loop: program_form
+  steps:
+  - action: program_form
+  - slot_was_set:
+      - program
+      - degree
+      - course
+      - query
+  - action: action_handle_query
+  - active_loop: null

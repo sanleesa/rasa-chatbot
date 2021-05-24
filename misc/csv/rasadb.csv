@@ -1,0 +1,2174 @@
+"level_1_id","payload","title"
+"1","undergraduate","Undergraduate"
+"2","postgraduate","Postgraduate"
+"3","postgraduatediploma","Postgraduate Diploma"
+"4","diploma","Diploma"
+"5","phd","PhD"
+"level_2_id","payload","title","level_1_id_fk"
+"1","aviation","Aviation, Hospitality & Customer Service","4"
+"2","hindi","Hindi","5"
+"3","geography","Geography","5"
+"4","geography","Geography","3"
+"5","computerscience","Computer Science","3"
+"6","masterofarts","Master of Arts","2"
+"7","masterofscience","Master of Sciece","2"
+"8","bachelorofvocation","Bachelor of Vocation","1"
+"9","bachelorofarts","Bachelor of Arts","1"
+"10","bachelorofscience","Bachelor of Science","1"
+"level_3_id","payload","title","level_2_id_fk"
+"1","computerscience","Computer Science","10"
+"2","chemistry","Chemistry","10"
+"3","biochemistry","Biochemistry","10"
+"4","geography","Geography","10"
+"5","mathematics","Mathematics","10"
+"6","geology","Geology","10"
+"7","biotechnology","Biotechonology","10"
+"8","botany","Botany","10"
+"9","physics","Physics","10"
+"10","english","English","9"
+"11","economics","Economics","9"
+"12","hindi","Hindi","9"
+"13","geography","Geography","9"
+"14","history","History","9"
+"15","french","French","9"
+"16","konkani","Konkani","9"
+"17","marathi","Marathi","9"
+"18","psychology","Psychology","9"
+"19","philosophy","Philosophy","9"
+"20","sociology ","Sociology","9"
+"21","portuguese","Portuguese","9"
+"22","softwaredevelopment","Software Development","8"
+"23","multimedia","Multimedia","8"
+"24","VFX","VFX","8"
+"25","computerscience","Computer Science","7"
+"26","chemistry","Chemistry","7"
+"27","geography","Geography","7"
+"28","economics","Economics","6"
+"29","english","English","6"
+"30","psychology","Psychology","6"
+"31","geography","Geography","6"
+"32","zoology","Zoology","10"
+"33",NULL,NULL,NULL
+"34",NULL,NULL,NULL
+"35",NULL,"Marathi",NULL
+"36",NULL,NULL,NULL
+"level_4_id","payload","title","level_3_id_fk"
+"1","subjectdetails","Subject Details","1"
+"2","fees","Fees","1"
+"3","admissiondetails","Admission Details","1"
+"4","faq","FAQ's","1"
+"5","subjectdetails","Subject Details","2"
+"6","fees","Fees","2"
+"7","admissiondetails","Admission Details","2"
+"8","faqs","FAQ's","2"
+"9","subjectdetails","Subject Details","3"
+"10","fees","Fees","3"
+"11","admissiondetails","Admission Details","3"
+"12","faqs","FAQ's","3"
+"13","subjectdetails","Subject Details","4"
+"14","fees","Fees","4"
+"15","admissiondetails","Admission Details","4"
+"16","faqs","FAQ's","4"
+"17","subjectdetails","Subject Details","5"
+"18","fees","Fees","5"
+"19","admissiondetails","Admission Details","5"
+"20","faq","FAQ's","5"
+"21","subjectdetails","Subject Details","6"
+"22","fees","Fees","6"
+"23","admissiondetails","Admission Details","6"
+"24","faq","FAQ's","6"
+"25","subjectdetails","Subject Details","7"
+"26","fees","Fees","7"
+"27","admissiondetails","Admission Details","7"
+"28","faq","FAQ's","7"
+"29","subjectdetails","Subject Details","8"
+"30","fees","Fees","8"
+"31","admissiondetails","Admission Details","8"
+"32","faq","FAQ's","8"
+"33","subjectdetails","Subject Details","9"
+"34","fees","Fees","9"
+"35","admissiondetails","Admission Details","9"
+"36","faq","FAQ's","9"
+"37","subjectdetails","Subject Details","10"
+"38","fees","Fees","10"
+"39","admissiondetails","Admission Details","10"
+"40","faq","FAQ's","10"
+"41","subjectdetails","Subject Details","11"
+"42","fees","Fees","11"
+"43","admissiondetails","Admission Details","11"
+"44","faq","FAQ's","11"
+"45","subjectdetails","Subject Details","12"
+"46","fees","Fees","12"
+"47","admissiondetails","Admission Details","12"
+"48","faq","FAQ's","12"
+"49","subjectdetails","Subject Details","13"
+"50","fees","Fees","13"
+"51","admissiondetails","Admission Details","13"
+"52","faq","FAQ's","13"
+"53","subjectdetails","Subject Details","14"
+"54","fees","Fees","14"
+"55","admissiondetails","Admission Details","14"
+"56","faq","FAQ's","14"
+"57","subjectdetails","Subject Details","15"
+"58","fees","Fees","15"
+"59","admissiondetails","Admission Details","15"
+"60","faq","FAQ's","15"
+"61","subjectdetails","Subject Details","16"
+"62","fees","Fees","16"
+"63","admissiondetails","Admission Details","16"
+"64","faq","FAQ's","16"
+"65","subjectdetails","Subject Details","17"
+"66","fees","Fees","17"
+"67","admissiondetails","Admission Details","17"
+"68","faq","FAQ's","17"
+"69","subjectdetails","Subject Details","18"
+"70","fees","Fees","18"
+"71","admissiondetails","Admission Details","18"
+"72","faq","FAQ's","18"
+"73","subjectdetails","Subject Details","19"
+"74","fees","Fees","19"
+"75","admissiondetails","Admission Details","19"
+"76","faq","FAQ's","19"
+"77","subjectdetails","Subject Details","20"
+"78","fees","Fees","20"
+"79","admissiondetails","Admission Details","20"
+"80","faq","FAQ's","20"
+"81","subjectdetails","Subject Details","21"
+"82","fees","Fees","21"
+"83","admissiondetails","Admission Details","21"
+"84","faq","FAQ's","21"
+"85","subjectdetails","Subject Details","22"
+"86","fees","Fees","22"
+"87","admissiondetails","Admission Details","22"
+"88","faq","FAQ's","22"
+"89","subjectdetails","Subject Details","23"
+"90","fees","Fees","23"
+"91","admissiondetails","Admission Details","23"
+"92","faq","FAQ's","23"
+"93","subjectdetails","Subject Details","24"
+"94","fees","Fees","24"
+"95","admissiondetails","Admission Details","24"
+"96","faq","FAQ's","24"
+"97","subjectdetails","Subject Details","25"
+"98","fees","Fees","25"
+"99","admissiondetails","Admission Details","25"
+"100","faq","FAQ's","25"
+"101","subjectdetails","Subject Details","32"
+"102","fees","Fees","32"
+"103","admissiondetails","Admission Details","32"
+"104","faq","FAQ's","32"
+"105","subjectdetails","Subject Details","26"
+"106","fees","Fees","26"
+"107","admissiondetails","Admission Details","26"
+"108","faq","FAQ's","26"
+"109","subjectdetails","Subject Details","27"
+"110","fees","Fees","27"
+"111","admissiondetails","Admission Details","27"
+"112","faq","FAQ's","27"
+"113","subjectdetails","Subject Details","28"
+"114","fees","Fees","28"
+"115","admissiondetails","Admission Details","28"
+"116","faq","FAQ's","28"
+"117","subjectdetails","Subject Details","29"
+"118","fees","Fees","29"
+"119","admissiondetails","Admission Details","29"
+"120","faq","FAQ's","29"
+"121","subjectdetails","Subject Details","30"
+"122","fees","Fees","30"
+"123","admissiondetails","Admission Details","30"
+"124","faq","FAQ's","30"
+"125","subjectdetails","Subject Details","31"
+"126","fees","Fees","31"
+"127","admissiondetails","Admission Details","31"
+"128","faq","FAQ's","31"
+"129","subjectdetails","Subject Details","32"
+"130","fees","Fees","32"
+"131","admissiondetails","Admission Details","32"
+"132","faq","FAQ's","32"
+"133","subjectdetails","Subject Details","33"
+"134","fees","Fees","33"
+"135","admissiondetails","Admission Details","33"
+"136","faq","FAQ's","33"
+"137","subjectdetails","Subject Details","34"
+"138","fees","Fees","34"
+"139","admissiondetails","Admission Details","34"
+"140","faq","FAQ's","34"
+"141","subjectdetails","Subject Details","35"
+"142","fees","Fees","35"
+"143","admissiondetails","Admission Details","35"
+"144","faq","FAQ's","35"
+"145","subjectdetails","Subject Details","36"
+"146","fees","Fees","36"
+"147","admissiondetails","Admission Details","36"
+"148","faq","FAQ's","36"
+"level_5_id","level_4_id_fk","details"
+"1","1","This B.Sc programme is for students interested in 
+Object Oriented Programming, 
+Database Administration, 
+Web Designing, 
+Software Engineering, 
+Computer Networking, 
+Operating systems, 
+Server Side Programming, 
+Mobile Application Development, 
+Multimedia Techniques etc.
+
+B.Sc curriculum includes core courses in:
+Programming, 
+Advanced Database Management Systems, 
+Operating Systems, Data Structures, 
+Computer Networking, 
+Computer Architecture & Organization etc. 
+
+The elective courses include:
+Software engineering, 
+Web Designing, Server Side Programming, 
+Embedded Systems, 
+HCI, 
+Cloud Computing, software Testing, 
+Multimedia Techniques, 
+Digital Marketing etc.
+"
+"2","2","University fees : 630.00
+Tuition fees : 2050.00
+Examination fees : 3550.00
+General deposit : 230.00
+Student aid fund : 130.00
+Gymkhana fund : 420.00
+Laboratory pract fee : 2470.00
+Library fee : 470.00
+Other fee : 420.00
+I.T fee : 820.00
+Student service charge : 10000.00
+IAIMS fees : 225.00
+
+Total : 21415.00"
+"3","3","How to apply:
+To apply for admission, please visit our college website http://www.chowgules.ac.in/admission/
+and complete the online admission form as per instructions provided therein.
+Contact Person: Mr. Harish Nadkarni, Vice Principal email: hsn001@chowgules.ac.in
+Documents required:
+Students are required to bring two photocopies (self-attested) of each of the following documents
+along with the originals at the time of admission.
+
+a. For Goa Board students:
+1. Two photocopies of qualifying examination mark sheets (XIIth).
+2. Two photocopies of Leaving Certificate.
+3. Two Photographs .
+
+b. For other Board/Universities students:
+1. Two photocopies of qualifying examination mark sheets (XIIth).
+2. Original as well as two photocopies of Transfer/Leaving certificate.
+3. Original as well as two photocopies of Migration certificate.
+4. Provisional Eligibility Certificate from Chowgule college.
+5. Two Photographs .
+
+c. For International students:
+International students applying directly for admission need to submit an application to the
+Principal stating their desire to seek admission along with their Passing Certificate, Transcript of
+records, copy of syllabus containing details of course of studies pursued in various courses in the
+examination passed by the applicant (duly countersigned by High Commissioner of India in the
+country). If the student is found eligible, prima facie letter will be sent to the student for carrying
+out further necessary formalities. Following documents are required to be submitted:
+1. Four photocopies of qualifying examination mark sheets (XIIth).
+2. Two Photographs.
+3. Two photocopies of Student Visa.
+4. Two photocopies of Passport.
+5. Original AIDS Test Report.
+6. Certificate of proficiency in English.
+7. Equivalence Certificate.
+8. Resident Permit and ‘C’ Form.
+
+Once the student’s admission is confirmed, he/she is required to attend the Counselling
+session organized by the faculty of the department, the date of which will be intimated to
+students by the college authorities.
+a) The number of seats approved by the appropriate statutory authority in respect of each course or programme of study for the academic year for which admission is proposed to be made is 180 for Arts
+
+b) The conditions of the minimum and maximum age limit of persons for admissions as a student in a particular course or programme of study is 18 years and above
+
+c)The process of selection of eligible candidates applying for such admission: Based on Merit and Personal Counseling and Reservation Policy
+"
+"4","4",
+"5","5","BSc Chemistry is a 3 years undergraduate course in India. The course curriculum deals with various aspects of chemistry including chemical reactions and chemical composition of substances.
+
+B.Sc curriculum includes core courses in:
+General Physical and Inorganic Chemistry,
+General Organic and Inorganic Chemistry,
+Concepts in Physical and Analytical Chemistry,
+Concepts in Organic and Inorganic Chemistry,
+Comprehensive Chemistry –I,
+Comprehensive Chemistry –II,
+Advanced Chemistry – I (Physical & Inorganic Chemistry), 
+Advanced Chemistry-II : Organic and Analytical Chemistry, etc.
+
+The elective courses include:
+Name Reactions and Synthetic Methodologies,
+Introduction to Industrial Chemistry,
+Surface Chemistry and Catalysis,
+Bioinorganic Chemistry,
+Pharmaceutical Chemistry,
+Polymer and Colloid Science,
+Spectroscopic Techniques,
+Chemistry of Natural Products, 
+Heterocyclic Chemistry,
+Nanomaterials and solid state Chemistry,
+Organometallic Chemistry,
+Chemistry of main group elements,
+Spectroscopic Methods in Organic Chemistry,
+Environmental Chemistry,
+Selected Topics in Inorganic Chemistry, etc
+"
+"6","6","University fees : 630.00
+Tuition fees : 2050.00
+Examination fees : 3550.00
+General deposit : 230.00
+Student aid fund : 130.00
+Gymkhana fund : 420.00
+Laboratory pract fee : 2470.00
+Library fee : 470.00
+Other fee : 420.00
+I.T fee : 820.00
+Student service charge : 10000.00
+IAIMS fees : 225.00
+
+Total : 49300.00
+"
+"7","7","How to apply: To apply for admission, please visit our college website http://www.chowgules.ac.in/admission/ and complete the online admission form as per instructions provided therein. Contact Person: Mr. Harish Nadkarni, Vice Principal email: hsn001@chowgules.ac.in Documents required: Students are required to bring two photocopies (self-attested) of each of the following documents along with the originals at the time of admission.  a. For Goa Board students: 1. Two photocopies of qualifying examination mark sheets (XIIth). 2. Two photocopies of Leaving Certificate. 3. Two Photographs .  b. For other Board/Universities students: 1. Two photocopies of qualifying examination mark sheets (XIIth). 2. Original as well as two photocopies of Transfer/Leaving certificate. 3. Original as well as two photocopies of Migration certificate. 4. Provisional Eligibility Certificate from Chowgule college. 5. Two Photographs .  c. For International students: International students applying directly for admission need to submit an application to the Principal stating their desire to seek admission along with their Passing Certificate, Transcript of records, copy of syllabus containing details of course of studies pursued in various courses in the examination passed by the applicant (duly countersigned by High Commissioner of India in the country). If the student is found eligible, prima facie letter will be sent to the student for carrying out further necessary formalities. Following documents are required to be submitted: 1. Four photocopies of qualifying examination mark sheets (XIIth). 2. Two Photographs. 3. Two photocopies of Student Visa. 4. Two photocopies of Passport. 5. Original AIDS Test Report. 6. Certificate of proficiency in English. 7. Equivalence Certificate. 8. Resident Permit and ‘C’ Form.  Once the student’s admission is confirmed, he/she is required to attend the Counselling session organized by the faculty of the department, the date of which will be intimated to students by the college authorities. a) The number of seats approved by the appropriate statutory authority in respect of each course or programme of study for the academic year for which admission is proposed to be made is 180 for Arts  b) The conditions of the minimum and maximum age limit of persons for admissions as a student in a particular course or programme of study is 18 years and above  c)The process of selection of eligible candidates applying for such admission: Based on Merit and Personal Counseling and Reservation Policy"
+"8","8",
+"9","9","Bachelor of Science in Biochemistry or BSc Biochemistry is a 3-year undergraduate course in chemical and physio-chemical processes. It is a branch of science that deals with chemistry applied to the study of living organisms and the atoms and molecules which comprise living organisms.
+
+B.Sc curriculum includes core courses in:
+Molecules of Life, Cell Biology, 
+Protein chemistry, Biophysics, 
+Enzymology, 
+Metabolism of Biomolecules, 
+Tools & Techniques in Biochemistry, 
+Microbiology, 
+Molecular biology, 
+Immunology, etc
+
+The elective courses include:
+Bioethics and Biosafety, 
+Plant Biochemistry, 
+Human physiology, 
+Nutritional Biochemistry, 
+Hormone: Biochemistry and Function, 
+Advanced Cell Biology, 
+Concepts in genetics, 
+Regulation of gene expression, 
+Genetic Engineering and Biotechnology, 
+Bioinformatics, 
+Biochemical correlation of Diseases, 
+Clinical Biochemistry,
+Environmental Biochemistry, 
+Industrial Biochemistry, etc.
+"
+"10","10","University fees : 800.00
+Tuition fees : 2050.00
+Examination fees : 3550.00
+General deposit : 230.00
+Student aid fund : 130.00
+Gymkhana fund : 420.00
+Laboratory pract fee : 2470.00
+Library fee : 470.00
+Other fee : 420.00
+I.T fee : 820.00
+Student service charge : 10000.00
+IAIMS fees : 225.00
+
+Total : 43000.00
+"
+"11","11","How to apply: To apply for admission, please visit our college website http://www.chowgules.ac.in/admission/ and complete the online admission form as per instructions provided therein. Contact Person: Mr. Harish Nadkarni, Vice Principal email: hsn001@chowgules.ac.in Documents required: Students are required to bring two photocopies (self-attested) of each of the following documents along with the originals at the time of admission.  a. For Goa Board students: 1. Two photocopies of qualifying examination mark sheets (XIIth). 2. Two photocopies of Leaving Certificate. 3. Two Photographs .  b. For other Board/Universities students: 1. Two photocopies of qualifying examination mark sheets (XIIth). 2. Original as well as two photocopies of Transfer/Leaving certificate. 3. Original as well as two photocopies of Migration certificate. 4. Provisional Eligibility Certificate from Chowgule college. 5. Two Photographs .  c. For International students: International students applying directly for admission need to submit an application to the Principal stating their desire to seek admission along with their Passing Certificate, Transcript of records, copy of syllabus containing details of course of studies pursued in various courses in the examination passed by the applicant (duly countersigned by High Commissioner of India in the country). If the student is found eligible, prima facie letter will be sent to the student for carrying out further necessary formalities. Following documents are required to be submitted: 1. Four photocopies of qualifying examination mark sheets (XIIth). 2. Two Photographs. 3. Two photocopies of Student Visa. 4. Two photocopies of Passport. 5. Original AIDS Test Report. 6. Certificate of proficiency in English. 7. Equivalence Certificate. 8. Resident Permit and ‘C’ Form.  Once the student’s admission is confirmed, he/she is required to attend the Counselling session organized by the faculty of the department, the date of which will be intimated to students by the college authorities. a) The number of seats approved by the appropriate statutory authority in respect of each course or programme of study for the academic year for which admission is proposed to be made is 180 for Arts  b) The conditions of the minimum and maximum age limit of persons for admissions as a student in a particular course or programme of study is 18 years and above  c)The process of selection of eligible candidates applying for such admission: Based on Merit and Personal Counseling and Reservation Policy"
+"12","12",
+"13","13","BSc Geography or Bachelor in Science in Geography is an undergraduate degree with an emphasis on Geography for 3 years. It is the study of the Earth and its many properties, characteristics, people and phenomena, in addition to the map and geographical image-interpretation.
+
+B.Sc curriculum includes core courses in:
+Introduction to Geography,
+Fundamentals of Physical Geography,
+Measurement Systems in Geography (Practical),
+Practical’s in Physical Geography (Practical),
+Basics of Human Geography,
+Basics of Regional Geography,
+Practical’s in Human Geography (Practical’s),
+Practicals  in Regional Geography (Practical’s),
+Fundamentals of Remote Sensing and GIS,
+Fundamentals of Geomorphology,
+Fundamentals of Climatology,
+Ecology and Terrestrial Environment
+
+The elective courses include:
+Spatial Analysis,
+Raster and Vector Data Models in GIS,
+Participatory GIS,
+Applied GIS,
+Coastal Geomorphology,
+Fluvial Geomorphology,
+Watershed Management,
+Biogeography,
+Geography of Soil Studies,
+AgroMeteorology: Principles and Applications,
+Field Survey in Physical Geography,
+Quantitative Techniques in Geography,
+Remote Sensing and Forest Ecology,
+Advanced Coastal Geomorphology,
+Ecology of Estuarine Environment,
+Disaster Management: Urban and Coastal, etc
+"
+"14","14","University fees : 650.00
+Tuition fees : 4000.00
+Examination fees : 3550.00
+General deposit : 230.00
+Student aid fund : 130.00
+Gymkhana fund : 420.00
+Laboratory pract fee : 1470.00
+Library fee : 470.00
+Other fee : 420.00
+I.T fee : 820.00
+Student service charge : 10000.00
+IAIMS fees : 225.00
+
+Total : 41000.00
+"
+"15","15","How to apply: To apply for admission, please visit our college website http://www.chowgules.ac.in/admission/ and complete the online admission form as per instructions provided therein. Contact Person: Mr. Harish Nadkarni, Vice Principal email: hsn001@chowgules.ac.in Documents required: Students are required to bring two photocopies (self-attested) of each of the following documents along with the originals at the time of admission.  a. For Goa Board students: 1. Two photocopies of qualifying examination mark sheets (XIIth). 2. Two photocopies of Leaving Certificate. 3. Two Photographs .  b. For other Board/Universities students: 1. Two photocopies of qualifying examination mark sheets (XIIth). 2. Original as well as two photocopies of Transfer/Leaving certificate. 3. Original as well as two photocopies of Migration certificate. 4. Provisional Eligibility Certificate from Chowgule college. 5. Two Photographs .  c. For International students: International students applying directly for admission need to submit an application to the Principal stating their desire to seek admission along with their Passing Certificate, Transcript of records, copy of syllabus containing details of course of studies pursued in various courses in the examination passed by the applicant (duly countersigned by High Commissioner of India in the country). If the student is found eligible, prima facie letter will be sent to the student for carrying out further necessary formalities. Following documents are required to be submitted: 1. Four photocopies of qualifying examination mark sheets (XIIth). 2. Two Photographs. 3. Two photocopies of Student Visa. 4. Two photocopies of Passport. 5. Original AIDS Test Report. 6. Certificate of proficiency in English. 7. Equivalence Certificate. 8. Resident Permit and ‘C’ Form.  Once the student’s admission is confirmed, he/she is required to attend the Counselling session organized by the faculty of the department, the date of which will be intimated to students by the college authorities. a) The number of seats approved by the appropriate statutory authority in respect of each course or programme of study for the academic year for which admission is proposed to be made is 180 for Arts  b) The conditions of the minimum and maximum age limit of persons for admissions as a student in a particular course or programme of study is 18 years and above  c)The process of selection of eligible candidates applying for such admission: Based on Merit and Personal Counseling and Reservation Policy"
+"16","16",
+"17","17","B.Sc curriculum includes core courses in:
+Basic Algebra
+Basic Real Analysis
+Coordinate Geometry
+Mathematical Analysis
+Differential Equations
+Linear Algebra
+Functions of Several Variables
+Vector Analysis
+
+The elective courses include:
+Abstract Algebra
+Number theory
+Combinatorics
+Numerical Methods
+Advanced Analysis
+Operations Research
+Cryptography
+Metric Spaces
+Graph Theory
+Pedagogy of Mathematics
+Complex Analysis
+Probability Theory
+Computers for Mathematics
+Computational Linear Algebra
+"
+"18","18","University fees : 780.00
+Tuition fees : 5050.00
+Examination fees : 3550.00
+General deposit : 230.00
+Student aid fund : 130.00
+Gymkhana fund : 420.00
+Library fee : 470.00
+Other fee : 420.00
+Student service charge : 10000.00
+IAIMS fees : 225.00
+
+Total : 46390.00
+"
+"19","19","How to apply: To apply for admission, please visit our college website http://www.chowgules.ac.in/admission/ and complete the online admission form as per instructions provided therein. Contact Person: Mr. Harish Nadkarni, Vice Principal email: hsn001@chowgules.ac.in Documents required: Students are required to bring two photocopies (self-attested) of each of the following documents along with the originals at the time of admission.  a. For Goa Board students: 1. Two photocopies of qualifying examination mark sheets (XIIth). 2. Two photocopies of Leaving Certificate. 3. Two Photographs .  b. For other Board/Universities students: 1. Two photocopies of qualifying examination mark sheets (XIIth). 2. Original as well as two photocopies of Transfer/Leaving certificate. 3. Original as well as two photocopies of Migration certificate. 4. Provisional Eligibility Certificate from Chowgule college. 5. Two Photographs .  c. For International students: International students applying directly for admission need to submit an application to the Principal stating their desire to seek admission along with their Passing Certificate, Transcript of records, copy of syllabus containing details of course of studies pursued in various courses in the examination passed by the applicant (duly countersigned by High Commissioner of India in the country). If the student is found eligible, prima facie letter will be sent to the student for carrying out further necessary formalities. Following documents are required to be submitted: 1. Four photocopies of qualifying examination mark sheets (XIIth). 2. Two Photographs. 3. Two photocopies of Student Visa. 4. Two photocopies of Passport. 5. Original AIDS Test Report. 6. Certificate of proficiency in English. 7. Equivalence Certificate. 8. Resident Permit and ‘C’ Form.  Once the student’s admission is confirmed, he/she is required to attend the Counselling session organized by the faculty of the department, the date of which will be intimated to students by the college authorities. a) The number of seats approved by the appropriate statutory authority in respect of each course or programme of study for the academic year for which admission is proposed to be made is 180 for Arts  b) The conditions of the minimum and maximum age limit of persons for admissions as a student in a particular course or programme of study is 18 years and above  c)The process of selection of eligible candidates applying for such admission: Based on Merit and Personal Counseling and Reservation Policy"
+"20","20",
+"21","21","BSc Geology or Bachelor of Science in Geology is a 3 year-long undergraduate level bachelor degree course focused on earth science. The course involves the study of rocks, minerals, other solid substances, their compositions, their history and other processes involving them.
+
+B.Sc curriculum includes core courses in:
+Fundamentals of Mineralogy,
+Earth’s Dynamics and Tectonics,
+Elementary Petrology,
+Principles of Stratigraphy and Paleontology,
+Advanced Mineralogy and Geochemistry,
+Structural Geology,
+Sedimentary Petrology,
+Core Project,
+Igneous Petrology.
+
+The elective courses include:
+Physical Geology
+Groundwater and Hydrogeology
+Ore Genesis
+Marine Geology
+Operational Geology and Gemmology
+Engineering Geology
+Optical Mineralogy
+Natural Hazards and Management
+Geotectonics GIS for Beginners 
+Precambrian Stratigraphy of India
+Petroleum Geology
+Metamorphic Petrology
+Remote Sensing and Digital Image Processing
+Phanerozoic Stratigraphy of India
+Rock Structures and Deformation Microstructures
+Surveying, Mapping and Field Geology
+Principles of Geophysical Exploration and Mining
+"
+"22","22","University fees : 620.00
+Tuition fees : 4000.00
+Examination fees : 5000.00
+General deposit : 230.00
+Student aid fund : 130.00
+Gymkhana fund : 420.00
+Laboratory pract fee : 3070.00
+Library fee : 470.00
+Other fee : 420.00
+I.T fee : 820.00
+Student service charge : 10000.00
+IAIMS fees : 225.00
+
+Total : 39600.00
+"
+"23","23","How to apply: To apply for admission, please visit our college website http://www.chowgules.ac.in/admission/ and complete the online admission form as per instructions provided therein. Contact Person: Mr. Harish Nadkarni, Vice Principal email: hsn001@chowgules.ac.in Documents required: Students are required to bring two photocopies (self-attested) of each of the following documents along with the originals at the time of admission.  a. For Goa Board students: 1. Two photocopies of qualifying examination mark sheets (XIIth). 2. Two photocopies of Leaving Certificate. 3. Two Photographs .  b. For other Board/Universities students: 1. Two photocopies of qualifying examination mark sheets (XIIth). 2. Original as well as two photocopies of Transfer/Leaving certificate. 3. Original as well as two photocopies of Migration certificate. 4. Provisional Eligibility Certificate from Chowgule college. 5. Two Photographs .  c. For International students: International students applying directly for admission need to submit an application to the Principal stating their desire to seek admission along with their Passing Certificate, Transcript of records, copy of syllabus containing details of course of studies pursued in various courses in the examination passed by the applicant (duly countersigned by High Commissioner of India in the country). If the student is found eligible, prima facie letter will be sent to the student for carrying out further necessary formalities. Following documents are required to be submitted: 1. Four photocopies of qualifying examination mark sheets (XIIth). 2. Two Photographs. 3. Two photocopies of Student Visa. 4. Two photocopies of Passport. 5. Original AIDS Test Report. 6. Certificate of proficiency in English. 7. Equivalence Certificate. 8. Resident Permit and ‘C’ Form.  Once the student’s admission is confirmed, he/she is required to attend the Counselling session organized by the faculty of the department, the date of which will be intimated to students by the college authorities. a) The number of seats approved by the appropriate statutory authority in respect of each course or programme of study for the academic year for which admission is proposed to be made is 180 for Arts  b) The conditions of the minimum and maximum age limit of persons for admissions as a student in a particular course or programme of study is 18 years and above  c)The process of selection of eligible candidates applying for such admission: Based on Merit and Personal Counseling and Reservation Policy"
+"24","24",
+"25","25","Bachelor of Science in Biotechnology is a 3-year undergraduate course that allows the candidates to learn how technology is utilized to create useful and necessary products from living organisms. With advancement of genetic engineering and the subsequent rise in research related to the field of pharmacy, Courses in Biotechnology are in huge demand.
+
+B.Sc curriculum includes core courses in:
+Biomolecules, 
+Cell Biology, 
+Fundamental Genetics, 
+Basic Microbiology, 
+Molecular Biology, 
+Immunology, 
+Concepts in Genetic Engineering, 
+Industrial Biotechnology, etc.
+
+The elective courses include:
+Basics of Plant and Animal Sciences,
+Metabolism of Biomolecules, 
+Biostatistics, Enzymology, 
+Plant and Animal Physiology, 
+Tools & Techniques in Biotechnology, 
+Evolution and Anthropology, 
+Molecular genetics, 
+Molecular medicine,
+Environmental Biotechnology, 
+Plant Biotechnology, 
+Bioinformatics, 
+Bioethics and Biosafety, 
+Advanced Cell Biology,
+Food Biotechnology, 
+Animal Cell Culture, etc.
+"
+"26","26","University fees : 750.00
+Tuition fees : 3000.00
+Examination fees : 3550.00
+General deposit : 330.00
+Student aid fund : 130.00
+Gymkhana fund : 620.00
+Laboratory pract fee : 2470.00
+Library fee : 470.00
+Other fee : 420.00
+I.T fee : 820.00
+Student service charge : 9000
+Total : 41500.00
+"
+"27","27","How to apply: To apply for admission, please visit our college website http://www.chowgules.ac.in/admission/ and complete the online admission form as per instructions provided therein. Contact Person: Mr. Harish Nadkarni, Vice Principal email: hsn001@chowgules.ac.in Documents required: Students are required to bring two photocopies (self-attested) of each of the following documents along with the originals at the time of admission.  a. For Goa Board students: 1. Two photocopies of qualifying examination mark sheets (XIIth). 2. Two photocopies of Leaving Certificate. 3. Two Photographs .  b. For other Board/Universities students: 1. Two photocopies of qualifying examination mark sheets (XIIth). 2. Original as well as two photocopies of Transfer/Leaving certificate. 3. Original as well as two photocopies of Migration certificate. 4. Provisional Eligibility Certificate from Chowgule college. 5. Two Photographs .  c. For International students: International students applying directly for admission need to submit an application to the Principal stating their desire to seek admission along with their Passing Certificate, Transcript of records, copy of syllabus containing details of course of studies pursued in various courses in the examination passed by the applicant (duly countersigned by High Commissioner of India in the country). If the student is found eligible, prima facie letter will be sent to the student for carrying out further necessary formalities. Following documents are required to be submitted: 1. Four photocopies of qualifying examination mark sheets (XIIth). 2. Two Photographs. 3. Two photocopies of Student Visa. 4. Two photocopies of Passport. 5. Original AIDS Test Report. 6. Certificate of proficiency in English. 7. Equivalence Certificate. 8. Resident Permit and ‘C’ Form.  Once the student’s admission is confirmed, he/she is required to attend the Counselling session organized by the faculty of the department, the date of which will be intimated to students by the college authorities. a) The number of seats approved by the appropriate statutory authority in respect of each course or programme of study for the academic year for which admission is proposed to be made is 180 for Arts  b) The conditions of the minimum and maximum age limit of persons for admissions as a student in a particular course or programme of study is 18 years and above  c)The process of selection of eligible candidates applying for such admission: Based on Merit and Personal Counseling and Reservation Policy"
+"28","28",
+"29","29","BSc Botany or Bachelor of Science in Botany is a 3-year undergraduate degree course, which deals with the study of plants and their physiology.
+
+B.Sc curriculum includes core courses in:
+Plant diversity,
+Cell Biology & Biomolecules,
+Plant Anatomy and Embryology,
+Microbiology,
+Physiology of Plants,
+Cytogenetics,
+Plant Molecular Biology,
+Plant Biotechnology and Genetic Engineering, etc.
+
+The elective courses include:
+Ecology & Conservation,
+Techniques and Instrumentation in Botany,
+Enzymes and metabolic pathways,
+Herbal Cosmetology,
+Plant Breeding and Biostatistics,
+Systematics of Flowering plants and Phylogeny,
+Plant pathology,
+Algal Biotechnology,
+Bioinformatics,
+Seed Technology,
+Plant drug Technology & Pharmacognosy,
+Organic Farming,
+Plant tissue culture,
+Horticulture, Floriculture & Landscaping,
+Economic Botany,
+Applied Mycology,etc
+"
+"30","30","University fees : 6400.00
+Tuition fees : 3900.00
+Examination fees : 3550.00
+General deposit : 230.00
+Student aid fund : 130.00
+Gymkhana fund : 420.00
+Laboratory pract fee : 2470.00
+Library fee : 470.00
+Other fee : 420.00
+Student service charge : 10000.00
+IAIMS fees : 265.00
+
+Total : 48000.00
+"
+"31","31","How to apply: To apply for admission, please visit our college website http://www.chowgules.ac.in/admission/ and complete the online admission form as per instructions provided therein. Contact Person: Mr. Harish Nadkarni, Vice Principal email: hsn001@chowgules.ac.in Documents required: Students are required to bring two photocopies (self-attested) of each of the following documents along with the originals at the time of admission.  a. For Goa Board students: 1. Two photocopies of qualifying examination mark sheets (XIIth). 2. Two photocopies of Leaving Certificate. 3. Two Photographs .  b. For other Board/Universities students: 1. Two photocopies of qualifying examination mark sheets (XIIth). 2. Original as well as two photocopies of Transfer/Leaving certificate. 3. Original as well as two photocopies of Migration certificate. 4. Provisional Eligibility Certificate from Chowgule college. 5. Two Photographs .  c. For International students: International students applying directly for admission need to submit an application to the Principal stating their desire to seek admission along with their Passing Certificate, Transcript of records, copy of syllabus containing details of course of studies pursued in various courses in the examination passed by the applicant (duly countersigned by High Commissioner of India in the country). If the student is found eligible, prima facie letter will be sent to the student for carrying out further necessary formalities. Following documents are required to be submitted: 1. Four photocopies of qualifying examination mark sheets (XIIth). 2. Two Photographs. 3. Two photocopies of Student Visa. 4. Two photocopies of Passport. 5. Original AIDS Test Report. 6. Certificate of proficiency in English. 7. Equivalence Certificate. 8. Resident Permit and ‘C’ Form.  Once the student’s admission is confirmed, he/she is required to attend the Counselling session organized by the faculty of the department, the date of which will be intimated to students by the college authorities. a) The number of seats approved by the appropriate statutory authority in respect of each course or programme of study for the academic year for which admission is proposed to be made is 180 for Arts  b) The conditions of the minimum and maximum age limit of persons for admissions as a student in a particular course or programme of study is 18 years and above  c)The process of selection of eligible candidates applying for such admission: Based on Merit and Personal Counseling and Reservation Policy"
+"32","32",
+"33","33","Bachelor of Science in Physics or BSc Physics is a 3 year undergraduate course, which deals with the nuances of Physics and its various properties. The curriculum is divided into 6 semesters, spanning over three years. It includes the specialized scientific study of Physics, Mathematics, and Chemistry in detail.
+
+B.Sc curriculum includes core courses in:
+Introduction to Mathematical Physics
+Mechanics
+Heat and Thermodynamics
+Electricity and Magnetism
+Electromagnetic Theory
+Quantum Mechanics
+Atomic and Molecular Physics
+
+The elective courses include:
+Optics
+Modern Physics
+Oscillations, Waves and Sound
+Introduction to Astronomy and Astrophysics
+Instrumentation 
+Electronics 
+Introduction to Error Analysis
+Properties of Matter and Acoustics
+Computational Physics
+Solid State Physics
+Thermodynamics and Statistical Mechanics
+Mathematical Physics
+Solid State Devices
+Nuclear and Elementary Particle Physics
+Introduction to Special Theory of Relativity
+Introduction to Material Science
+"
+"34","34","University fees : 620.00
+Tuition fees : 4000.00
+Examination fees : 5000.00
+General deposit : 230.00
+Student aid fund : 130.00
+Gymkhana fund : 420.00
+Laboratory pract fee : 6000.00
+Library fee : 470.00
+Other fee : 420.00
+I.T fee : 820.00
+Student service charge : 10000.00
+IAIMS fees : 225.00
+
+Total : 42600.00
+"
+"35","35","How to apply: To apply for admission, please visit our college website http://www.chowgules.ac.in/admission/ and complete the online admission form as per instructions provided therein. Contact Person: Mr. Harish Nadkarni, Vice Principal email: hsn001@chowgules.ac.in Documents required: Students are required to bring two photocopies (self-attested) of each of the following documents along with the originals at the time of admission.  a. For Goa Board students: 1. Two photocopies of qualifying examination mark sheets (XIIth). 2. Two photocopies of Leaving Certificate. 3. Two Photographs .  b. For other Board/Universities students: 1. Two photocopies of qualifying examination mark sheets (XIIth). 2. Original as well as two photocopies of Transfer/Leaving certificate. 3. Original as well as two photocopies of Migration certificate. 4. Provisional Eligibility Certificate from Chowgule college. 5. Two Photographs .  c. For International students: International students applying directly for admission need to submit an application to the Principal stating their desire to seek admission along with their Passing Certificate, Transcript of records, copy of syllabus containing details of course of studies pursued in various courses in the examination passed by the applicant (duly countersigned by High Commissioner of India in the country). If the student is found eligible, prima facie letter will be sent to the student for carrying out further necessary formalities. Following documents are required to be submitted: 1. Four photocopies of qualifying examination mark sheets (XIIth). 2. Two Photographs. 3. Two photocopies of Student Visa. 4. Two photocopies of Passport. 5. Original AIDS Test Report. 6. Certificate of proficiency in English. 7. Equivalence Certificate. 8. Resident Permit and ‘C’ Form.  Once the student’s admission is confirmed, he/she is required to attend the Counselling session organized by the faculty of the department, the date of which will be intimated to students by the college authorities. a) The number of seats approved by the appropriate statutory authority in respect of each course or programme of study for the academic year for which admission is proposed to be made is 180 for Arts  b) The conditions of the minimum and maximum age limit of persons for admissions as a student in a particular course or programme of study is 18 years and above  c)The process of selection of eligible candidates applying for such admission: Based on Merit and Personal Counseling and Reservation Policy"
+"36","36",
+"37","37","A three year bachelor's degree program in English language focuses on different aspects of the subject. This course looks at the history, grammar, and ancient forms of English.. Individuals who wish to teach English will need to take additional education courses in order to obtain a teaching license.
+
+B.a curriculum includes core courses in:
+Understanding Poetry & Drama
+History of English Literature from Fifth Century to the Eighteenth Century
+Understanding
+Fiction An Introduction to Linguistics & Stylistics
+Contemporary Indian English Literature 
+Literary Criticism
+Nineteenth Century English Literature
+Twentieth Century English Literature
+
+Effective English Communication (Science Stream)
+
+The elective courses include:
+Women’s Writing in India
+American Literature of the Twentieth Century
+Writing for the Media 
+New Literatures in English
+The Literature of the Indian Diaspora
+Visual Literature
+World Literature
+Shakespeare Today
+English Language and Literature Teaching
+Ancient Indian Classics in Translation OR Modern Indian Literature in Translation
+Latin American Literature
+Film Studies
+Contemporary Literary Theory
+Goan Literature and Culture
+Representation of Gender & Sexuality in Literature
+"
+"38","38","University fees : 630.00
+Tuition fees : 1530.00
+Examination fees : 3250.00
+Student aid fund : 130.00
+Gymkhana fund : 420.00
+Additional credits: 8000
+Library fee : 470.00
+Student service charges : 10000.00
+IAIMS fees: 225
+
+Total : 26035.00
+"
+"39","39","How to apply:
+To apply for admission, please visit our college website http://www.chowgules.ac.in/admission/
+and complete the online admission form as per instructions provided therein.
+Contact Person: Mr. Harish Nadkarni, Vice Principal email: hsn001@chowgules.ac.in
+Documents required:
+Students are required to bring two photocopies (self-attested) of each of the following documents
+along with the originals at the time of admission.
+
+a. For Goa Board students:
+1. Two photocopies of qualifying examination mark sheets (XIIth).
+2. Two photocopies of Leaving Certificate.
+3. Two Photographs .
+
+b. For other Board/Universities students:
+1. Two photocopies of qualifying examination mark sheets (XIIth).
+2. Original as well as two photocopies of Transfer/Leaving certificate.
+3. Original as well as two photocopies of Migration certificate.
+4. Provisional Eligibility Certificate from Chowgule college.
+5. Two Photographs .
+
+c. For International students:
+International students applying directly for admission need to submit an application to the
+Principal stating their desire to seek admission along with their Passing Certificate, Transcript of
+records, copy of syllabus containing details of course of studies pursued in various courses in the
+examination passed by the applicant (duly countersigned by High Commissioner of India in the
+country). If the student is found eligible, prima facie letter will be sent to the student for carrying
+out further necessary formalities. Following documents are required to be submitted:
+1. Four photocopies of qualifying examination mark sheets (XIIth).
+2. Two Photographs.
+3. Two photocopies of Student Visa.
+4. Two photocopies of Passport.
+5. Original AIDS Test Report.
+6. Certificate of proficiency in English.
+7. Equivalence Certificate.
+8. Resident Permit and ‘C’ Form.
+
+Once the student’s admission is confirmed, he/she is required to attend the Counselling
+session organized by the faculty of the department, the date of which will be intimated to
+students by the college authorities.
+a) The number of seats approved by the appropriate statutory authority in respect of each course or programme of study for the academic year for which admission is proposed to be made is 180 for Arts
+
+b) The conditions of the minimum and maximum age limit of persons for admissions as a student in a particular course or programme of study is 18 years and above
+
+c)The process of selection of eligible candidates applying for such admission: Based on Merit and Personal Counseling and Reservation Policy
+"
+"40","40",
+"41","41","economics"
+"42","42","University fees : 620.00
+Tuition fees : 1930.00
+Examination fees : 3650.00
+Student aid fund : 130.00
+Gymkhana fund : 420.00
+Additional credits: 8000
+Library fee : 470.00
+Student service charges : 10000.00
+IAIMS fees: 225
+
+Total : 28995.00
+"
+"43","43","How to apply:
+To apply for admission, please visit our college website http://www.chowgules.ac.in/admission/
+and complete the online admission form as per instructions provided therein.
+Contact Person: Mr. Harish Nadkarni, Vice Principal email: hsn001@chowgules.ac.in
+Documents required:
+Students are required to bring two photocopies (self-attested) of each of the following documents
+along with the originals at the time of admission.
+
+a. For Goa Board students:
+1. Two photocopies of qualifying examination mark sheets (XIIth).
+2. Two photocopies of Leaving Certificate.
+3. Two Photographs .
+
+b. For other Board/Universities students:
+1. Two photocopies of qualifying examination mark sheets (XIIth).
+2. Original as well as two photocopies of Transfer/Leaving certificate.
+3. Original as well as two photocopies of Migration certificate.
+4. Provisional Eligibility Certificate from Chowgule college.
+5. Two Photographs .
+
+c. For International students:
+International students applying directly for admission need to submit an application to the
+Principal stating their desire to seek admission along with their Passing Certificate, Transcript of
+records, copy of syllabus containing details of course of studies pursued in various courses in the
+examination passed by the applicant (duly countersigned by High Commissioner of India in the
+country). If the student is found eligible, prima facie letter will be sent to the student for carrying
+out further necessary formalities. Following documents are required to be submitted:
+1. Four photocopies of qualifying examination mark sheets (XIIth).
+2. Two Photographs.
+3. Two photocopies of Student Visa.
+4. Two photocopies of Passport.
+5. Original AIDS Test Report.
+6. Certificate of proficiency in English.
+7. Equivalence Certificate.
+8. Resident Permit and ‘C’ Form.
+
+Once the student’s admission is confirmed, he/she is required to attend the Counselling
+session organized by the faculty of the department, the date of which will be intimated to
+students by the college authorities.
+a) The number of seats approved by the appropriate statutory authority in respect of each course or programme of study for the academic year for which admission is proposed to be made is 180 for Arts
+
+b) The conditions of the minimum and maximum age limit of persons for admissions as a student in a particular course or programme of study is 18 years and above
+
+c)The process of selection of eligible candidates applying for such admission: Based on Merit and Personal Counseling and Reservation Policy
+"
+"44","44",
+"45","45","hindi details"
+"46","46","University fees : 720.00
+Tuition fees : 1230.00
+Examination fees : 3250.00
+Student aid fund : 130.00
+Gymkhana fund : 420.00
+Additional credits: 8000
+Library fee : 470.00
+Student service charges : 8000.00
+IAIMS fees: 225
+
+Total : 25600.00
+"
+"47","47","How to apply:
+To apply for admission, please visit our college website http://www.chowgules.ac.in/admission/
+and complete the online admission form as per instructions provided therein.
+Contact Person: Mr. Harish Nadkarni, Vice Principal email: hsn001@chowgules.ac.in
+Documents required:
+Students are required to bring two photocopies (self-attested) of each of the following documents
+along with the originals at the time of admission.
+
+a. For Goa Board students:
+1. Two photocopies of qualifying examination mark sheets (XIIth).
+2. Two photocopies of Leaving Certificate.
+3. Two Photographs .
+
+b. For other Board/Universities students:
+1. Two photocopies of qualifying examination mark sheets (XIIth).
+2. Original as well as two photocopies of Transfer/Leaving certificate.
+3. Original as well as two photocopies of Migration certificate.
+4. Provisional Eligibility Certificate from Chowgule college.
+5. Two Photographs .
+
+c. For International students:
+International students applying directly for admission need to submit an application to the
+Principal stating their desire to seek admission along with their Passing Certificate, Transcript of
+records, copy of syllabus containing details of course of studies pursued in various courses in the
+examination passed by the applicant (duly countersigned by High Commissioner of India in the
+country). If the student is found eligible, prima facie letter will be sent to the student for carrying
+out further necessary formalities. Following documents are required to be submitted:
+1. Four photocopies of qualifying examination mark sheets (XIIth).
+2. Two Photographs.
+3. Two photocopies of Student Visa.
+4. Two photocopies of Passport.
+5. Original AIDS Test Report.
+6. Certificate of proficiency in English.
+7. Equivalence Certificate.
+8. Resident Permit and ‘C’ Form.
+
+Once the student’s admission is confirmed, he/she is required to attend the Counselling
+session organized by the faculty of the department, the date of which will be intimated to
+students by the college authorities.
+a) The number of seats approved by the appropriate statutory authority in respect of each course or programme of study for the academic year for which admission is proposed to be made is 180 for Arts
+
+b) The conditions of the minimum and maximum age limit of persons for admissions as a student in a particular course or programme of study is 18 years and above
+
+c)The process of selection of eligible candidates applying for such admission: Based on Merit and Personal Counseling and Reservation Policy
+"
+"48","48",
+"49","49","BA in geography details"
+"50","50","University fees : 750.00
+Tuition fees : 1860.00
+Examination fees : 3650.00
+Student aid fund : 130.00
+Gymkhana fund : 420.00
+Additional credits: 8000
+Library fee : 470.00
+Student service charges : 10000.00
+IAIMS fees: 225
+
+Total : 23500.00
+"
+"51","51","How to apply:
+To apply for admission, please visit our college website
+http://www.chowgules.ac.in/admission/ and complete the online admission form as per
+instructions provided therein.
+The online admission will be open 30th April 2020
+Contact Person: Mr. Harish Nadkarni, Vice Principal email: hsn001@chowgules.ac.in
+Documents required:
+Students are required to bring two photocopies (self attested) of each of the following
+documents along with the originals at the time of admission.
+
+a. For Goa Board students:
+1. Two photocopies of qualifying examination mark sheets (XII).
+2. Two photocopies of Leaving Certificate.
+3. Two Photographs .
+
+b. For other Board/Universities students:
+1. Two photocopies of qualifying examination mark sheets (XII).
+2. Original as well as two photocopies of Transfer/Leaving certificate.
+3. Original as well as two photocopies of Migration certificate.
+4. Provisional Eligibility Certificate from Chowgule college.
+5. Two Photographs .
+
+c. For International students:
+International students applying directly for admission need to submit an application to the
+Principal stating their desire to seek admission along with their Passing Certificate, Transcript
+of records, copy of syllabus containing details of course of studies pursued in various courses
+in the examination passed by the applicant (duly countersigned by High Commissioner of
+India in the country). If the student is found eligible, prima facie letter will be sent to the
+student for carrying out further necessary formalities. Following documents are required to be
+Submitted:
+1. Four photocopies of qualifying examination mark sheets (XIIth).
+2. Two Photographs.
+3. Two photocopies of Student Visa.
+4. Two photocopies of Passport.
+5. Original AIDS Test Report.
+6. Certificate of proficiency in English.
+7. Equivalence Certificate.
+8. Resident Permit and ‘C’ Form.
+
+Once the student’s admission is confirmed, he/she is required to attend the Counselling
+session organized by the faculty of the department, the date of which will be intimated to
+students by the college authorities.
+a) The number of seats approved by the appropriate statutory authority in respect of each course or programme of study for the academic year for which admission is proposed to be made is 180 for Arts
+
+b) The conditions of the minimum and maximum age limit of persons for admissions as a student in a
+particular course or programme of study is 18 years and above
+
+c)The process of selection of eligible candidates applying for such admission: Based on Merit and
+Personal Counseling and Reservation Policy
+"
+"52","52",
+"53","53","history"
+"54","54","University fees : 620.00
+Tuition fees : 1230.00
+Examination fees : 2250.00
+Student aid fund : 130.00
+Gymkhana fund : 420.00
+Additional credits: 6000
+Library fee : 470.00
+Student service charges : 9000.00
+IAIMS fees: 225
+
+Total : 27660.00
+"
+"55","55","How to apply:
+To apply for admission, please visit our college website
+http://www.chowgules.ac.in/admission/ and complete the online admission form as per
+instructions provided therein.
+The online admission will be open 30th April 2020
+Contact Person: Mr. Harish Nadkarni, Vice Principal email: hsn001@chowgules.ac.in
+Documents required:
+Students are required to bring two photocopies (self attested) of each of the following
+documents along with the originals at the time of admission.
+
+a. For Goa Board students:
+1. Two photocopies of qualifying examination mark sheets (XII).
+2. Two photocopies of Leaving Certificate.
+3. Two Photographs .
+
+b. For other Board/Universities students:
+1. Two photocopies of qualifying examination mark sheets (XII).
+2. Original as well as two photocopies of Transfer/Leaving certificate.
+3. Original as well as two photocopies of Migration certificate.
+4. Provisional Eligibility Certificate from Chowgule college.
+5. Two Photographs .
+
+c. For International students:
+International students applying directly for admission need to submit an application to the
+Principal stating their desire to seek admission along with their Passing Certificate, Transcript
+of records, copy of syllabus containing details of course of studies pursued in various courses
+in the examination passed by the applicant (duly countersigned by High Commissioner of
+India in the country). If the student is found eligible, prima facie letter will be sent to the
+student for carrying out further necessary formalities. Following documents are required to be
+Submitted:
+1. Four photocopies of qualifying examination mark sheets (XIIth).
+2. Two Photographs.
+3. Two photocopies of Student Visa.
+4. Two photocopies of Passport.
+5. Original AIDS Test Report.
+6. Certificate of proficiency in English.
+7. Equivalence Certificate.
+8. Resident Permit and ‘C’ Form.
+
+Once the student’s admission is confirmed, he/she is required to attend the Counselling
+session organized by the faculty of the department, the date of which will be intimated to
+students by the college authorities.
+a) The number of seats approved by the appropriate statutory authority in respect of each course or programme of study for the academic year for which admission is proposed to be made is 180 for Arts
+
+b) The conditions of the minimum and maximum age limit of persons for admissions as a student in a
+particular course or programme of study is 18 years and above
+
+c)The process of selection of eligible candidates applying for such admission: Based on Merit and
+Personal Counseling and Reservation Policy
+"
+"56","56",
+"57","57","BA French or Bachelor of Arts in French language is a 3 year undergraduate course degree which is one of the premium language courses offered by many colleges and universities in India. This course consists of integrated French language and literature with emphasis being laid on spoken French, structure, grammar and writing skills as well as studying literature and poems of France to gain more knowledge and grasp complex language phonetics and linguistic approaches
+
+B.a curriculum includes core courses in:
+Language in Context: Developing Reading and Writing Skills
+Language in Context: Developing Listening and Speaking Skills
+
+The elective courses include:
+French for Tourism and Hospitality 
+Study of Selected Elementary Texte in French
+Introduction to Francophone
+Initiation to Translation
+Overview of 17th Century French Literature
+Overview of 18th Century French Literature
+Overview of 19th Century French Literature
+Business Communication in French
+Study of Collection of French Short Stories
+"
+"58","58","University fees : 630.00
+Tuition fees : 1500.00
+Examination fees : 3650.00
+Student aid fund : 130.00
+Gymkhana fund : 420.00
+Additional credits: 8000
+Library fee : 470.00
+Student service charges : 10000.00
+IAIMS fees: 225
+
+Total : 25690.00
+"
+"59","59","How to apply:
+To apply for admission, please visit our college website
+http://www.chowgules.ac.in/admission/ and complete the online admission form as per
+instructions provided therein.
+The online admission will be open 30th April 2020
+Contact Person: Mr. Harish Nadkarni, Vice Principal email: hsn001@chowgules.ac.in
+Documents required:
+Students are required to bring two photocopies (self attested) of each of the following
+documents along with the originals at the time of admission.
+
+a. For Goa Board students:
+1. Two photocopies of qualifying examination mark sheets (XII).
+2. Two photocopies of Leaving Certificate.
+3. Two Photographs .
+
+b. For other Board/Universities students:
+1. Two photocopies of qualifying examination mark sheets (XII).
+2. Original as well as two photocopies of Transfer/Leaving certificate.
+3. Original as well as two photocopies of Migration certificate.
+4. Provisional Eligibility Certificate from Chowgule college.
+5. Two Photographs .
+
+c. For International students:
+International students applying directly for admission need to submit an application to the
+Principal stating their desire to seek admission along with their Passing Certificate, Transcript
+of records, copy of syllabus containing details of course of studies pursued in various courses
+in the examination passed by the applicant (duly countersigned by High Commissioner of
+India in the country). If the student is found eligible, prima facie letter will be sent to the
+student for carrying out further necessary formalities. Following documents are required to be
+Submitted:
+1. Four photocopies of qualifying examination mark sheets (XIIth).
+2. Two Photographs.
+3. Two photocopies of Student Visa.
+4. Two photocopies of Passport.
+5. Original AIDS Test Report.
+6. Certificate of proficiency in English.
+7. Equivalence Certificate.
+8. Resident Permit and ‘C’ Form.
+
+Once the student’s admission is confirmed, he/she is required to attend the Counselling
+session organized by the faculty of the department, the date of which will be intimated to
+students by the college authorities.
+a) The number of seats approved by the appropriate statutory authority in respect of each course or programme of study for the academic year for which admission is proposed to be made is 180 for Arts
+
+b) The conditions of the minimum and maximum age limit of persons for admissions as a student in a
+particular course or programme of study is 18 years and above
+
+c)The process of selection of eligible candidates applying for such admission: Based on Merit and
+Personal Counseling and Reservation Policy
+"
+"60","60",
+"61","61","konkani details"
+"62","62","University fees : 660.00
+Tuition fees : 1600.00
+Examination fees : 3650.00
+Student aid fund : 130.00
+Gymkhana fund : 420.00
+Additional credits: 8000
+Library fee : 470.00
+Student service charges : 10000.00
+IAIMS fees: 225
+
+Total : 28500.00
+"
+"63","63","How to apply:
+To apply for admission, please visit our college website
+http://www.chowgules.ac.in/admission/ and complete the online admission form as per
+instructions provided therein.
+The online admission will be open 30th April 2020
+Contact Person: Mr. Harish Nadkarni, Vice Principal email: hsn001@chowgules.ac.in
+Documents required:
+Students are required to bring two photocopies (self attested) of each of the following
+documents along with the originals at the time of admission.
+
+a. For Goa Board students:
+1. Two photocopies of qualifying examination mark sheets (XII).
+2. Two photocopies of Leaving Certificate.
+3. Two Photographs .
+
+b. For other Board/Universities students:
+1. Two photocopies of qualifying examination mark sheets (XII).
+2. Original as well as two photocopies of Transfer/Leaving certificate.
+3. Original as well as two photocopies of Migration certificate.
+4. Provisional Eligibility Certificate from Chowgule college.
+5. Two Photographs .
+
+c. For International students:
+International students applying directly for admission need to submit an application to the
+Principal stating their desire to seek admission along with their Passing Certificate, Transcript
+of records, copy of syllabus containing details of course of studies pursued in various courses
+in the examination passed by the applicant (duly countersigned by High Commissioner of
+India in the country). If the student is found eligible, prima facie letter will be sent to the
+student for carrying out further necessary formalities. Following documents are required to be
+Submitted:
+1. Four photocopies of qualifying examination mark sheets (XIIth).
+2. Two Photographs.
+3. Two photocopies of Student Visa.
+4. Two photocopies of Passport.
+5. Original AIDS Test Report.
+6. Certificate of proficiency in English.
+7. Equivalence Certificate.
+8. Resident Permit and ‘C’ Form.
+
+Once the student’s admission is confirmed, he/she is required to attend the Counselling
+session organized by the faculty of the department, the date of which will be intimated to
+students by the college authorities.
+a) The number of seats approved by the appropriate statutory authority in respect of each course or programme of study for the academic year for which admission is proposed to be made is 180 for Arts
+
+b) The conditions of the minimum and maximum age limit of persons for admissions as a student in a
+particular course or programme of study is 18 years and above
+
+c)The process of selection of eligible candidates applying for such admission: Based on Merit and
+Personal Counseling and Reservation Policy
+"
+"64","64",
+"65","65","marathi details"
+"66","66","University fees : 630.00
+Tuition fees : 1300.00
+Examination fees : 5650.00
+Student aid fund : 130.00
+Gymkhana fund : 420.00
+Additional credits: 8000
+Library fee : 470.00
+Student service charges : 9000.00
+IAIMS fees: 225
+
+
+Total : 25500.00
+"
+"67","67","How to apply:
+To apply for admission, please visit our college website
+http://www.chowgules.ac.in/admission/ and complete the online admission form as per
+instructions provided therein.
+The online admission will be open 30th April 2020
+Contact Person: Mr. Harish Nadkarni, Vice Principal email: hsn001@chowgules.ac.in
+Documents required:
+Students are required to bring two photocopies (self attested) of each of the following
+documents along with the originals at the time of admission.
+
+a. For Goa Board students:
+1. Two photocopies of qualifying examination mark sheets (XII).
+2. Two photocopies of Leaving Certificate.
+3. Two Photographs .
+
+b. For other Board/Universities students:
+1. Two photocopies of qualifying examination mark sheets (XII).
+2. Original as well as two photocopies of Transfer/Leaving certificate.
+3. Original as well as two photocopies of Migration certificate.
+4. Provisional Eligibility Certificate from Chowgule college.
+5. Two Photographs .
+
+c. For International students:
+International students applying directly for admission need to submit an application to the
+Principal stating their desire to seek admission along with their Passing Certificate, Transcript
+of records, copy of syllabus containing details of course of studies pursued in various courses
+in the examination passed by the applicant (duly countersigned by High Commissioner of
+India in the country). If the student is found eligible, prima facie letter will be sent to the
+student for carrying out further necessary formalities. Following documents are required to be
+Submitted:
+1. Four photocopies of qualifying examination mark sheets (XIIth).
+2. Two Photographs.
+3. Two photocopies of Student Visa.
+4. Two photocopies of Passport.
+5. Original AIDS Test Report.
+6. Certificate of proficiency in English.
+7. Equivalence Certificate.
+8. Resident Permit and ‘C’ Form.
+
+Once the student’s admission is confirmed, he/she is required to attend the Counselling
+session organized by the faculty of the department, the date of which will be intimated to
+students by the college authorities.
+a) The number of seats approved by the appropriate statutory authority in respect of each course or programme of study for the academic year for which admission is proposed to be made is 180 for Arts
+
+b) The conditions of the minimum and maximum age limit of persons for admissions as a student in a
+particular course or programme of study is 18 years and above
+
+c)The process of selection of eligible candidates applying for such admission: Based on Merit and
+Personal Counseling and Reservation Policy
+"
+"68","68",
+"69","69","psychology details"
+"70","70","University fees : 800.00
+Tuition fees : 1600.00
+Examination fees : 3650.00
+Student aid fund : 130.00
+Gymkhana fund : 420.00
+Additional credits: 8000
+Library fee : 470.00
+Laboratory fees : 6000
+Student service charges : 10000.00
+IAIMS fees: 225
+
+Total : 30500.00
+"
+"71","71","How to apply:
+To apply for admission, please visit our college website
+http://www.chowgules.ac.in/admission/ and complete the online admission form as per
+instructions provided therein.
+The online admission will be open 30th April 2020
+Contact Person: Mr. Harish Nadkarni, Vice Principal email: hsn001@chowgules.ac.in
+Documents required:
+Students are required to bring two photocopies (self attested) of each of the following
+documents along with the originals at the time of admission.
+
+a. For Goa Board students:
+1. Two photocopies of qualifying examination mark sheets (XII).
+2. Two photocopies of Leaving Certificate.
+3. Two Photographs .
+
+b. For other Board/Universities students:
+1. Two photocopies of qualifying examination mark sheets (XII).
+2. Original as well as two photocopies of Transfer/Leaving certificate.
+3. Original as well as two photocopies of Migration certificate.
+4. Provisional Eligibility Certificate from Chowgule college.
+5. Two Photographs .
+
+c. For International students:
+International students applying directly for admission need to submit an application to the
+Principal stating their desire to seek admission along with their Passing Certificate, Transcript
+of records, copy of syllabus containing details of course of studies pursued in various courses
+in the examination passed by the applicant (duly countersigned by High Commissioner of
+India in the country). If the student is found eligible, prima facie letter will be sent to the
+student for carrying out further necessary formalities. Following documents are required to be
+Submitted:
+1. Four photocopies of qualifying examination mark sheets (XIIth).
+2. Two Photographs.
+3. Two photocopies of Student Visa.
+4. Two photocopies of Passport.
+5. Original AIDS Test Report.
+6. Certificate of proficiency in English.
+7. Equivalence Certificate.
+8. Resident Permit and ‘C’ Form.
+
+Once the student’s admission is confirmed, he/she is required to attend the Counselling
+session organized by the faculty of the department, the date of which will be intimated to
+students by the college authorities.
+a) The number of seats approved by the appropriate statutory authority in respect of each course or programme of study for the academic year for which admission is proposed to be made is 180 for Arts
+
+b) The conditions of the minimum and maximum age limit of persons for admissions as a student in a
+particular course or programme of study is 18 years and above
+
+c)The process of selection of eligible candidates applying for such admission: Based on Merit and
+Personal Counseling and Reservation Policy
+"
+"72","72",
+"73","73","philosophy details"
+"74","74","University fees : 620.00
+Tuition fees : 1800.00
+Examination fees : 3650.00
+Student aid fund : 130.00
+Gymkhana fund : 420.00
+Additional credits: 8000
+Library fee : 470.00
+Laboratory fees : 6000
+Student service charges : 10000.00
+IAIMS fees: 225
+
+Total : 26600.00
+"
+"75","75","How to apply:
+To apply for admission, please visit our college website
+http://www.chowgules.ac.in/admission/ and complete the online admission form as per
+instructions provided therein.
+The online admission will be open 30th April 2020
+Contact Person: Mr. Harish Nadkarni, Vice Principal email: hsn001@chowgules.ac.in
+Documents required:
+Students are required to bring two photocopies (self attested) of each of the following
+documents along with the originals at the time of admission.
+
+a. For Goa Board students:
+1. Two photocopies of qualifying examination mark sheets (XII).
+2. Two photocopies of Leaving Certificate.
+3. Two Photographs .
+
+b. For other Board/Universities students:
+1. Two photocopies of qualifying examination mark sheets (XII).
+2. Original as well as two photocopies of Transfer/Leaving certificate.
+3. Original as well as two photocopies of Migration certificate.
+4. Provisional Eligibility Certificate from Chowgule college.
+5. Two Photographs .
+
+c. For International students:
+International students applying directly for admission need to submit an application to the
+Principal stating their desire to seek admission along with their Passing Certificate, Transcript
+of records, copy of syllabus containing details of course of studies pursued in various courses
+in the examination passed by the applicant (duly countersigned by High Commissioner of
+India in the country). If the student is found eligible, prima facie letter will be sent to the
+student for carrying out further necessary formalities. Following documents are required to be
+Submitted:
+1. Four photocopies of qualifying examination mark sheets (XIIth).
+2. Two Photographs.
+3. Two photocopies of Student Visa.
+4. Two photocopies of Passport.
+5. Original AIDS Test Report.
+6. Certificate of proficiency in English.
+7. Equivalence Certificate.
+8. Resident Permit and ‘C’ Form.
+
+Once the student’s admission is confirmed, he/she is required to attend the Counselling
+session organized by the faculty of the department, the date of which will be intimated to
+students by the college authorities.
+a) The number of seats approved by the appropriate statutory authority in respect of each course or programme of study for the academic year for which admission is proposed to be made is 180 for Arts
+
+b) The conditions of the minimum and maximum age limit of persons for admissions as a student in a
+particular course or programme of study is 18 years and above
+
+c)The process of selection of eligible candidates applying for such admission: Based on Merit and
+Personal Counseling and Reservation Policy
+"
+"76","76",
+"77","77","sociology details"
+"78","78","University fees : 620.00
+Tuition fees : 1900.00
+Examination fees : 8650.00
+Student aid fund : 130.00
+Gymkhana fund : 420.00
+Additional credits: 7000
+Library fee : 470.00
+Laboratory fees : 6000
+Student service charges : 9000.00
+IAIMS fees: 225
+
+Total : 24600.00
+"
+"79","79","How to apply:
+To apply for admission, please visit our college website
+http://www.chowgules.ac.in/admission/ and complete the online admission form as per
+instructions provided therein.
+The online admission will be open 30th April 2020
+Contact Person: Mr. Harish Nadkarni, Vice Principal email: hsn001@chowgules.ac.in
+Documents required:
+Students are required to bring two photocopies (self attested) of each of the following
+documents along with the originals at the time of admission.
+
+a. For Goa Board students:
+1. Two photocopies of qualifying examination mark sheets (XII).
+2. Two photocopies of Leaving Certificate.
+3. Two Photographs .
+
+b. For other Board/Universities students:
+1. Two photocopies of qualifying examination mark sheets (XII).
+2. Original as well as two photocopies of Transfer/Leaving certificate.
+3. Original as well as two photocopies of Migration certificate.
+4. Provisional Eligibility Certificate from Chowgule college.
+5. Two Photographs .
+
+c. For International students:
+International students applying directly for admission need to submit an application to the
+Principal stating their desire to seek admission along with their Passing Certificate, Transcript
+of records, copy of syllabus containing details of course of studies pursued in various courses
+in the examination passed by the applicant (duly countersigned by High Commissioner of
+India in the country). If the student is found eligible, prima facie letter will be sent to the
+student for carrying out further necessary formalities. Following documents are required to be
+Submitted:
+1. Four photocopies of qualifying examination mark sheets (XIIth).
+2. Two Photographs.
+3. Two photocopies of Student Visa.
+4. Two photocopies of Passport.
+5. Original AIDS Test Report.
+6. Certificate of proficiency in English.
+7. Equivalence Certificate.
+8. Resident Permit and ‘C’ Form.
+
+Once the student’s admission is confirmed, he/she is required to attend the Counselling
+session organized by the faculty of the department, the date of which will be intimated to
+students by the college authorities.
+a) The number of seats approved by the appropriate statutory authority in respect of each course or programme of study for the academic year for which admission is proposed to be made is 180 for Arts
+
+b) The conditions of the minimum and maximum age limit of persons for admissions as a student in a
+particular course or programme of study is 18 years and above
+
+c)The process of selection of eligible candidates applying for such admission: Based on Merit and
+Personal Counseling and Reservation Policy
+"
+"80","80",
+"81","81","Portuguese details"
+"82","82","University fees : 640.00
+Tuition fees : 1500.00
+Examination fees : 3650.00
+Student aid fund : 130.00
+Gymkhana fund : 420.00
+Additional credits: 8000
+Library fee : 470.00
+Laboratory fees : 6000
+Student service charges : 10000.00
+IAIMS fees: 225
+
+Total : 27000.00
+"
+"83","83","How to apply:
+To apply for admission, please visit our college website
+http://www.chowgules.ac.in/admission/ and complete the online admission form as per
+instructions provided therein.
+The online admission will be open 30th April 2020
+Contact Person: Mr. Harish Nadkarni, Vice Principal email: hsn001@chowgules.ac.in
+Documents required:
+Students are required to bring two photocopies (self attested) of each of the following
+documents along with the originals at the time of admission.
+
+a. For Goa Board students:
+1. Two photocopies of qualifying examination mark sheets (XII).
+2. Two photocopies of Leaving Certificate.
+3. Two Photographs .
+
+b. For other Board/Universities students:
+1. Two photocopies of qualifying examination mark sheets (XII).
+2. Original as well as two photocopies of Transfer/Leaving certificate.
+3. Original as well as two photocopies of Migration certificate.
+4. Provisional Eligibility Certificate from Chowgule college.
+5. Two Photographs .
+
+c. For International students:
+International students applying directly for admission need to submit an application to the
+Principal stating their desire to seek admission along with their Passing Certificate, Transcript
+of records, copy of syllabus containing details of course of studies pursued in various courses
+in the examination passed by the applicant (duly countersigned by High Commissioner of
+India in the country). If the student is found eligible, prima facie letter will be sent to the
+student for carrying out further necessary formalities. Following documents are required to be
+Submitted:
+1. Four photocopies of qualifying examination mark sheets (XIIth).
+2. Two Photographs.
+3. Two photocopies of Student Visa.
+4. Two photocopies of Passport.
+5. Original AIDS Test Report.
+6. Certificate of proficiency in English.
+7. Equivalence Certificate.
+8. Resident Permit and ‘C’ Form.
+
+Once the student’s admission is confirmed, he/she is required to attend the Counselling
+session organized by the faculty of the department, the date of which will be intimated to
+students by the college authorities.
+a) The number of seats approved by the appropriate statutory authority in respect of each course or programme of study for the academic year for which admission is proposed to be made is 180 for Arts
+
+b) The conditions of the minimum and maximum age limit of persons for admissions as a student in a
+particular course or programme of study is 18 years and above
+
+c)The process of selection of eligible candidates applying for such admission: Based on Merit and
+Personal Counseling and Reservation Policy
+"
+"84","84",
+"85","85","software development"
+"86","86","University fees : 630.00
+Tuition fees : 32375.00
+Student aid fund : 130.00
+Gymkhana fund : 420.00
+Library fee : 1000.00
+Other fee : 420.00
+Comp lab fee : 3000.00
+Examination fees : 4500.00
+Student service charge : 10000.00
+General deposit : 230.00
+IAIMS fees : 225.00
+
+Total : 52700.00
+"
+"87","87","How to apply:
+To apply for admission, please visit our college website http://www.chowgules.ac.in/admission/
+and complete the online admission form as per instructions provided therein.
+The online admission will be open 30th April 2020
+Contact Person: Mr. Harish Nadkarni, Vice Principal email: hsn001@chowgules.ac.in
+Documents required:
+Students are required to bring two photocopies (self-attested) of each of the following documents
+along with the originals at the time of admission.
+
+a. For Goa Board students:
+1. Two photocopies of qualifying examination mark sheets (XIIth).
+2. Two photocopies of Leaving Certificate.
+3. Two Photographs .
+
+b. For other Board/Universities students:
+1. Two photocopies of qualifying examination mark sheets (XIIth).
+2. Original as well as two photocopies of Transfer/Leaving certificate.
+3. Original as well as two photocopies of Migration certificate.
+4. Provisional Eligibility Certificate from Chowgule college.
+5. Two Photographs .
+
+c. For International students:
+International students applying directly for admission need to submit an application to the
+Principal stating their desire to seek admission along with their Passing Certificate, Transcript of
+records, copy of syllabus containing details of course of studies pursued in various courses in the
+examination passed by the applicant (duly countersigned by High Commissioner of India in the
+country). If the student is found eligible, prima facie letter will be sent to the student for carrying
+out further necessary formalities. Following documents are required to be submitted:
+1. Four photocopies of qualifying examination mark sheets (XIIth).
+2. Two Photographs.
+3. Two photocopies of Student Visa.
+4. Two photocopies of Passport.
+5. Original AIDS Test Report.
+6. Certificate of proficiency in English.
+7. Equivalence Certificate.
+8. Resident Permit and ‘C’ Form.
+
+Once the student’s admission is confirmed, he/she is required to attend the Counselling
+session organized by the faculty of the department, the date of which will be intimated to
+students by the college authorities.
+a) The number of seats approved by the appropriate statutory authority in respect of each course or programme of study for the academic year for which admission is proposed to be made is 180 for Arts
+
+b) The conditions of the minimum and maximum age limit of persons for admissions as a student in a
+particular course or programme of study is 18 years and above
+
+c)The process of selection of eligible candidates applying for such admission: Based on Merit and
+Personal Counseling and Reservation Policy
+"
+"88","88",
+"89","89","multimedia details"
+"90","90","Tuition fees : 42680.00
+Lab fee : 21500.00
+Admnst fees : 1000.00
+Student aid fund : 130.00
+Gymkhana fund : 420.00
+Library fee : 2000.00
+Other fee : 420.00
+Examination fees : 7150.00
+Student service charge : 10000.00
+General deposit : 230.00
+IAIMS fees : 225.00
+
+
+Total : 85525.00
+"
+"91","91","How to apply:
+To apply for admission, please visit our college website http://www.chowgules.ac.in/admission/
+and complete the online admission form as per instructions provided therein.
+The online admission will be open 30th April 2020
+Contact Person: Mr. Harish Nadkarni, Vice Principal email: hsn001@chowgules.ac.in
+Documents required:
+Students are required to bring two photocopies (self-attested) of each of the following documents
+along with the originals at the time of admission.
+
+a. For Goa Board students:
+1. Two photocopies of qualifying examination mark sheets (XIIth).
+2. Two photocopies of Leaving Certificate.
+3. Two Photographs .
+
+b. For other Board/Universities students:
+1. Two photocopies of qualifying examination mark sheets (XIIth).
+2. Original as well as two photocopies of Transfer/Leaving certificate.
+3. Original as well as two photocopies of Migration certificate.
+4. Provisional Eligibility Certificate from Chowgule college.
+5. Two Photographs .
+
+c. For International students:
+International students applying directly for admission need to submit an application to the
+Principal stating their desire to seek admission along with their Passing Certificate, Transcript of
+records, copy of syllabus containing details of course of studies pursued in various courses in the
+examination passed by the applicant (duly countersigned by High Commissioner of India in the
+country). If the student is found eligible, prima facie letter will be sent to the student for carrying
+out further necessary formalities. Following documents are required to be submitted:
+1. Four photocopies of qualifying examination mark sheets (XIIth).
+2. Two Photographs.
+3. Two photocopies of Student Visa.
+4. Two photocopies of Passport.
+5. Original AIDS Test Report.
+6. Certificate of proficiency in English.
+7. Equivalence Certificate.
+8. Resident Permit and ‘C’ Form.
+
+Once the student’s admission is confirmed, he/she is required to attend the Counselling
+session organized by the faculty of the department, the date of which will be intimated to
+students by the college authorities.
+a) The number of seats approved by the appropriate statutory authority in respect of each course or programme of study for the academic year for which admission is proposed to be made is 180 for Arts
+
+b) The conditions of the minimum and maximum age limit of persons for admissions as a student in a
+particular course or programme of study is 18 years and above
+
+c)The process of selection of eligible candidates applying for such admission: Based on Merit and
+Personal Counseling and Reservation Policy
+"
+"92","92",
+"93","93","VFX details"
+"94","94","Tuition fees : 42680.00
+Lab fee : 21500.00
+Admnst fees : 1000.00
+Student aid fund : 130.00
+Gymkhana fund : 420.00
+Library fee : 2000.00
+Other fee : 420.00
+Examination fees : 7150.00
+Student service charge : 10000.00
+General deposit : 230.00
+IAIMS fees : 225.00
+
+
+Total : 85525.00
+"
+"95","95","How to apply:
+To apply for admission, please visit our college website http://www.chowgules.ac.in/admission/
+and complete the online admission form as per instructions provided therein.
+The online admission will be open 30th April 2020
+Contact Person: Mr. Harish Nadkarni, Vice Principal email: hsn001@chowgules.ac.in
+Documents required:
+Students are required to bring two photocopies (self-attested) of each of the following documents
+along with the originals at the time of admission.
+
+a. For Goa Board students:
+1. Two photocopies of qualifying examination mark sheets (XIIth).
+2. Two photocopies of Leaving Certificate.
+3. Two Photographs .
+
+b. For other Board/Universities students:
+1. Two photocopies of qualifying examination mark sheets (XIIth).
+2. Original as well as two photocopies of Transfer/Leaving certificate.
+3. Original as well as two photocopies of Migration certificate.
+4. Provisional Eligibility Certificate from Chowgule college.
+5. Two Photographs .
+
+c. For International students:
+International students applying directly for admission need to submit an application to the
+Principal stating their desire to seek admission along with their Passing Certificate, Transcript of
+records, copy of syllabus containing details of course of studies pursued in various courses in the
+examination passed by the applicant (duly countersigned by High Commissioner of India in the
+country). If the student is found eligible, prima facie letter will be sent to the student for carrying
+out further necessary formalities. Following documents are required to be submitted:
+1. Four photocopies of qualifying examination mark sheets (XIIth).
+2. Two Photographs.
+3. Two photocopies of Student Visa.
+4. Two photocopies of Passport.
+5. Original AIDS Test Report.
+6. Certificate of proficiency in English.
+7. Equivalence Certificate.
+8. Resident Permit and ‘C’ Form.
+
+Once the student’s admission is confirmed, he/she is required to attend the Counselling
+session organized by the faculty of the department, the date of which will be intimated to
+students by the college authorities.
+a) The number of seats approved by the appropriate statutory authority in respect of each course or programme of study for the academic year for which admission is proposed to be made is 180 for Arts
+
+b) The conditions of the minimum and maximum age limit of persons for admissions as a student in a
+particular course or programme of study is 18 years and above
+
+c)The process of selection of eligible candidates applying for such admission: Based on Merit and
+Personal Counseling and Reservation Policy
+"
+"96","96",
+"97","97","MSc in computer science"
+"98","98","University fees : 630.00
+Tuition fees : 87580.00
+Student aid fund : 120.00
+Gymkhana fund : 420.00
+Laboratory fee : 5000.00
+Library fee : 2000.00
+Other fee : 420.00
+Student activity fee : 420.00
+Student service charge : 10000.00
+
+Total : 106170.00
+"
+"99","99",
+"100","100",
+"101","101","B.Sc. (Hons.) in Zoology is a 3 year under-graduate degree program, the minimum eligibility is the 12th class in science from a recognized school board or its equivalent exam. Interested candidates can get admission to B.Sc. (Hons.) in Zoology on the premise of a candidate's performance in a relevant entrance exam, and subsequent round of counseling.
+
+B.Sc curriculum includes core courses in:
+Animal Diversity : Non Chordates
+Cell and Molecular Biology / Cell Biology & Biomolecules
+Diversity and Biological
+Systems of Chordates
+Fundamentals of Animal and Human Genetics
+Human Physiology
+Biochemistry and Metabolic Regulation
+Developmental Biology
+Wildlife Biology
+
+The elective courses include:
+Vertebrate Endocrinology
+Basic Microbiology and Fundamentals of Animal Biotechnology
+Environmental Toxicology
+Waste Management Techniques
+Animal Cell Culture and Applications
+Aquaculture and Fisheries
+Immunology
+Parasitology
+Molecular Genetics and Forensic Science
+Economic Zoology
+Basic and Applied Entomology
+Fish Preservation and Processing
+Health and Nutrition
+Ecology and Ethology
+Laboratory Techniques in Pathology
+Bio Entrepreneurship
+"
+"102","102","University fees : 600.00
+Tuition fees : 1050.00
+Examination fees : 3550.00
+General deposit : 230.00
+Student aid fund : 130.00
+Gymkhana fund : 420.00
+Laboratory pract fee : 2470.00
+Library fee : 470.00
+Other fee : 420.00
+I.T fee : 820.00
+Student service charge : 10000.00
+IAIMS fees : 225.00
+
+Total : 42500.00
+"
+"103","103","How to apply: To apply for admission, please visit our college website http://www.chowgules.ac.in/admission/ and complete the online admission form as per instructions provided therein. Contact Person: Mr. Harish Nadkarni, Vice Principal email: hsn001@chowgules.ac.in Documents required: Students are required to bring two photocopies (self-attested) of each of the following documents along with the originals at the time of admission.  a. For Goa Board students: 1. Two photocopies of qualifying examination mark sheets (XIIth). 2. Two photocopies of Leaving Certificate. 3. Two Photographs .  b. For other Board/Universities students: 1. Two photocopies of qualifying examination mark sheets (XIIth). 2. Original as well as two photocopies of Transfer/Leaving certificate. 3. Original as well as two photocopies of Migration certificate. 4. Provisional Eligibility Certificate from Chowgule college. 5. Two Photographs .  c. For International students: International students applying directly for admission need to submit an application to the Principal stating their desire to seek admission along with their Passing Certificate, Transcript of records, copy of syllabus containing details of course of studies pursued in various courses in the examination passed by the applicant (duly countersigned by High Commissioner of India in the country). If the student is found eligible, prima facie letter will be sent to the student for carrying out further necessary formalities. Following documents are required to be submitted: 1. Four photocopies of qualifying examination mark sheets (XIIth). 2. Two Photographs. 3. Two photocopies of Student Visa. 4. Two photocopies of Passport. 5. Original AIDS Test Report. 6. Certificate of proficiency in English. 7. Equivalence Certificate. 8. Resident Permit and ‘C’ Form.  Once the student’s admission is confirmed, he/she is required to attend the Counselling session organized by the faculty of the department, the date of which will be intimated to students by the college authorities. a) The number of seats approved by the appropriate statutory authority in respect of each course or programme of study for the academic year for which admission is proposed to be made is 180 for Arts  b) The conditions of the minimum and maximum age limit of persons for admissions as a student in a particular course or programme of study is 18 years and above  c)The process of selection of eligible candidates applying for such admission: Based on Merit and Personal Counseling and Reservation Policy"
+"104","104",
+"105","105","MSc in chemistry"
+"106","106","University fees : 630.00
+Tuition fees : 580.00
+Student aid fund : 120.00
+Gymkhana fund : 420.00
+Laboratory fee : 4000.00
+Library fee : 2000.00
+Other fee : 420.00
+Student activity fee : 420.00
+Student service charge : 12000.00
+
+
+Total : 105176
+"
+"107","107",
+"108","108",
+"109","109","MSc in geography"
+"110","110","University fees : 630.00
+Tuition fees : 5580.00
+Student aid fund : 120.00
+Gymkhana fund : 420.00
+Laboratory fee : 6000.00
+Library fee : 2000.00
+Other fee : 420.00
+Student activity fee : 420.00
+Student service charge : 11000.00
+
+
+Total : 108170.00
+"
+"111","111",
+"112","112",
+"113","113","MA in economics "
+"114","114","Tuition fees : 47865.00
+Student activity fee : 420.00
+Gymkhana fund : 420.00
+Laboratory fee : 4000.00
+Library fee : 2000.00
+Other fee : 420.00
+Student activity fee : 420.00
+Student service charge : 10000.00
+
+
+Total : 60955.00
+"
+"115","115",
+"116","116",
+"117","117","MA in english"
+"118","118","Tuition fees : 50000.00
+Student activity fee : 420.00
+Gymkhana fund : 420.00
+Laboratory fee : 4000.00
+Library fee : 2000.00
+Other fee : 420.00
+Student activity fee : 420.00
+Student service charge : 10000.00
+
+
+Total : 63090.00
+"
+"119","119",
+"120","120",
+"121","121","MA in physchology"
+"122","122","Tuition fees : 32500.00
+Student activity fee : 420.00
+Gymkhana fund : 420.00
+Laboratory fee : 4000.00
+Library fee : 2000.00
+Other fee : 420.00
+Student activity fee : 420.00
+Student service charge : 10000.00
+
+
+Total : 45590.00
+"
+"123","123",
+"124","124",
+"125","125","MA in geography"
+"126","126","University fee : 630.00
+Tuition fees : 35200.00
+Student activity fee : 420.00
+Gymkhana fund : 420.00
+Laboratory fee : 4000.00
+Library fee : 2000.00
+Other fee : 420.00
+Student activity fee : 420.00
+Student service charge : 10000.00
+
+
+Total : 49300.00
+"
+"127","127",
+"128","128",
+"129","129","subject details"
+"130","130",
+"131","131",
+"132","132",
+"133","133","subject details"
+"134","134",
+"135","135",
+"136","136",
+"137","137","subject details"
+"138","138",
+"139","139",
+"140","140",
+"141","141","subject details"
+"142","142",
+"143","143",
+"144","144",
+"145","145","subject details"
+"146","146",
+"147","147",
+"148","148",
+"query","bot_responses"
+"query","bot_responses"
+,"NULL"
+"/
+
+/stop","NULL"
+"7t7t7t","NULL"
+"Are most classes in BA reading/writing intensive?","NULL"
+"Are most classes in this department reading/writing intensive?","NULL"
+"Are the assignments difficult in psychology course?","NULL"
+"Are there any industry interactions related to multimedia in BVoc?","NULL"
+"Are there any industry interactions related to Software Development in Bachelor of Vocational","NULL"
+"Are there any industry interactions related to Software Development in BVoc?","Yes. There are workshops & hands-on interraction sessions in which industry experts come to give talks on various trending technologies."
+"Are there any industry interactions related to VFX in BVoc?","NULL"
+"are there any psychology projects to do in these 3 years?","Yes. In the third year, students are expected to do a project for 4 credits"
+"Are there different subjects in one course?","NULL"
+"Are there Seminary courses conducted in college?","NULL"
+"Are they any facilities for Internship in college itself after completing BA?","NULL"
+"Are we provided internship after completing the BA in psychology?","NULL"
+"are yo a bot","NULL"
+"are you a bot","NULL"
+"are you boooooooot","NULL"
+"Boi","NULL"
+"Can I be a full stack developer after a bvoc software development course?","NULL"
+"Can I do bsc in a particular subject?","NULL"
+"Can I do double master's in psychology?","parvatibai chowgule college doesn't support double major in Psychology"
+"Can I do Ma in psychology?","Yes. Parvatibai Chowgule College offers a Post graduate program in Child Psychology and Child Development."
+"can I do single major in bachelor's of science?","NULL"
+"can I do single major in bsc ?","NULL"
+"Can I get a diploma in BVoc multimedia?","NULL"
+"Can I get a diploma in bvoc software development?","Yes. If you pass in all the subjects in 1st year,you can get diploma and again if you clear in all the subjects for the second year then you get advanced diploma, and if you complete for all three years with no backlogs then you can get the degree."
+"Can I get a diploma in bvoc VFX?","NULL"
+"Can I get a list of all the degrees in the college","NULL"
+"Can I take admission in two different courses or some course in different college after declaration of a cut off?","NULL"
+"Can I take admission in two different courses?","NULL"
+"Can we do a double major in bvoc in multimedia course?","NULL"
+"can we do a double major in bvoc vfx course?","NULL"
+"Can we do a single  major in bvoc in multimedia course?","NULL"
+"can we do a single major in bvoc vfx course?","NULL"
+"Can we do double major in bsc?","NULL"
+"can we do single major in bsc in  biochemistry?","NULL"
+"can we do single major in bsc in  biotechnology?","NULL"
+"can we do single major in bsc in  chemistry?","NULL"
+"can we do single major in bsc in  geography?","NULL"
+"can we do single major in bsc in  geology?","NULL"
+"can we do single major in bsc in  mathematics?","NULL"
+"can we do single major in bsc in botany?","NULL"
+"can we do single major in bsc in computer science?","Yes. Autonomy programme structure of our college allows it."
+"can we do single major in bsc in maths?","NULL"
+"can we do single major in bsc in physics?","NULL"
+"can we do single major in bsc in zoology?","NULL"
+"Can we do single major in bsc?","NULL"
+"Can we get an internship while studying BVoc in a multimedia course?","NULL"
+"Can we get an internship while studying bvoc VFX course?","NULL"
+"Can we get internship while studying bvoc course?","Yes. We can get internships.The internship cell of the college helps you to get the right internship"
+"Can we see the prospectus?","NULL"
+"Can we take double major in chemistry!","NULL"
+"Can you give me a list of Bachelor of Art's degrees?","NULL"
+"can you give me a list of Bachelor of Science degrees","NULL"
+"Can you give me the list of bachelor degree","NULL"
+"Can you give me the list of bvoc degree?","NULL"
+"Can you give me the list of pgdc in computer science?","NULL"
+"Can you give me the list of pgdc?","NULL"
+"Can you give me the list of post graduate courses","NULL"
+"Can you give me the list of under graduate degre","NULL"
+"can you help me","NULL"
+"can you help?","NULL"
+"can you show me a list of Science degrees?","NULL"
+"Can you show me all the courses available in bsc?","NULL"
+"Can you show me all the subjects available in bsc?","NULL"
+"Can you show me the list of bachelor's in science degree?","NULL"
+"Can you tell me more details on the subjects offered?","NULL"
+"can you tell me something about bvoc","NULL"
+"Can you tell me which editing softwares used in bvoc in multimedia courses?","NULL"
+"Could you tell me about bvoc","NULL"
+"could you tell me something about Bvoc?","NULL"
+"D","NULL"
+"date for bsc admissions?","NULL"
+"Do the college provide child psychology?","NULL"
+"Do the college provide DSC english and communicative english?","NULL"
+"Do the college provide DSC psychology?","NULL"
+"Do we get mentors in bvoc courses?","NULL"
+"Does","NULL"
+"Does psychology course conduct any trips?","As and when it is feasible, a study tour is organised."
+"Does the college have an Aviation course?","NULL"
+"Does the literature course helps us in writing a book and will the college help us in publishing it?","NULL"
+"Does this college also have a post graduate level education for BVoc?","No. In the state of Goa there is no provision for M.Voc. People who do Bvoc can apply for MSc. I.T offered by the college."
+"Does this college also have a post graduate level education for multimedia BVoc?","NULL"
+"Does this college also have a post graduate level education for vfx BVoc?","NULL"
+"Does this college also have a post graduate level education?","NULL"
+"Each semester consists of how many subjects?","NULL"
+"Ft","NULL"
+"gfdgdfhgerht384ytioaweg t9qpw4yf kgfbueihflshdfuodshglkrjbgahSfgerjnggksuietjgne;ioaogfefyuakasiusdjlkgosiusedibdbkxdnxjauahj","NULL"
+"give me a list of Bachelor of Science degrees","NULL"
+"Give me details of the syllabus structure in bvoc course.","NULL"
+"Give me the eligibility for computer science?","12th Science with Mathematics"
+"help me /","NULL"
+"Hi, Can you tell me which editing softwares used in bvoc Vfx course?","NULL"
+"Hoi there","NULL"
+"How are BA in geography and BSc in geography different from each other","NULL"
+"How are BA in mathematics and BSc in mathematics different from each other","NULL"
+"How are Semester End exams conducted for bvoc in multimedia course?","NULL"
+"How are Semester End exams conducted for bvoc software development course?","1.It is decided by the faculty how they want to conduct the exams. 2.College has some continuous way of assessment in which students are assessed throughout the semester. 3.College conducts few exams in continuous assessment and then the semester ends."
+"How are Semester End exams conducted for bvoc VFX course?","NULL"
+"How are the practicals conducted?","NULL"
+"how are you","NULL"
+"How are you?","NULL"
+"How can I register myself for undergraduate courses?","NULL"
+"How can sociology course benefit us in future?","NULL"
+"how can yo help?","NULL"
+"How helpful BA in psychology  is?","NULL"
+"How long are the BVoc in multimedia courses?","NULL"
+"How long are the BVoc VFX courses?","NULL"
+"How long is the bachelor's course?","NULL"
+"how long is the BVoc courses","The degree is for 3 Years. There are 3 different exit points, If you leave the course in the first year you get the dimploma and if you leave in the second year you get advanced diploma and for the third year its the degree."
+"How long is the BVoc in a multimedia course?","NULL"
+"How long is the BVoc in Software development course?","The degree is for 3 Years. There are 3 different exit points, If you leave the course in the first year you get the dimploma and if you leave in the second year you get advanced diploma and for the third year its the degree."
+"How long is the BVoc in VFX course?","NULL"
+"How long is the English course?","NULL"
+"How long is the history course?","NULL"
+"How long will be the B.A course?","NULL"
+"How many colleges in Goa offer bvoc software development courses?","NULL"
+"How many credits are required to pass the course?","NULL"
+"How many diploma courses are available?","NULL"
+"How many internal tests are conducted for a semester in bvoc in multimedia?","NULL"
+"How many internal tests are conducted for a semester in bvoc software development?","That depends on the course and also the credit of the course generally for the 3-4 credit course we have 4 contineous assesment and 3 credit course we generally have 2 contineous assesment"
+"How many internal tests are conducted for a semester in bvoc vfx course?","NULL"
+"How many internal tests are conducted for a semester in bvoc vfx?","NULL"
+"How many seats are available for Bsc geography course? Is there any limit?","NULL"
+"How many subject are there for bsc","NULL"
+"How many subjects are there for ba","NULL"
+"How many subjects are there in each semester of bvoc multimedia?","NULL"
+"How many subjects are there in each semester of bvoc software development?","NULL"
+"How many subjects are there in each semester of bvoc VFX?","NULL"
+"How many subjects can we choose in B.A?","NULL"
+"How many years does it take to complete the bvoc in multimedia course?","NULL"
+"How many years does it take to complete the bvoc vfx course?","NULL"
+"How many years has a bvoc in multimedia courses consist of?","NULL"
+"How many years has a bvoc vfx course consist of?","NULL"
+"How many years is a bvoc course consist of?","The degree is for 3 Years. There are 3 different exit points, If you leave the course in the first year you get the dimploma and if you leave in the second year you get advanced diploma and for the third year its the degree."
+"How many years is for phd course?","NULL"
+"How many years is of post graduate course","NULL"
+"how many years it takes to complete bachelor's of science","In chowgule college it takes minimum 3 years to complete Bsc"
+"how many years it takes to complete bsc?","In chowgule college it takes minimum 3 years to complete Bsc"
+"How many years it takes to complete bvoc software development course?","The degree is for 3 Years. There are 3 different exit points, If you leave the course in the first year you get the dimploma and if you leave in the second year you get advanced diploma and for the third year its the degree."
+"How much is the fee structure for a whole year for Bachelors in Vocational?","NULL"
+"How to get admission form?","NULL"
+"How will be the psychology experiments conducted?","Psychology practicals are conducted on campus in the laboratory. However due the the pandemic, the same are being done in an online mode."
+"Hw r u","NULL"
+"I am a student from Rosary HSS and I have done 12th computer science. I got 48% so am I eligible for bvoc in multimedia course?","NULL"
+"I am a student from Rosary HSS and I have done 12th computer science. I got 48% so am I eligible for bvoc Vfx course?","NULL"
+"I am From Abu Dhabi and I want to do a Bvoc in a multimedia course? Is that possible for me to do?","NULL"
+"I am From Abu Dhabi and I want to do a Bvoc VFX course? Is that possible for me to do?","NULL"
+"I am interested in the multimedia course, which type of cameras and PC is used in the course?","NULL"
+"I am interested in the Vfx course, which type of cameras and PC is used in the course?","NULL"
+"I did not have taken mathematics in class 12th so Can i opt for B.A.(H) Economic?","NULL"
+"I did not have taken mathematics in class 12th so Can i opt for or B.A.(H) Business Economics?","NULL"
+"I have done 12th Arts, am I eligible for bvoc in multimedia course?","NULL"
+"I have done 12th Arts, am I eligible for bvoc vfx course?","NULL"
+"I have done 12th Commerce, am I eligible for bvoc in multimedia course?","NULL"
+"I have done 12th Commerce, am I eligible for bvoc vfx course?","NULL"
+"I have done 12th Science, am I eligible for bvoc in multimedia course?","NULL"
+"I have done 12th Science, am I eligible for bvoc vfx course?","NULL"
+"I have done 12th Vocational, am I eligible for bvoc in multimedia course?","NULL"
+"I have done 12th Vocational, am I eligible for bvoc vfx course?","NULL"
+"I want to apply for a vocational course. How should I do it?","NULL"
+"i want to hi my fall back","NULL"
+"I want to know what are the technologies used in multimedia courses?","NULL"
+"I want to know what are the technologies used in vfx courses?","NULL"
+"I want to know what is the eligibility criteria for multimedia?","NULL"
+"I want to know what is the eligibility criteria for VFX?","NULL"
+"I want to know which is better in BVoc multimedia/CS?","NULL"
+"I want to know which is better VFX/CS?","NULL"
+"In which year the internship is done for bvoc in multimedia courses?","NULL"
+"In which year the internship is done for bvoc software development courses?","Internships usually starts from the second year as the first year is full of gaining the basic skillset.You can do your full internships by third year."
+"In which year the internship is done for bvoc vfx courses?","NULL"
+"Is B.A good for IAS?","NULL"
+"Is bvoc software development equivalent to bsc computer science?","NULL"
+"Is classroom facility available for bvoc in multimedia?","NULL"
+"Is classroom facility available for bvoc software development?","Yes. The real as well as virtual classrooms are available for this course."
+"Is classroom facility available for bvoc vfx?","NULL"
+"Is Double major subjects included in the bvoc in multimedia course?","NULL"
+"Is Double major subjects included in the bvoc software development course?","No! Its pure skill orinteted course where you have to study the paper which are offered."
+"Is Double major subjects included in the bvoc vfx course?","NULL"
+"is it possible to complete one year in this college and other years in another college?","NULL"
+"Is it possible to obtain a bachelor's degree and a master's degree at the same time?","NULL"
+"Is it worth applying for bvoc course?","Bvoc is an initiative by UGC which is started to enhance student on a particular skillset rather than generalising on everything. "
+"Is it worth applying for bvoc in a multimedia course?","NULL"
+"Is it worth applying for bvoc vfx course?","NULL"
+"Is MA in psychology available then how long will the degree course be?","Yes, we offer MA in Child Psychology and Child Development. It's a post graduate program of 2 years."
+"Is Single major subjects included in the bvoc in multimedia course?","NULL"
+"Is Single major subjects included in the bvoc software development course?","No! We dont have a concept of single magor or double."
+"Is Single major subjects included in the bvoc vfx course?","NULL"
+"Is the course allows semester or quarter systems?","NULL"
+"Is there a Marine microbiology  course in your college?","NULL"
+"is there scope for higher studies for BA in psychology?","After BA in Psychology, you can enrol for Masters in Psychology with the specialization of your choice. Clinical, Industrial, Social, Child, Counselling, Criminal Psychology are some of the specializations in Psychology."
+"is there scope for higher studies?","NULL"
+"List all the courses available in bachelor's of science ?","NULL"
+"List all the courses available in bsc?","NULL"
+"list of BA degrees","NULL"
+"list of BSc degrees","NULL"
+"List of computer science courses","8 core courses,12 Elective courses,1 project work"
+"List of pg diploma courses?","NULL"
+"qwertyuiop","NULL"
+"show me all the subjects available for bachelors in science degree","NULL"
+"Show me the eligibility criteria for bvoc?","NULL"
+"Show me the syllabus for bvoc course?","NULL"
+"Show me two companies which are recruiting bvoc students?","NULL"
+"some new  message to hit up my fallback action","NULL"
+"some new kind of text","NULL"
+"Suppose if I do Ma in psychology than can I opt for a career to be a psychologist?","If you pursue Clinical Psychology, you have to do MPhil to be able to call yourself a psychologist and practice in the field. "
+"tell abot Bachelor of Arts in english","NULL"
+"tell me about bsc in biochemistry","NULL"
+"tell me about bsc in botany?","NULL"
+"tell me about bsc in chemistry","NULL"
+"tell me about bsc in geography?","NULL"
+"tell me about bsc in geology?","NULL"
+"tell me about bsc in mathematics?","NULL"
+"tell me about bsc in maths?","NULL"
+"tell me about bsc in physics?","NULL"
+"tell me about bsc in zoology?","NULL"
+"Tell me about BVoc in a multimedia course?","NULL"
+"Tell me about BVoc in software development course?","Bvoc is a degree course which has multiple exit points there is purely skill orented and mostly handson and less of theory and more of practical and all the courses are related to building a skillset to become a good software developer."
+"Tell me about BVoc in vfx course?","NULL"
+"Tell me about bvoc?","NULL"
+"Tell me about the courses offered by the college","NULL"
+"tell me about the UG programs?","NULL"
+"tell me bvoc","NULL"
+"Tell me eligibility for bvoc course?","NULL"
+"tell me something about courese realated to CS","NULL"
+"wat is bvoc","NULL"
+"What are the activities conducted in B.A psychology?","Psychospectrum(Psychology Exhibition)wherein students of the department exhibit charts,models and equipment,social experiments,Discussion Forum (extension activity)wherein experts interact with the audience."
+"What are the activities conducted in BA geography?","NULL"
+"What are the activities conducted in BA psychology?","NULL"
+"What are the career options open for Philosophical course?","NULL"
+"What are the courses offered by the college","NULL"
+"What are the different streams offered at this college?","NULL"
+"What are the dvantages of BA in psychology?","NULL"
+"What are the eligibility for admission for ba in English","NULL"
+"What are the facilities offered in bvoc course?","NULL"
+"What are the field work in BA psychology?","Students are expected to complete 120 hours of internship in an organisation that works in the field of their choice."
+"What are the field work in BA?","NULL"
+"What are the grades needed for bvoc?","NULL"
+"what are the internship opportunities in BA?","NULL"
+"What are the job opportunities offered by bvoc software development course?","NULL"
+"What are the number of seats offered in bvoc?","NULL"
+"What are the other possibilities that the History course will help us?","NULL"
+"What are the outcomes of bvoc software development course?","NULL"
+"What are the pros and cons of taking bvoc software development programme?","NULL"
+"What are the streams offered at this college?","NULL"
+"What are the subjects offered under bvoc multimedia courses?","NULL"
+"What are the subjects offered under bvoc software development courses?","NULL"
+"What are the subjects offered under bvoc VFXcourses?","NULL"
+"what are the vision and mission of the BA/BSc/BVoc course?","NULL"
+"What are the work-study opportunities in computer science degree?","NULL"
+"What assessment methods are used by bvoc in multimedia course?","NULL"
+"What assessment methods are used by bvoc vfx course?","NULL"
+"What assessment methods are used by bvoc vfx course.?","NULL"
+"What assessments methods are used by bvoc software development course.?","We use everything from presentation to written exams to projects and assignments."
+"what can you do","NULL"
+"what can you do?","NULL"
+"what courses u r providing ?wanna know about ba course in details.","NULL"
+"What do I get after completion of the course?","NULL"
+"What does the bsc computer science covers?","NULL"
+"What does the bvoc course cover?","NULL"
+"what does this college have for BA courses that the rest don't?","NULL"
+"what is bovc","NULL"
+"what is bvoc","Bachelor of Vocational Education is a specialized undergraduate bachelor's degree which qualifies the graduate as a vocational teacher in public schools or trainer for private companies."
+"What is bvoc software development course?","NULL"
+"what is bvoc!","NULL"
+"what is bvoc?","Bachelor of Vocational Education is a specialized undergraduate bachelor's degree which qualifies the graduate as a vocational teacher in public schools or trainer for private companies."
+"What is the admission process of bvoc software development course?","To be eligible for B.Voc you need to have passing certificate of any higher-secondary and you should have percentage more than 55%."
+"What is the admission process of the bvoc in multimedia course?","NULL"
+"What is the admission process of the bvoc vfx course?","NULL"
+"What is the attendance scheme in bvoc software development course?","The attendance scheme for the whole college is same i.e. You need tgo have minimum 75% of attendance to answer the exams."
+"What is the campus placement rate in bvoc in multimedia course?","NULL"
+"What is the campus placement rate in bvoc software development?","The first batch was passed out in 2019. Thirteen students were appeared in exam out of which ten are passed out and currently four are working at different places. "
+"What is the campus placement rate in bvoc vfx course?","NULL"
+"What is the credit system in bvoc in multimedia course?","NULL"
+"What is the credit system in Bvoc?","NULL"
+"What is the cut off point for bvoc course?","NULL"
+"What is the cutoff for computer science degree?","Merit list is prepared based on 12th marks and students are admitted as per the merit list"
+"What is the degree to be awarded after completion of the course","NULL"
+"What is the difference between BA in mathematics and BSc in mathematics","NULL"
+"What is the duration of bvoc in multimedia course?","NULL"
+"What is the duration of bvoc software development course?","The degree is for 3 Years. There are 3 different exit points, If you leave the course in the first year you get the dimploma and if you leave in the second year you get advanced diploma and for the third year its the degree."
+"What is the duration of each course","NULL"
+"what is the eligibility criteria for bsc in biochemistry?","NULL"
+"what is the eligibility criteria for bsc in biotechnology","NULL"
+"what is the eligibility criteria for bsc in botany","NULL"
+"what is the eligibility criteria for bsc in chemistry?","NULL"
+"what is the eligibility criteria for bsc in computer science?","12th Science with Mathematics"
+"what is the eligibility criteria for bsc in geography?","NULL"
+"what is the eligibility criteria for bsc in geology?","NULL"
+"what is the eligibility criteria for bsc in mathematics","NULL"
+"what is the eligibility criteria for bsc in maths?","NULL"
+"what is the eligibility criteria for bsc in physics?","NULL"
+"what is the eligibility criteria for bsc in zoology","NULL"
+"What is the eligibility criteria to get into BA?","NULL"
+"What is the group size of students in the lab for bvoc software development course?","NULL"
+"What is the outcome of Bsc computer science","Students pursue Masters in Computer Science or become entrepreneurs"
+"What is the procedure to get into BA?","NULL"
+"what is the scope of taking BA?","NULL"
+"What is the size of each batch for practicals ?","NULL"
+"What is the syllabus for the bvoc course?","NULL"
+"What is the weight of each credit","NULL"
+"what jobs can i apply for after BVOC in softwear devolopment","NULL"
+"What kind of extra curricular activiies are provided here?","NULL"
+"What kind of practicals are conducted?","NULL"
+"What makes the BA in psychology interesting?","""Besides the core courses we offer 4 verticals as electives - lifespan development, applied psychology, individual and society, and biological foundations of Psychology. "
+"What more does psychology course offer?","Besides the core courses we offer 4 verticals as electives - lifespan development, applied psychology, individual and society, and biological foundations of Psychology. "
+"what other academic certificates or courses should I do to boost my BA degree value?","NULL"
+"What percentage of students get interenship in computer science?","NULL"
+"what qualifications are required for bsc in biochemistry?","NULL"
+"what qualifications are required for bsc in biotechnology?","NULL"
+"what qualifications are required for bsc in botany?","NULL"
+"what qualifications are required for bsc in chemistry?","NULL"
+"what qualifications are required for bsc in computer science?","12th Science with Mathematics"
+"what qualifications are required for bsc in geography","NULL"
+"what qualifications are required for bsc in geology?","NULL"
+"what qualifications are required for bsc in mathematics?","NULL"
+"what qualifications are required for bsc in maths?","NULL"
+"what qualifications are required for bsc in zoology?","NULL"
+"What qualifications are required for bvoc in multimedia course?","NULL"
+"What qualifications are required for bvoc software development course.","To be eligible for B.Voc you need to have passing certificate of any higher-secondary and you should have percentage more than 55%."
+"What qualifications are required for bvoc vfx course?","NULL"
+"What research opportunities are available for undergraduates in BA in psychology?","Yes. In the third year, students are expected to do a project for 4 credits"
+"What time does the college starts in the morning","NULL"
+"What will be the topics in Economics whether it will be Major economic or Micro economic in the first semester?","NULL"
+"What would we study in BA in BVoc?","NULL"
+"What would we study in BA in CS?","NULL"
+"What would we study in BA in psychology?","""In the first year you will study only the core courses in Psychology. "
+"What's the fees for bsc in computer science","Around 22,000/-. Please contact Accounts Dept of College for the exact fees."
+"Where will I find admission form","NULL"
+"Which other courses should I take if I want to do master's in psychology?","If you want to do Master's in Psychology, I would strongly recommend that you take up Single Major in Psychology. The courses offered by the department are sufficient to create a strong basis for post graduate studies."
+"Which teacher or sir I should meet if I want to know more about ba","NULL"
+"Which teacher or sir I should meet if I want to know more about bsc in c.s","NULL"
+"Which teacher or sir I should meet if I want to know more about bsc in chemistry","NULL"
+"Which teacher or sir I should meet if I want to know more about bsc in computer science","NULL"
+"Who are the professors of psychology subject?","NULL"
+"what time is it right now?",NULL

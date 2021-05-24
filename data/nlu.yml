@@ -96,12 +96,17 @@ nlu:
   examples: |
     - i want to know [subject](ent_query) details
     - give me [subject](ent_query) details
+    - [fees](ent_query)
+    - [Fees](ent_query)
 
 - intent: course
   examples: |
     - i want to know [course](ent_course) details
     - give me [course](ent_course) details
     - i want to know details for [computer science](ent_course)
+    - i want to know details for [software dev](ent_course)
+    - [Software Development](ent_course)
+    - [softwaredevelopment](ent_course)
 
 - intent: degree
   examples: |
@@ -110,3 +115,6 @@ nlu:
     - i want to know details for [bvoc](ent_degree)
     - [BA](ent_degree)
     - [ba](ent_degree)
+    - [msc](ent_degree)
+    - [MSc](ent_degree)
+    - show me deatils about [Msc](ent_degree)
