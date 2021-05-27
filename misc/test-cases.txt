@@ -1,0 +1,84 @@
+1) user greets ---> ....----------->	  1) Bot ask for program slot
+					  2) fill program slot
+				          3) bot ask for degree slot
+					  4) fill degree slot
+   					  5) bot ask for course slot
+                                          6) fill course slot
+					  7) bot ask for query slot
+					  8) fill query slot
+  					  9) provide deatils
+
+
+2) user fills program [undergrad]--->     1) fill program slot
+				          2) bot ask for degree slot
+					  3) fill degree slot
+   					  4) bot ask for course slot
+                                          5) fill course slot
+					  6) bot ask for query slot
+					  7) fill query slot
+  					  8) provide deatils
+
+3) user fill degree but degree belongs many programs [computer science] ---> 1) display which program cs belongs to ----> query to db ----> returns x
+					 				 2) bot will display x for the user to select
+									 3) user select program
+									 4) program slot will filled
+                                                			 5) state1 - program set to postgard diploma ----> couser slot to 'na' ---> go to step 7
+  						   			   state2 - program set to undergrad -----> bot ask for course slot
+									 6) if state2 == true ---> fill course slot
+       									 7) ask query slot
+									 8) fill query slot
+									 9) provide deatils
+
+
+4) user fills drgree slot ---------------------->       1)bot will ask for course slot 
+							2)fill course slot
+					  		3) bot ask for query slot
+					 		4) fill query slot
+  					  		5) provide deatils
+
+
+5) user fills course slot ---------------------->      	1) bot ask for query slot
+					 		2) fill query slot
+  					  		3) provide deatils
+
+6) user fills course slot but course belongs to many degrees *(tell me about chemistry)--------->      	
+									 1) display which degree course belongs to ----> query to db ----> returns x
+					 				 2) bot will display x for the user to select
+									 3) user select degree
+									 4) degree slot will filled
+                                                			 5) state1 - degree set to Bsc ----> couser slot to 'chem' ---> go to step 7
+  						   			   state2 - degree set to Msc -----> bot ask for course slot to 'chem'
+									 6) if state2 == true ---> fill course slot
+       									 7) ask query slot
+									 8) fill query slot
+									 9) provide deatils
+
+
+5) user fills query slot(tell me subject details) ---------->      	 1) Bot displays a message saying "please provide more details"
+									 2) Bot ask for program slot
+					  				 3) fill program slot
+				          				 4) bot ask for degree slot
+									 5) fill degree slot
+   									 6) bot ask for course slot
+                                       					 7) fill course slot
+					 				 8) bot ask for query slot
+					 				 9) fill query slot
+  					 				 10) provide deatils
+					  		 		
+
+
+6) user fill drgree + program slots ------------------------->  1) bot ask for course slot
+                                          			2) fill course slot
+					  			3) bot ask for query slot
+					 			4) fill query slot
+  					  			5) provide deatils
+
+
+7) user asks tell me about all degrees in your college ------>  1) bot will display all degrees (utter or dispatcher) 
+
+
+
+8)user fill drgree + course slots ------------------------->  	1) bot ask for query slot
+					 			2) fill query slot
+  					  			3) provide deatils
+

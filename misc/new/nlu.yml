@@ -1,0 +1,472 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: program
+  examples: |
+    - i want details on programs
+    - i want information on programs
+    - give me info on programs
+    - info on progs
+    - information on programs
+    - provide me info on programs
+    - programs offered by your college?
+    - i want to know about programs in your college
+    - tell me about programs in your college
+    - what are the various programs offered by your college
+    - can you give me info on programs offered by your college
+
+- intent: diploma
+  examples: |
+    - [diploma](ent_program)
+    - i want details on [diploma](ent_program) programs
+    - i want information on [diploma](ent_program) programs
+    - Give me info on [diploma](ent_program)
+    - Give me information on [diploma](ent_program)
+    - I want to know about [diploma](ent_program) in your college 
+    - Does the college offer [diploma](ent_program) course
+    - what are the various [diploma](ent_program) programs
+    - I want to know more about [diploma](ent_program)
+    - give me details on [diploma](ent_program)
+
+- intent: under_graduate
+  examples: |
+    - [under graduate](ent_program)
+    - [undergrad] programs(ent_program)
+    - i want details on [undergraduate](ent_program) programs
+    - i want information on [undergraduate](ent_program) programs
+    - Give me info on [undergraduate](ent_program)
+    - I want to know about [undergraduate](ent_program) in your college
+    - Does the college offer [undergraduate](ent_program) course
+    - what are the various [undergraduate](ent_program) programs
+    - Give me details on [undergraduate](ent_program) programs
+    - what are the various [undergraduate](ent_program) programs
+    - provide me info on [undergraduate](ent_program) programs
+    - info on [undergraduate](ent_program) programs
+
+
+
+- intent: phd
+  examples: |
+    - [phd](ent_program)
+    - i want details on [phd](ent_program) programs
+    - i want information on [phd](ent_program) programs
+    - Give me info on [phd](ent_program)
+    - I want to know about [phd](ent_program) in your college
+    - Does the college offer [phd](ent_program) course
+    - what are the various [phd](ent_program) programs
+
+
+
+- intent: post_graduate_diploma
+  examples: |
+    - [postgraduate diploma](ent_program)
+    - i want details on [postgraduate diploma](ent_program) programs
+    - i want information on [postgraduate diploma](ent_program) programs
+    - Give me info on [postgraduate diploma](ent_program)
+    - I want to know about [postgraduate diploma](ent_program) in your college
+    - Does the college offer [postgraduate diploma](ent_program) course
+    - what are the various [postgraduatediploma](ent_program) programs
+
+
+
+- intent: post_graduate
+  examples: |
+    - [postgraduate](ent_program)
+    - i want details on [postgraduate](ent_program) programs
+    - i want information on [postgraduate](ent_program) programs
+    - Give me info on [postgraduate](ent_program)
+    - I want to know about [postgraduate](ent_program) in your college
+    - Does the college offer [postgraduate](ent_program) course
+    - what are the various [postgraduate](ent_program) programs
+
+    - [post grad](ent_program)
+    - tell me about [postgraduate](ent_program) programs
+    - can you give me info on [postgraduate](ent_program) programs
+    - info on [postgraduate](ent_program) programs
+
+- intent: degree
+  examples: |
+    - [Bachelor of Arts](ent_degree)
+    - [Bachelor of Science](ent_degree)
+    - [Bachelor of Vocation](ent_degree)
+    - [Master of Science](ent_degree)
+    - [Master of Arts](ent_degree)
+    - [Aviation, Hospitality & Customer Service](ent_degree)
+    - [aviation](ent_degree)
+    - [hospitality](ent_degree)
+    - [customer service](ent_degree)
+    - [Computer Science](ent_degree)
+    - [cs](ent_degree)
+    - [Geography](ent_degree)
+    - [geo](ent_degree)
+    - [Computer Science](ent_degree)
+    - [BSC](ent_degree)
+    - [BA](ent_degree)
+    - [BVOC](ent_degree)
+    - [MSc](ent_degree)
+    - [MA](ent_degree)
+    - i want to know [degree](ent_degree) details
+    - give me [degree](ent_degree) details
+    - i want to know details for [Bachelor of Vocation](ent_degree)
+    - i want to know details for [Bachelor of Arts](ent_degree)
+    - i want to know details for [Bachelor of Science](ent_degree)
+    - i want to know details for [Master of Science](ent_degree)
+    - i want to know details for [Master of Arts](ent_degree)
+
+- intent: course
+  examples: |
+    - [Software Development](ent_course)
+    - [Computer Science](ent_course)
+    - [Chemistry](ent_course)
+    - [Biochemistry](ent_course)
+    - [Geography](ent_course)
+    - [Mathematics](ent_course)
+    - [Geology](ent_course)
+    - [Biotechonology](ent_course)
+    - [Botany](ent_course)
+    - [Physics](ent_course)
+    - [English](ent_course)
+    - [Economics](ent_course)
+    - [Hindi](ent_course)
+    - [History](ent_course)
+    - [French](ent_course)
+    - [Konkani](ent_course)
+    - [Marathi](ent_course)
+    - [Psychology](ent_course)
+    - [Philosophy](ent_course)
+    - [Sociology](ent_course)
+    - [Portuguese](ent_course)
+    - [Multimedia](ent_course)
+    - [VFX](ent_course)
+    - [Zoology](ent_course)
+    - i want to know about [softwaredevelopment](ent_course)
+    - tell me about [softwaredevelopment](ent_course)
+    - i want to know about [computerscience](ent_course)
+    - tell me about [computerscience](ent_course)
+    - i want to know details for [computer science](ent_course)
+    - give me [chemistry](ent_course) details
+    - i want to know about [Biochemistry](ent_course) 
+    - i want to know [Geography](ent_course) details
+    - I want to know about [Maths](ent_course) in your college
+    - give me [Geology](ent_course) details
+    - i want to know details for [Biotech](ent_course)
+    - i want to know details for [Physics](ent_course)
+    - I want to know about [Zoology](ent_course) in your college
+    - give me [English](ent_course) details 
+    - i want to know details for [Economics](ent_course)
+    - give me [Hindi](ent_course) details [History](ent_course) in your college
+    - i want to know details for [History](ent_course)
+    - I want to know about [French](ent_course) in your college
+    - i want to know [Konkani](ent_course) details
+    - i want to know details for [Marathi](ent_course)
+    - give me [Psychology](ent_course) details
+    - i want to know details for [Philosophy](ent_course)
+    - give me [Sociology](ent_course) details
+    - I want to know about [Portuguese](ent_course) in your college
+    - i want to know [Multimedia](ent_course) details
+    - give me [Virtual Reality VFX](ent_course) details
+    - I want to know about [Virtual Reality VFX](ent_course) in your college
+    - Give me info on [course](ent_course)
+    - I want to know about [course](ent_course) in your college
+    - what are the various [courses](ent_course) offered by your college
+    - i want to know course details
+    - give me course details
+    - could you provide me course deatils
+
+    - [Cs](ent_course)
+    - [Soft dev](ent_course)
+    - [chem](ent_course)
+    - [bio chem](ent_course)
+    - [geog](ent_course)
+    - [geo](ent_course)
+    - [Maths](ent_course)
+    - [Math](ent_course)
+    - [geol](ent_course)
+    - [Biotech](ent_course)
+    - [Bot](ent_course)
+    - [phy](ent_course)
+    - [eng](ent_course)
+    - [eco](ent_course)
+    - [hin](ent_course)
+    - [hind](ent_course)
+    - [fre](ent_course)
+    - [frncg](ent_course)
+    - [his](ent_course)
+    - [kon](ent_course)
+    - [konk](ent_course)
+    - [mar](ent_course)
+    - [psy](ent_course)
+    - [phil](ent_course)
+    - [socio](ent_course)
+    - [socio](ent_course)
+    - [por](ent_course)
+    - [multi](ent_course)
+    - [zoo](ent_course)
+    - [comp](ent_course)
+    - [comp sci](ent_course)
+    - [che](ent_course)
+    - [phys](ent_course)
+    - [ecnms](ent_course)
+    - [sd](ent_course)
+    - [software developing](ent_course)
+
+
+- intent: query
+  examples: |
+    - i want to know [subject](ent_query) details
+    - give me [subject](ent_query) details
+    - can you provide me with [subject](ent_query) details
+    - [subject](ent_query) details
+    - tell me more about [subjects](ent_query)
+    - [Admission Details](ent_query)
+    - could you tell me what the [admission](ent_query) process
+    - [fees](ent_query)
+    - [Fees](ent_query)
+    - Give me info of [fees](ent_query)
+    - I want to know about [fees](ent_query) in your college
+    - want to know more about the [fees](ent_query) structures
+
+    - show me the [fees](ent_query) structure
+    - [Fees](ent_query) structure
+
+- synonym: Bachelor of Arts 
+  examples: |
+    - ba
+    - BA
+    - bachelor of arts
+
+- synonym: Bachelor of Science
+  examples: |
+    - BSC
+    - Bachelor Science
+    - bsc
+    - bachelor of science
+  
+
+- synonym: Bachelor of Vocation
+  examples: |
+    - BVOC
+    - Bachelor Vocation
+    - bvoc
+    - bachelor of vocation
+
+- synonym: Master of Science
+  examples: |
+    - MSC
+    - Master Science
+    - msc
+
+- synonym: Master of Arts
+  examples: |
+    - MA
+    - Master Arts
+    - ma
+
+- synonym: Aviation, Hospitality & Customer Service
+  examples: |
+    - aviation
+    - hospitality
+    - customer service
+
+- synonym: computer science
+  examples: |
+    - CS
+    - Comp sci
+    - COMP
+    - Computer science
+
+- synonym: software development
+  examples: |
+    - sd
+    - soft dev
+    - software developing
+
+
+- synonym: Chemistry
+  examples: |
+    - chemistry
+    - chem
+    - che
+
+
+- synonym: Biochemistry
+  examples: |
+    - biochem
+    - bio chem
+    - biochemistry
+
+
+- synonym: Geography
+  examples: |
+    - geography
+    - geo
+    - Geog
+
+
+- synonym: Maths
+  examples: |
+    - maths
+    - math
+    - Mathematics
+
+
+- synonym: Geology
+  examples: |
+    - geol
+    - geology
+
+
+- synonym: Biotech
+  examples: |
+    - biotech
+    - bio tech
+    - Biotechnology
+
+- synonym: botany
+  examples: |
+    - bot
+    - botany
+
+- synonym: Physics
+  examples: |
+    - phy
+    - physics
+    - phys
+
+- synonym: Zoology
+  examples: |
+    - zoology
+    - zoo
+
+- synonym: Economics
+  examples: |
+    - eco
+    - ecnmcs
+    - economics
+
+- synonym: English
+  examples: |
+    - Eng
+    - eng
+
+- synonym: Hindi
+  examples: |
+    - hind
+    - hindi
+    - hin
+
+- synonym: History
+  examples: |
+    - Hist
+    - his
+    - history
+
+- synonym: French
+  examples: |
+    - french
+    - frnch
+
+- synonym: Konkani
+  examples: |
+    - konk
+    - konkani
+
+- synonym: Marathi
+  examples: |
+    - mar
+    - MAR
+    - marathi
+
+- synonym: Psychology
+  examples: |
+    - PSY
+    - psy
+    - psycho
+    - Psycho
+    - psychology
+
+- synonym: Philosophy
+  examples: |
+    - philosophy
+    - phil
+
+- synonym: Sociology
+  examples: |
+    - socio
+    - SOCIO
+    - sociology
+
+- synonym: Portuguese
+  examples: |
+    - Portugal
+    - portuguese
+
+- synonym: Multimedia 
+  examples: |
+    - multimedia
+    - MULTIMEDIA
+    - multi MEDIA
+
+- synonym: Virtual Reality VFX 
+  examples: |
+    - virtual Reality VFX
+    - VR VFX
+    - VR
+    - vfx
+    - virtual reality vfx

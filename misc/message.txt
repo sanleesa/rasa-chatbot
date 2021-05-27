@@ -1,0 +1,313 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: program
+  examples: |
+    - i want details on programs
+    - i want information on programs
+    - give me info on programs
+
+- intent: diploma
+  examples: |
+    - [diploma](ent_program)
+    - i want details on [diploma](ent_program) programs
+    - i want information on [diploma](ent_program) programs
+    - Give me info on [diploma](ent_program)
+    - I want to know about [diploma](ent_program) in your college
+    - Does [diploma](ent_program) exist in the college
+    - what are the various [diploma](ent_program) programs
+
+- intent: under_graduate
+  examples: |
+    - [undergraduate](ent_program)
+    - i want details on [undergraduate](ent_program) programs
+    - i want information on [undergraduate](ent_program) programs
+    - Give me info on [undergraduate](ent_program)
+    - I want to know about [undergraduate](ent_program) in your college
+    - Does [undergraduate](ent_program) exist in the college
+    - what are the various [undergraduate](ent_program) programs
+
+- intent: phd
+  examples: |
+    - [phd](ent_program)
+    - i want details on [phd](ent_program) programs
+    - i want information on [phd](ent_program) programs
+    - Give me info on [phd](ent_program)
+    - I want to know about [phd](ent_program) in your college
+    - Does [phd](ent_program) exist in the college
+    - what are the various [phd](ent_program) programs
+
+- intent: post_graduate_diploma
+  examples: |
+    - [postgraduatediploma](ent_program)
+    - i want details on [postgraduatediploma](ent_program) programs
+    - i want information on [postgraduatediploma](ent_program) programs
+    - Give me info on [postgraduatediploma](ent_program)
+    - I want to know about [postgraduatediploma](ent_program) in your college
+    - Does [postgraduatediploma](ent_program) exist in the college
+    - what are the various [postgraduatediploma](ent_program) programs
+
+- intent: post_graduate
+  examples: |
+    - [postgraduate](ent_program)
+    - i want details on [postgraduate](ent_program) programs
+    - i want information on [postgraduate](ent_program) programs
+    - Give me info on [postgraduate](ent_program)
+    - I want to know about [postgraduate](ent_program) in your college
+    - Does [postgraduate](ent_program) exist in the college
+    - what are the various [postgraduate](ent_program) programs
+
+- intent: query
+  examples: |
+    - i want to know [subject](ent_query) details
+    - give me [subject](ent_query) details
+    - can you provide me with [subject](ent_query) details
+    - [subject](ent_query) details
+    - tell me more about [subjects](ent_query)
+    - [fees](ent_query)
+    - [Fees](ent_query)
+    - Give me info of [fees](ent_query)
+    - I want to know about [fees](ent_query) in your college
+    - want to know more about the [fees](ent_query) structures
+
+
+- intent: course
+  examples: |
+    - i want to know [course](ent_course) details
+    - give me [course](ent_course) details
+    - i want to know details for [computer science](ent_course)
+    - [computer science](ent_course)
+    - [Computer Science](ent_course)
+    - [CS](ent_course)
+    - give me [cs](ent_course) details
+    - give me [computer sci](ent_course) details
+    - i want to know [chemistry](ent_course) details
+    - give me [chemistry](ent_course) details
+    - [Software Development](ent_course)
+    - [softwaredevelopment](ent_course)
+    - i want to know [chemistry](ent_course) details
+    - give me [chemistry](ent_course) details
+    - i want to know details for [chemistry](ent_course)
+    - [Chemistry](ent_course)
+    - [Chem](ent_course)
+    - [chemistry](ent_course)
+    - i want to know [Biochemistry](ent_course) details
+    - give me [Biochemistry](ent_course) details
+    - i want to know details for [biochemistry](ent_course)
+    - [biochemistry](ent_course)
+    - [Biochemistry](ent_course)
+    - [Biochem](ent_course)
+    - Give me info on [Biochem](ent_course)
+    - I want to know about [Biochem](ent_course) in your college
+    - i want to know [Geography](ent_course) details
+    - give me [Geography](ent_course) details
+    - i want to know details for [Geography](ent_course)
+    - [Geography](ent_course)
+    - [geography](ent_course)
+    - I want to know about [Maths](ent_course) in your college
+    - i want to know [Maths](ent_course) details
+    - give me [Maths](ent_course) details
+    - i want to know details for [Maths](ent_course)
+    - [Maths](ent_course)
+    - [maths](ent_course)
+    - I want to know about [Geology](ent_course) in your college
+    - i want to know [Geology](ent_course) details
+    - give me [Geology](ent_course) details
+    - i want to know details for [Geology](ent_course)
+    - [Geology](ent_course)
+    - [geology](ent_course)
+    - I want to know about [Biotech](ent_course) in your college
+    - i want to know [Biotech](ent_course) details
+    - give me [Biotech](ent_course) details
+    - i want to know details for [Biotech](ent_course)
+    - [Biotech](ent_course)
+    - [biotech](ent_course)
+    - I want to know about [Botany](ent_course) in your college
+    - i want to know [Botany](ent_course) details
+    - give me [Botany](ent_course) details
+    - i want to know details for [Botany](ent_course)
+    - [Botany](ent_course)
+    - [botany](ent_course)
+    - I want to know about [Physics](ent_course) in your college
+    - i want to know [Physics](ent_course) details
+    - give me [Physics](ent_course) details
+    - i want to know details for [Physics](ent_course)
+    - [Physics](ent_course)
+    - [physics](ent_course)
+    - I want to know about [Zoology](ent_course) in your college
+    - i want to know [Zoology](ent_course) details
+    - give me [Zoology](ent_course) details
+    - i want to know details for [Zoology](ent_course)
+    - [Zoology](ent_course)
+    - [zoology](ent_course)
+    - I want to know about [English](ent_course) in your college
+    - i want to know [English](ent_course) details
+    - give me [English](ent_course) details
+    - i want to know details for [English](ent_course)
+    - [English](ent_course)
+    - [english](ent_course)    
+    - [eng](ent_course)  
+    - I want to know about [Economics](ent_course) in your college
+    - i want to know [Economics](ent_course) details
+    - give me [Economics](ent_course) details
+    - i want to know details for [Economics](ent_course)
+    - [Economics](ent_course)
+    - [economics](ent_course)   
+    - [eco](ent_course) 
+    - I want to know about [Hindi](ent_course) in your college
+    - i want to know [Hindi](ent_course) details
+    - give me [Hindi](ent_course) details
+    - i want to know details for [Hindi](ent_course)
+    - [Hindi](ent_course)
+    - [hindi](ent_course)   
+    - I want to know about [History](ent_course) in your college
+    - i want to know [History](ent_course) details
+    - give me [History](ent_course) details
+    - i want to know details for [History](ent_course)
+    - [History](ent_course)
+    - [history](ent_course) 
+    - I want to know about [French](ent_course) in your college
+    - i want to know [French](ent_course) details
+    - give me [French](ent_course) details
+    - i want to know details for [French](ent_course)
+    - [French](ent_course)
+    - [french](ent_course)
+    - I want to know about [Konkani](ent_course) in your college
+    - i want to know [Konkani](ent_course) details
+    - give me [Konkani](ent_course) details
+    - i want to know details for [Konkani](ent_course)
+    - [Konkani](ent_course)
+    - [Konkani](ent_course)
+    - I want to know about [Marathi](ent_course) in your college
+    - i want to know [Marathi](ent_course) details
+    - give me [Marathi](ent_course) details
+    - i want to know details for [Marathi](ent_course)
+    - [Marathi](ent_course)
+    - [marathi](ent_course)
+    - I want to know about [Psychology](ent_course) in your college
+    - i want to know [Psychology](ent_course) details
+    - give me [Psychology](ent_course) details
+    - i want to know details for [Psychology](ent_course)
+    - [Psychology](ent_course)
+    - [psychology](ent_course)
+    - [psy](ent_course)
+    - [PSY](ent_course)
+    - [psycho](ent_course)
+    - I want to know about [Philosophy](ent_course) in your college
+    - i want to know [Philosophy](ent_course) details
+    - give me [Philosophy](ent_course) details
+    - i want to know details for [Philosophy](ent_course)
+    - [Philosophy](ent_course)
+    - [philosophy](ent_course)
+    - I want to know about [Sociology](ent_course) in your college
+    - i want to know [Sociology](ent_course) details
+    - give me [Sociology](ent_course) details
+    - i want to know details for [Sociology](ent_course)
+    - [Sociology](ent_course)
+    - [sociology](ent_course)
+    - [socio](ent_course)
+    - [Socio](ent_course)
+    - I want to know about [Portuguese](ent_course) in your college
+    - i want to know [Portuguese](ent_course) details
+    - give me [Portuguese](ent_course) details
+    - i want to know details for [Portuguese](ent_course)
+    - [Portuguese](ent_course)
+    - [portuguese](ent_course)
+    - I want to know about [Multimedia](ent_course) in your college
+    - i want to know [Multimedia](ent_course) details
+    - give me [Multimedia](ent_course) details
+    - i want to know details for [Multimedia](ent_course)
+    - [Multimedia](ent_course)
+    - [multimedia](ent_course)
+    - I want to know about [Multimedia](ent_course) in your college
+    - i want to know [Multimedia](ent_course) details
+    - give me [Multimedia](ent_course) details
+    - i want to know details for [Multimedia](ent_course)
+    - [Multimedia](ent_course)
+    - [multimedia](ent_course)
+    - I want to know about [Multimedia](ent_course) in your college
+    - i want to know [Multimedia](ent_course) details
+    - give me [Multimedia](ent_course) details
+    - i want to know details for [Multimedia](ent_course)
+    - [Multimedia](ent_course)
+    - [multimedia](ent_course)
+    - I want to know about [Virtual Reality VFX](ent_course) in your college
+    - i want to know [Virtual Reality VFX](ent_course) details
+    - give me [Virtual Reality VFX](ent_course) details
+    - i want to know details for [VFX](ent_course)
+    - [Virtual Reality VFX](ent_course)
+    - [VFX](ent_course)
+    - I want to know about [Virtual Reality VFX](ent_course) in your college
+    - i want to know [Virtual Reality VFX](ent_course) details
+    - give me [Virtual Reality VFX](ent_course) details
+    - i want to know details for [VFX](ent_course)
+    - [Virtual Reality VFX](ent_course)
+    - [VFX](ent_course)
+    - Give me info on [course](ent_course)
+    - I want to know about [course](ent_course) in your college
+    - what are the various [courses](ent_course) offered by your college
+
+
+- intent: degree
+  examples: |
+    - i want to know [degree](ent_degree) details
+    - give me [degree](ent_degree) details
+    - i want to know details for [bvoc](ent_degree)
+    - [BA](ent_degree)
+    - [ba](ent_degree)

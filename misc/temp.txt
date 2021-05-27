@@ -1,0 +1,208 @@
+- synonym: Bachelor of Arts 
+  examples: |
+    - ba
+    - BA
+    - BACHELOR OF ARTS
+    - bachelor of arts
+
+- synonym: Bachelor of Science
+  examples: |
+    - BSC
+    - Bachelor Science
+    - BACHELOR OF SCIENCE
+    - bsc
+    - bachelor of science
+
+- synonym: Bachelor of Vocation
+  examples: |
+    - BVOC
+    - Bachelor Vocation
+    - BACHELOR OF VOCATION
+    - bvoc
+    - bachelor of vocation
+
+- synonym: Master of Science
+  examples: |
+    - MSC
+    - Master Science
+    - MASTERS OF SCIENCE
+    - msc
+    - master of science
+
+- synonym: Master of Arts
+  examples: |
+    - MA
+    - Master Arts
+    - MASTERS OF ARTS
+    - ma
+    - master of arts
+
+- synonym: Master of Science
+  examples: |
+    - MSC
+    - Master Science
+    - MASTERS OF SCIENCE
+    - msc
+    - master of science
+
+- synonym: Aviation, Hospitality & Customer Service
+  examples: |
+    - aviation
+    - hospitality
+    - customer service
+
+- synonym: computer science
+  examples: |
+    - CS
+    - Comp sci
+    - COMP
+    - cs
+    - Computer science
+    - COMPUTER SCIENCE
+
+- synonym: Chemistry
+  examples: |
+    - chemistry
+    - chem
+    - Chem
+    - che
+    - CHEMISTRY
+
+- synonym: Biochemistry
+  examples: |
+    - Biochem
+    - biochem
+    - bio chem
+    - Bio Chem
+    - biochemistry
+    - BIOCHEMISTRY
+
+- synonym: Geography
+  examples: |
+    - geography
+    - geo
+    - Geo
+    - GEOGRAPHY
+
+- synonym: Maths
+  examples: |
+    - maths
+    - math
+    - MATH
+    - MATHS
+
+- synonym: Geology
+  examples: |
+    - geol
+    - geology
+    - GEOLOGY
+
+- synonym: Biotech
+  examples: |
+    - biotech
+    - bio tech
+    - BIO TECH
+    - Biotechnology
+
+- synonym: Physics
+  examples: |
+    - phy
+    - physics
+    - PHYSICS
+    - phys
+
+- synonym: Zoology
+  examples: |
+    - zoology
+    - ZOOLOGY
+    - zoo
+
+- synonym: Economics
+  examples: |
+    - eco
+    - ecnmcs
+    - economics
+    - ECONOMICS
+
+- synonym: English
+  examples: |
+    - Eng
+    - eng
+    - ENGLISH
+
+- synonym: Hindi
+  examples: |
+    - hind
+    - hindi
+    - HINDI
+    - hin
+
+- synonym: History
+  examples: |
+    - Hist
+    - HIST
+    - HISTORY
+    - history
+
+- synonym: French
+  examples: |
+    - french
+    - frnch
+    - FRENCH
+
+- synonym: Konkani
+  examples: |
+    - konk
+    - KONKANI
+    - konkani
+
+- synonym: Marathi
+  examples: |
+    - mar
+    - MAR
+    - marathi
+    - MARATHI
+
+- synonym: Psychology
+  examples: |
+    - PSY
+    - psy
+    - psycho
+    - Psycho
+    - psychology
+    - PSYCHOLOGY
+
+- synonym: Philosophy
+  examples: |
+    - philosophy
+    - phil
+    - PHILOSOPHY
+
+- synonym: Sociology
+  examples: |
+    - socio
+    - SOCIO
+    - sociology
+    - SOCIOLOGY
+
+- synonym: Portuguese
+  examples: |
+    - Portugal
+    - PORTUGUESE
+    - portuguese
+
+- synonym: Multimedia 
+  examples: |
+    - multimedia
+    - MULTIMEDIA
+    - MULTI MEDIA
+    - multi MEDIA
+
+- synonym: Virtual Reality VFX 
+  examples: |
+    - virtual Reality VFX
+    - VR VFX
+    - VR
+    - VFX
+    - vfx
+    - virtual reality vfx

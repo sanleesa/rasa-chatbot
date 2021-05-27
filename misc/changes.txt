@@ -1,0 +1,88 @@
+intent :    programs
+    
+    
+    - information on progs
+    - info on programs
+    - provide me some info on programs
+    - programs offered by your college?
+    - i want to know about programs in your college
+    - tell me about programs in your college
+    - can you give me info on programs offered by your college
+    - what are the various programs offered by your college
+
+
+
+
+intent:     diploma
+
+   - I want to know more about [diploma](ent_program)
+   - give me details on [diploma](ent_program)
+
+
+
+
+intent:     under_graduate
+
+
+    - Give me details on [undergraduate](ent_program) programs
+    - what are the various [undergraduate](ent_program) programs
+    - provide me info on [undergraduate](ent_program) programs
+
+
+
+intent:     post_graduate
+
+    - [post grad](ent_program)
+    - tell me about [postgraduate](ent_program) programs
+    - can you give me info on [postgraduate](ent_program) programs
+    - info on [postgraduate](ent_program) programs
+    
+
+
+
+intent:        course
+
+    - [Soft dev](ent_course)
+    - [Cs](ent_course)
+    - [Soft dev](ent_course)
+    - [chem](ent_course)
+    - [bio chem](ent_course)
+    - [geog](ent_course)
+    - [geo](ent_course)
+    - [Maths](ent_course)
+    - [Math](ent_course)
+    - [geol](ent_course)
+    - [Biotech](ent_course)
+    - [Bot](ent_course)
+    - [phy](ent_course)
+    - [eng](ent_course)
+    - [eco](ent_course)
+    - [hin](ent_course)
+    - [hind](ent_course)
+    - [fre](ent_course)
+    - [frncg](ent_course)
+    - [his](ent_course)
+    - [kon](ent_course)
+    - [konk](ent_course)
+    - [mar](ent_course)
+    - [psy](ent_course)
+    - [phil](ent_course)
+    - [socio](ent_course)
+    - [socio](ent_course)
+    - [por](ent_course)
+    - [multi](ent_course)
+    - [zoo](ent_course)
+    - [comp](ent_course)
+    - [comp sci](ent_course)
+    - [che](ent_course)
+    - [phys](ent_course)
+    - [ecnms](ent_course)
+
+
+
+intent:        course
+
+    - show me the [fees](ent_query) structure
+    - [Fees](ent_query) structure
+
+

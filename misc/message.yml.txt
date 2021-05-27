@@ -1,0 +1,381 @@
+```
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: program
+  examples: |
+    - i want details on programs
+    - i want information on programs
+    - give me info on programs
+
+- intent: diploma
+  examples: |
+    - [diploma](ent_program)
+    - i want details on [diploma](ent_program) programs
+    - i want information on [diploma](ent_program) programs
+    - Give me info on [diploma](ent_program)
+    - I want to know about [diploma](ent_program) in your college
+    - Does [diploma](ent_program) exist in the college
+    - what are the various [diploma](ent_program) programs
+
+- intent: under_graduate
+  examples: |
+    - [undergraduate](ent_program)
+    - i want details on [undergraduate](ent_program) programs
+    - i want information on [undergraduate](ent_program) programs
+    - Give me info on [undergraduate](ent_program)
+    - I want to know about [undergraduate](ent_program) in your college
+    - Does [undergraduate](ent_program) exist in the college
+    - what are the various [undergraduate](ent_program) programs
+
+- intent: phd
+  examples: |
+    - [phd](ent_program)
+    - i want details on [phd](ent_program) programs
+    - i want information on [phd](ent_program) programs
+    - Give me info on [phd](ent_program)
+    - I want to know about [phd](ent_program) in your college
+    - Does [phd](ent_program) exist in the college
+    - what are the various [phd](ent_program) programs
+
+- intent: post_graduate_diploma
+  examples: |
+    - [postgraduatediploma](ent_program)
+    - i want details on [postgraduatediploma](ent_program) programs
+    - i want information on [postgraduatediploma](ent_program) programs
+    - Give me info on [postgraduatediploma](ent_program)
+    - I want to know about [postgraduatediploma](ent_program) in your college
+    - Does [postgraduatediploma](ent_program) exist in the college
+    - what are the various [postgraduatediploma](ent_program) programs
+
+- intent: post_graduate
+  examples: |
+    - [postgraduate](ent_program)
+    - i want details on [postgraduate](ent_program) programs
+    - i want information on [postgraduate](ent_program) programs
+    - Give me info on [postgraduate](ent_program)
+    - I want to know about [postgraduate](ent_program) in your college
+    - Does [postgraduate](ent_program) exist in the college
+    - what are the various [postgraduate](ent_program) programs
+
+- intent: query
+  examples: |
+    - i want to know [subject](ent_query) details
+    - give me [subject](ent_query) details
+    - can you provide me with [subject](ent_query) details
+    - [subject](ent_query) details
+    - tell me more about [subjects](ent_query)
+    - [fees](ent_query)
+    - [Fees](ent_query)
+    - Give me info of [fees](ent_query)
+    - I want to know about [fees](ent_query) in your college
+    - want to know more about the [fees](ent_query) structures
+
+
+- intent: course
+  examples: |
+    - i want to know [course](ent_course) details
+    - give me [course](ent_course) details
+    - i want to know details for [computer science](ent_course)
+    - give me [chemistry](ent_course) details
+    - i want to know about [Biochemistry](ent_course) 
+    - i want to know [Geography](ent_course) details
+    - I want to know about [Maths](ent_course) in your college
+    - give me [Geology](ent_course) details
+    - i want to know details for [Biotech](ent_course)
+    - i want to know details for [Physics](ent_course)
+    - I want to know about [Zoology](ent_course) in your college
+    - give me [English](ent_course) details 
+    - i want to know details for [Economics](ent_course)
+    - give me [Hindi](ent_course) details [History](ent_course) in your college
+    - i want to know details for [History](ent_course)
+    - I want to know about [French](ent_course) in your college
+    - i want to know [Konkani](ent_course) details
+    - i want to know details for [Marathi](ent_course)
+    - give me [Psychology](ent_course) details
+    - i want to know details for [Philosophy](ent_course)
+    - give me [Sociology](ent_course) details
+    - I want to know about [Portuguese](ent_course) in your college
+    - i want to know [Multimedia](ent_course) details
+    - give me [Virtual Reality VFX](ent_course) details
+    - I want to know about [Virtual Reality VFX](ent_course) in your college
+    - Give me info on [course](ent_course)
+    - I want to know about [course](ent_course) in your college
+    - what are the various [courses](ent_course) offered by your college
+
+
+- intent: degree
+  examples: |
+    - i want to know [degree](ent_degree) details
+    - give me [degree](ent_degree) details
+    - i want to know details for [bvoc](ent_degree)
+    - [BA](ent_degree)
+    - [ba](ent_degree)
+
+
+- synonym: computer science
+  examples: |
+    - CS
+    - Comp sci
+    - COMP
+    - cs
+    - Computer science
+    - COMPUTER SCIENCE
+
+- synonym: Chemistry
+  examples: |
+    - chemistry
+    - chem
+    - Chem
+    - che
+    - CHEMISTRY
+
+- synonym: Biochemistry
+  examples: |
+    - Biochem
+    - biochem
+    - bio chem
+    - Bio Chem
+    - biochemistry
+    - BIOCHEMISTRY
+
+- synonym: Geography
+  examples: |
+    - geography
+    - geog
+    - Geog
+    - GEOGRAPHY
+
+- synonym: Maths
+  examples: |
+    - maths
+    - math
+    - MATH
+    - MATHS
+
+- synonym: Geology
+  examples: |
+    - geol
+    - geology
+    - GEOLOGY
+
+- synonym: Biotech
+  examples: |
+    - biotech
+    - bio tech
+    - BIO TECH
+    - Biotechnology
+
+- synonym: Physics
+  examples: |
+    - phy
+    - physics
+    - PHYSICS
+    - phys
+
+- synonym: Zoology
+  examples: |
+    - zoology
+    - ZOOLOGY
+    - zoo logy
+    - zoo
+
+- synonym: Economics
+  examples: |
+    - eco
+    - ecnmcs
+    - economics
+    - ECONOMICS
+
+- synonym: English
+  examples: |
+    - Eng
+    - eng
+    - ENGLISH
+
+- synonym: Hindi
+  examples: |
+    - hind
+    - hindi
+    - HINDI
+    - hin
+
+- synonym: History
+  examples: |
+    - Hist
+    - HIST
+    - HISTORY
+    - history
+
+- synonym: French
+  examples: |
+    - french
+    - frnch
+    - FRENCH
+
+- synonym: Konkani
+  examples: |
+    - konk
+    - KONKANI
+    - konkani
+
+- synonym: Marathi
+  examples: |
+    - mar
+    - MAR
+    - marathi
+    - MARATHI
+
+- synonym: Psychology
+  examples: |
+    - PSY
+    - psy
+    - psycho
+    - Psycho
+    - psychology
+    - PSYCHOLOGY
+
+- synonym: Philosophy
+  examples: |
+    - philosophy
+    - phil
+    - PHILOSOPHY
+
+- synonym: Sociology
+  examples: |
+    - socio
+    - SOCIO
+    - sociology
+    - SOCIOLOGY
+
+- synonym: Portuguese
+  examples: |
+    - Portugal
+    - PORTUGUESE
+    - portuguese
+
+- synonym: Multimedia 
+  examples: |
+    - multimedia
+    - MULTIMEDIA
+    - MULTI MEDIA
+    - multi MEDIA
+
+- synonym: Virtual Reality VFX 
+  examples: |
+    - virtual Reality VFX
+    - VR VFX
+    - VR
+    - VFX
+    - vfx
+    - virtual reality vfx
+
+
+- synonym: Bachelor of Arts 
+  examples: |
+    - ba
+    - BA
+    - BACHELOR OF ARTS
+    - bachelor of arts
+
+
+- synonym: Bachelor of Science
+  examples: |
+    - BSC
+    - Bachelor Science
+    - BACHELOR OF SCIENCE
+    - bsc
+    - bachelor of science
+
+
+- synonym: Bachelor of Vocation
+  examples: |
+    - BVOC
+    - Bachelor Vocation
+    - BACHELOR OF VOCATION
+    - bvoc
+    - bachelor of vocation
+
+- synonym: Master of Science
+  examples: |
+    - MSC
+    - Master Science
+    - MASTERS OF SCIENCE
+    - msc
+    - master of science
+
+- synonym: Master of Arts
+  examples: |
+    - MA
+    - Master Arts
+    - MASTERS OF ARTS
+    - ma
+    - master of arts
+
+- synonym: Master of Science
+  examples: |
+    - MSC
+    - Master Science
+    - MASTERS OF SCIENCE
+    - msc
+    - master of science
+
+
+
+```
