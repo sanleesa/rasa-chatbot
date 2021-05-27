@@ -30,23 +30,55 @@ class DatabaseConnection():
         print(f"get_response found this as a response: {results}")
         return results
 
-    def get_degree_list(self, program):
+    def get_all_degrees(self):
         try:
             my_cursor = self.cursor
-            sql = """SELECT level_2.title,level_2.payload FROM level_2 
-            INNER JOIN level_1 on level_1.level_1_id = level_2.level_1_id_fk WHERE level_1.payload = (%s);"""
-            val = program
-            my_cursor.execute(sql, (val,))
+            sql = """SELECT title, payload FROM level_2;"""
+            my_cursor.execute(sql)
             results = my_cursor.fetchall()
-            print(f"get_degree_list found this as a response: {results}")
+            print(f"get_program_list found this as a response: {results}")
             return results
         except Exception as err:
             print("Err:",err)
 
-    def get_degree_list_title(self, program):
+    def get_all_courses(self):
         try:
             my_cursor = self.cursor
-            sql = """SELECT level_2.title FROM level_2 
+            sql = """SELECT title, payload FROM level_3;"""
+            my_cursor.execute(sql)
+            results = my_cursor.fetchall()
+            print(f"get_program_list found this as a response: {results}")
+            return results
+        except Exception as err:
+            print("Err:",err)
+
+    def get_all_query(self):
+        try:
+            my_cursor = self.cursor
+            sql = """SELECT title, payload FROM level_4;"""
+            my_cursor.execute(sql)
+            results = my_cursor.fetchall()
+            print(f"get_program_list found this as a response: {results}")
+            return results
+        except Exception as err:
+            print("Err:",err)
+
+
+    def get_program_list(self):
+        try:
+            my_cursor = self.cursor
+            sql = """SELECT title, payload FROM level_1;"""
+            my_cursor.execute(sql)
+            results = my_cursor.fetchall()
+            print(f"get_program_list found this as a response: {results}")
+            return results
+        except Exception as err:
+            print("Err:",err)
+
+    def get_degree_list(self, program):
+        try:
+            my_cursor = self.cursor
+            sql = """SELECT level_2.title,level_2.payload FROM level_2 
             INNER JOIN level_1 on level_1.level_1_id = level_2.level_1_id_fk WHERE level_1.payload = (%s);"""
             val = program
             my_cursor.execute(sql, (val,))
@@ -101,17 +133,6 @@ class DatabaseConnection():
         except Exception as err:
             print("Err:",err)
 
-    def get_program_list(self):
-        try:
-            my_cursor = self.cursor
-            sql = """SELECT title, payload FROM level_1;"""
-            my_cursor.execute(sql)
-            results = my_cursor.fetchall()
-            print(f"get_program_list found this as a response: {results}")
-            return results
-        except Exception as err:
-            print("Err:",err)
-
     def get_program_from_course(self, course):
         try:
             my_cursor = self.cursor
@@ -148,13 +169,4 @@ class DatabaseConnection():
         except Exception as err:
             print("Err:",err)
 
-    def get_all_degrees(self):
-        try:
-            my_cursor = self.cursor
-            sql = """SELECT title, payload FROM level_2;"""
-            my_cursor.execute(sql)
-            results = my_cursor.fetchall()
-            print(f"get_program_list found this as a response: {results}")
-            return results
-        except Exception as err:
-            print("Err:",err)
+    
