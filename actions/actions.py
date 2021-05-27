@@ -7,11 +7,14 @@ from logging import NullHandler, setLoggerClass
 import re
 from typing import Any, Text, Dict, List
 from dns.rdatatype import NULL
-from rasa_sdk import Action, Tracker
+from dns.tsig import validate
+from rasa_sdk import Action, Tracker, FormValidationAction
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import AllSlotsReset, SlotSet, UserUtteranceReverted
+from rasa_sdk.types import DomainDict
 
 from databaseconnection import DatabaseConnection as dbcon
+
 
 class ActionAskProgram(Action):
 
@@ -88,7 +91,7 @@ class ActionAskDegree(Action):
             #     results = dbcon().get_all_degrees()
             #     if (results is not None) or (len(results) != 0):
             #         if (degree in results[0][0]):
-                        
+
             #     else:
             #         # set custom message
             #         dispatcher.utter_message(
@@ -103,7 +106,8 @@ class ActionAskDegree(Action):
 
             for list in results:
                 buttons.append({"title": list[0], "payload": list[1]})
-                dispatcher.utter_message(text="Please select a degree:", buttons=buttons)
+                dispatcher.utter_message(
+                    text="Please select a degree:", buttons=buttons)
 
         except Exception as ex:
             print(ex)
@@ -111,7 +115,7 @@ class ActionAskDegree(Action):
 
 
 class ActionAskCourse(Action):
-    
+
     def name(self):
         return 'action_ask_course'
 
@@ -130,13 +134,6 @@ class ActionAskCourse(Action):
             if (course is not None) and (degree is None):
                 # query to find program from course
                 results = dbcon().get_program_from_course(course)
-                if (results is None) or (len(results) == 0):
-                    # set custom message
-                    dispatcher.utter_message(
-                        text=f"Sorry I couldn't find programs for {course}")
-                    return [SlotSet('course', None)]
-            elif (course is not None):
-                results = dbcon().get_course_list(course)
                 if (results is None) or (len(results) == 0):
                     # set custom message
                     dispatcher.utter_message(
@@ -204,3 +201,84 @@ class ActionHandleQuery(Action):
         except Exception as ex:
             print(ex)
         return []
+
+
+class ValidateProgramForm(FormValidationAction):
+    def name(self) -> Text:
+        return "validate_program_form"
+
+    @staticmethod
+    def program_db() -> List[Text]:
+        # function returns list of all programs
+        results = dbcon().get_program_list()
+        return [results[0][0]]
+    
+    @staticmethod
+    def degree_db() -> List[Text]:
+        # fuctions returns list of all degrees
+        results = dbcon().get_all_degrees()
+        return [results[0][0]]
+    
+    @staticmethod
+    def course_db() -> List[Text]:
+        # fuctions returns list of all course
+        results = dbcon().get_all_courses()
+        return [results[0][0]]
+
+    @staticmethod
+    def query_db() -> List[Text]:
+        # fuctions returns list of all queries
+        results = dbcon().get_all_query()
+        return [results[0][0]]
+
+    def validate_program(
+        self, slot_value: Any, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict,
+        ) -> Dict[Text, Any]:
+        """Validate program value."""
+
+        if (slot_value.lower() in self.program_db()):
+            # validation succeeded, set the value of the "program" slot to value
+            return {"program": slot_value}
+        else:
+            # validation failed, set this slot to None so that the
+            # user will be asked for the slot again
+            return {"program": None}
+
+    def validate_degree(
+        self, slot_value: Any, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict,
+        ) -> Dict[Text, Any]:
+        """Validate degree value."""
+
+        if (slot_value.lower() in self.degree_db()):
+            # validation succeeded, set the value of the "degree" slot to value
+            return {"degree": slot_value}
+        else:
+            # validation failed, set this slot to None so that the
+            # user will be asked for the slot again
+            return {"program": None}
+
+    def validate_course(
+        self, slot_value: Any, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict,
+        ) -> Dict[Text, Any]:
+        """Validate course value."""
+
+        if (slot_value.lower() in self.course_db()):
+            # validation succeeded, set the value of the "course" slot to value
+            return {"course": slot_value}
+        else:
+            # validation failed, set this slot to None so that the
+            # user will be asked for the slot again
+            return {"course": None}
+
+    def validate_query(
+        self, slot_value: Any, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict,
+        ) -> Dict[Text, Any]:
+        """Validate query value."""
+
+        if (slot_value.lower() in self.query_db()):
+            # validation succeeded, set the value of the "course" slot to value
+            return {"query": slot_value}
+        else:
+            # validation failed, set this slot to None so that the
+            # user will be asked for the slot again
+            return {"course": None}
