@@ -119,7 +119,7 @@ actions:
   - action_ask_course
   - action_ask_query
   - action_handle_query
-  - utter_welcome
+  - utter_how_to_use
   #- utter_ask_program_form_program
   #- utter_ask_diploma_form_degree
   #- utter_ask_query_form_query
