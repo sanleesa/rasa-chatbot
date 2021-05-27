@@ -59,7 +59,7 @@ nlu:
 
 - intent: program
   examples: |
-     i want details on programs
+    - i want details on programs
     - i want information on programs
     - give me info on programs
     - info on progs
