@@ -42,15 +42,8 @@ responses:
   - text: "Hello!"
   - text: "Hi!"
 
-  utter_how_to_use:
-  - text: "Hi, I am a chatbot here to help you answer your queries about the diffrent courses, degress, etc. that the collage offers.\
-          \n How to use:\
-          \n 1) Type 'Hi' to begin a menu driven conversation\
-          \n 2) Then just select the buttons that pertain to your quey\
-          \n * Note if you want too look for a specific qurey you may type a message by provideing all the deatisl like\
-          \n   program name, degree name, course name.
-          "
-
+  utter_help:
+  - text: "Hi, I am a chatbot to help you with your queries on the diffrent courses offered by the college."
 
   # utter_ask_program_form_program:
   # - text: "Hi, which program are you looking for?"
@@ -119,7 +112,8 @@ actions:
   - action_ask_course
   - action_ask_query
   - action_handle_query
-  - utter_how_to_use
+  - utter_help
+  - validate_program_form
   #- utter_ask_program_form_program
   #- utter_ask_diploma_form_degree
   #- utter_ask_query_form_query
