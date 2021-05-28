@@ -30,10 +30,21 @@ class DatabaseConnection():
         print(f"get_response found this as a response: {results}")
         return results
 
+    def get_all_programs(self):
+        try:
+            my_cursor = self.cursor
+            sql = """SELECT payload FROM level_1;"""
+            my_cursor.execute(sql)
+            results = my_cursor.fetchall()
+            print(f"get_program_list found this as a response: {results}")
+            return results
+        except Exception as err:
+            print("Err:",err)
+
     def get_all_degrees(self):
         try:
             my_cursor = self.cursor
-            sql = """SELECT title, payload FROM level_2;"""
+            sql = """SELECT payload FROM level_2;"""
             my_cursor.execute(sql)
             results = my_cursor.fetchall()
             print(f"get_program_list found this as a response: {results}")
@@ -44,7 +55,7 @@ class DatabaseConnection():
     def get_all_courses(self):
         try:
             my_cursor = self.cursor
-            sql = """SELECT title, payload FROM level_3;"""
+            sql = """SELECT payload FROM level_3;"""
             my_cursor.execute(sql)
             results = my_cursor.fetchall()
             print(f"get_program_list found this as a response: {results}")
@@ -55,7 +66,7 @@ class DatabaseConnection():
     def get_all_query(self):
         try:
             my_cursor = self.cursor
-            sql = """SELECT title, payload FROM level_4;"""
+            sql = """SELECT payload FROM level_4;"""
             my_cursor.execute(sql)
             results = my_cursor.fetchall()
             print(f"get_program_list found this as a response: {results}")
