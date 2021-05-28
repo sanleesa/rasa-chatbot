@@ -5,6 +5,7 @@ stories:
 - story: user greets
   steps:
   - intent: greet
+  - action: utter_help
   - action: program_form
   - slot_was_set:
       - program
@@ -49,7 +50,6 @@ stories:
       - query
   - action: action_handle_query
   - active_loop: null
-
 
 - story: user asks for phd program
   steps:
