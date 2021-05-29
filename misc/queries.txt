@@ -35,3 +35,13 @@ SELECT program query from degree
 SELECT degree query from program
 - SELECT title, payload FROM level_2 WHERE level_2_id IN 
 (SELECT level_2_id_fk FROM level_3 WHERE lower(payload) = "computerscience")
+
+give level_3 check level_2 is vaild
+- SELECT count(*) FROM level_2 
+WHERE '{level_2}' IN (SELECT payload FROM level_2 WHERE level_2_id IN 
+(SELECT level_2_id_fk FROM level_3 WHERE lower(payload) = {level_3}));
+
+give level_2 check level_1 is vaild
+- SELECT count(*) FROM level_1 
+WHERE '{level_1}' IN (SELECT payload FROM level_1 WHERE level_1_id IN 
+(SELECT level_1_id_fk FROM level_2 WHERE lower(payload) = {level_2}));

@@ -99,14 +99,14 @@ class DatabaseConnection():
         except Exception as err:
             print("Err:",err)
     
-    def get_degree_list(self, program, degree):
+    def get_degree_list(self, grade_level, program):
         try:
             my_cursor = self.cursor
             sql = """SELECT level_3.title, level_3.payload FROM level_3 
             INNER JOIN level_2 on level_3.level_2_id_fk = level_2.level_2_id 
             INNER JOIN level_1 on level_2.level_1_id_fk = level_1.level_1_id 
             WHERE level_1.payload = (%s) AND level_2.payload = (%s);"""
-            my_cursor.execute(sql, (program, degree))
+            my_cursor.execute(sql, (grade_level, program))
             results = my_cursor.fetchall()
             print(f"get_degree_list found this as a response: {results}")
             return results
