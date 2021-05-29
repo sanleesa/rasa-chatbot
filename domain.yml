@@ -6,9 +6,9 @@ intents:
   - affirm
   - deny
   - bot_challenge
+  - grade_level
   - program
   - degree
-  - course
   - query
   - diploma
   - post_graduate_diploma
@@ -17,19 +17,19 @@ intents:
   - phd
 
 entities:
+  - ent_grade_level
   - ent_program
   - ent_degree
-  - ent_course
   - ent_query
 
 slots:
+  grade_level:
+    type: text
+    influence_conversation: true
   program:
     type: text
     influence_conversation: true
   degree:
-    type: text
-    influence_conversation: true
-  course:
     type: text
     influence_conversation: true
   query:
@@ -83,15 +83,15 @@ responses:
 
 forms:
   program_form:
+    grade_level:
+    - type: from_entity
+      entity: ent_grade_level
     program:
     - type: from_entity
       entity: ent_program
     degree:
     - type: from_entity
       entity: ent_degree
-    course:
-    - type: from_entity
-      entity: ent_course
     query:
     - type: from_entity
       entity: ent_query
@@ -107,9 +107,9 @@ forms:
   #     entity: ent_query
 
 actions:
+  - action_ask_grade_level
   - action_ask_program
   - action_ask_degree
-  - action_ask_course
   - action_ask_query
   - action_handle_query
   - utter_help
