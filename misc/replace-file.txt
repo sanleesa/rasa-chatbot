@@ -1,0 +1,37 @@
+# program ---> grade_level
+# degree ---> program
+# course ---> degree
+
+domain:
+	entities:
+	ent_program -- ent_grade_level
+	ent_degree -- ent_program
+	ent_course -- ent_degree
+
+	slots:
+	program -- grade_level
+	degree -- program
+	course -- degree
+
+	form:
+	program -- grade_level
+	degree -- program
+	course -- degree
+
+	actions_names:
+	action_ask_program -- action_ask_grade_level
+	action_ask_degree -- action_ask_program 
+	action_ask_course -- action_ask_degree
+
+nlu:
+	all program intents (ug,pg,phd,etc.) | entities --> ent_grade_level
+	intent: degree --> program | entities --> ent_program
+	intent: course --> degree | entities --> ent_degree
+
+stories:
+	all slot_was_set -- > from - program,degree,course ---> grade_level,program,degree
+	story: user asks for degree --> user asks for program --->intent degree -> program
+	stroy: user asks for course --> user asks for degree - intent course -> degree
+
+actions.py:
+
