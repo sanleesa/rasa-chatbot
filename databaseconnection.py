@@ -6,7 +6,7 @@ class DatabaseConnection():
         "host": "localhost",
         "user": "sanlee",
         "password": "password",
-        "database": "chatbotdb"
+        "database": "rasachatbot"
     }
 
     def __init__(self):
@@ -30,35 +30,35 @@ class DatabaseConnection():
         print(f"get_response found this as a response: {results}")
         return results
 
-    def get_all_programs(self):
+    def get_all_grade_level(self):
         try:
             my_cursor = self.cursor
             sql = """SELECT payload FROM level_1;"""
             my_cursor.execute(sql)
             results = my_cursor.fetchall()
-            print(f"get_program_list found this as a response: {results}")
+            print(f"get_all_grade_level found this as a response: {results}")
             return results
         except Exception as err:
             print("Err:",err)
 
-    def get_all_degrees(self):
+    def get_all_program(self):
         try:
             my_cursor = self.cursor
             sql = """SELECT payload FROM level_2;"""
             my_cursor.execute(sql)
             results = my_cursor.fetchall()
-            print(f"get_program_list found this as a response: {results}")
+            print(f"get_all_program found this as a response: {results}")
             return results
         except Exception as err:
             print("Err:",err)
 
-    def get_all_courses(self):
+    def get_all_degree(self):
         try:
             my_cursor = self.cursor
             sql = """SELECT payload FROM level_3;"""
             my_cursor.execute(sql)
             results = my_cursor.fetchall()
-            print(f"get_program_list found this as a response: {results}")
+            print(f"get_all_degree found this as a response: {results}")
             return results
         except Exception as err:
             print("Err:",err)
@@ -69,24 +69,24 @@ class DatabaseConnection():
             sql = """SELECT payload FROM level_4;"""
             my_cursor.execute(sql)
             results = my_cursor.fetchall()
-            print(f"get_program_list found this as a response: {results}")
+            print(f"get_all_query found this as a response: {results}")
             return results
         except Exception as err:
             print("Err:",err)
 
 
-    def get_program_list(self):
+    def get_grade_level_list(self):
         try:
             my_cursor = self.cursor
             sql = """SELECT title, payload FROM level_1;"""
             my_cursor.execute(sql)
             results = my_cursor.fetchall()
-            print(f"get_program_list found this as a response: {results}")
+            print(f"get_grade_level_list found this as a response: {results}")
             return results
         except Exception as err:
             print("Err:",err)
 
-    def get_degree_list(self, program):
+    def get_program_list(self, program):
         try:
             my_cursor = self.cursor
             sql = """SELECT level_2.title,level_2.payload FROM level_2 
@@ -94,12 +94,12 @@ class DatabaseConnection():
             val = program
             my_cursor.execute(sql, (val,))
             results = my_cursor.fetchall()
-            print(f"get_degree_list found this as a response: {results}")
+            print(f"get_program_list found this as a response: {results}")
             return results
         except Exception as err:
             print("Err:",err)
     
-    def get_course_list(self, program, degree):
+    def get_degree_list(self, program, degree):
         try:
             my_cursor = self.cursor
             sql = """SELECT level_3.title, level_3.payload FROM level_3 
@@ -108,7 +108,7 @@ class DatabaseConnection():
             WHERE level_1.payload = (%s) AND level_2.payload = (%s);"""
             my_cursor.execute(sql, (program, degree))
             results = my_cursor.fetchall()
-            print(f"get_course_list found this as a response: {results}")
+            print(f"get_degree_list found this as a response: {results}")
             return results
         except Exception as err:
             print("Err:",err)
@@ -144,19 +144,19 @@ class DatabaseConnection():
         except Exception as err:
             print("Err:",err)
 
-    def get_program_from_course(self, course):
+    def get_grade_from_degree(self, degree):
         try:
             my_cursor = self.cursor
             sql = """SELECT title, payload FROM level_1 WHERE level_1_id IN (SELECT level_1_id_fk FROM level_2 WHERE level_2_id 
             IN (SELECT level_2_id_fk FROM level_3 WHERE lower(payload) = (%s)))"""
-            my_cursor.execute(sql, (course,))
+            my_cursor.execute(sql, (degree,))
             results = my_cursor.fetchall()
             print(f"get_program_from_course found this as a response: {results}")
             return results
         except Exception as err:
             print("Err:",err)
     
-    def get_program_from_degree(self, degree):
+    def get_grade_from_program(self, degree):
         try:
             my_cursor = self.cursor
             sql = """SELECT title, payload FROM level_1 WHERE level_1_id IN 
@@ -168,16 +168,16 @@ class DatabaseConnection():
         except Exception as err:
             print("Err:",err)
 
-    def get_degree_from_program(self, program):
-        try:
-            my_cursor = self.cursor
-            sql = """SELECT title, payload FROM level_2 WHERE level_2_id IN (SELECT level_2_id_fk FROM level_3 
-            WHERE lower(payload) = (%s))"""
-            my_cursor.execute(sql, (program,))
-            results = my_cursor.fetchall()
-            print(f"get_degree_from_program found this as a response: {results}")
-            return results
-        except Exception as err:
-            print("Err:",err)
+    # def get_degree_from_program(self, program):
+    #     try:
+    #         my_cursor = self.cursor
+    #         sql = """SELECT title, payload FROM level_2 WHERE level_2_id IN (SELECT level_2_id_fk FROM level_3 
+    #         WHERE lower(payload) = (%s))"""
+    #         my_cursor.execute(sql, (program,))
+    #         results = my_cursor.fetchall()
+    #         print(f"get_degree_from_program found this as a response: {results}")
+    #         return results
+    #     except Exception as err:
+    #         print("Err:",err)
 
     
