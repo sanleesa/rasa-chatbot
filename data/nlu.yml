@@ -469,6 +469,9 @@ nlu:
 - synonym: vfx
   examples: |
     - virtual Reality VFX
+    - Visual Effects
+    - visual eff
+    - visualeffects
     - VR VFX
     - VR
     - VFX
