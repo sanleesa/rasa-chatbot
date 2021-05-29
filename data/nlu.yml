@@ -57,209 +57,210 @@ nlu:
     - am I talking to a bot?
     - am I talking to a human?
 
-- intent: program
+- intent: grade_level
   examples: |
-    - i want details on programs
-    - i want information on programs
-    - give me info on programs
-    - info on progs
-    - information on programs
-    - provide me info on programs
-    - programs offered by your college?
-    - i want to know about programs in your college
-    - tell me about programs in your college
-    - what are the various programs offered by your college
-    - can you give me info on programs offered by your college
+    - i want details on grade level
+    - i want information on grade level
+    - give me info on grade level
+    - info on grade level
+    - information on grade level
+    - provide me info on grade level
+    - grade level offered by your college?
+    - i want to know about grade level in your college
+    - tell me about grade level in your college
+    - what are the various grade level offered by your college
+    - can you give me info on grade level offered by your college
 
 - intent: diploma
   examples: |
-    - [diploma](ent_program)
-    - i want details on [diploma](ent_program) programs
-    - i want information on [diploma](ent_program) programs
-    - Give me info on [diploma](ent_program)
-    - Give me information on [diploma](ent_program)
-    - I want to know about [diploma](ent_program) in your college 
-    - Does the college offer [diploma](ent_program) course
-    - what are the various [diploma](ent_program) programs
-    - I want to know more about [diploma](ent_program)
-    - give me details on [diploma](ent_program)
+    - [diploma](ent_grade_level)
+    - i want details on [diploma](ent_grade_level) programs
+    - i want information on [diploma](ent_grade_level) programs
+    - Give me info on [diploma](ent_grade_level)
+    - Give me information on [diploma](ent_grade_level)
+    - I want to know about [diploma](ent_grade_level) in your college 
+    - Does the college offer [diploma](ent_grade_level) course
+    - what are the various [diploma](ent_grade_level) programs
+    - I want to know more about [diploma](ent_grade_level)
+    - give me details on [diploma](ent_grade_level)
 
 - intent: under_graduate
   examples: |
-    - [under graduate](ent_program)
-    - [undergrad] programs(ent_program)
-    - i want details on [undergraduate](ent_program) programs
-    - i want information on [undergraduate](ent_program) programs
-    - Give me info on [undergraduate](ent_program)
-    - I want to know about [undergraduate](ent_program) in your college
-    - Does the college offer [undergraduate](ent_program) course
-    - what are the various [undergraduate](ent_program) programs
-    - Give me details on [undergraduate](ent_program) programs
-    - what are the various [undergraduate](ent_program) programs
-    - provide me info on [undergraduate](ent_program) programs
-    - info on [undergraduate](ent_program) programs
+    - [under graduate](ent_grade_level)
+    - [undergrad] programs(ent_grade_level)
+    - i want details on [undergraduate](ent_grade_level) programs
+    - i want information on [undergraduate](ent_grade_level) programs
+    - Give me info on [undergraduate](ent_grade_level)
+    - I want to know about [undergraduate](ent_grade_level) in your college
+    - Does the college offer [undergraduate](ent_grade_level) course
+    - what are the various [undergraduate](ent_grade_level) programs
+    - Give me details on [undergraduate](ent_grade_level) programs
+    - what are the various [undergraduate](ent_grade_level) programs
+    - provide me info on [undergraduate](ent_grade_level) programs
+    - info on [undergraduate](ent_grade_level) programs
 
 - intent: phd
   examples: |
-    - [phd](ent_program)
-    - i want details on [phd](ent_program) programs
-    - i want information on [phd](ent_program) programs
-    - Give me info on [phd](ent_program)
-    - I want to know about [phd](ent_program) in your college
-    - Does the college offer [phd](ent_program) course
-    - what are the various [phd](ent_program) programs
+    - [phd](ent_grade_level)
+    - i want details on [phd](ent_grade_level) programs
+    - i want information on [phd](ent_grade_level) programs
+    - Give me info on [phd](ent_grade_level)
+    - I want to know about [phd](ent_grade_level) in your college
+    - Does the college offer [phd](ent_grade_level) course
+    - what are the various [phd](ent_grade_level) programs
 
 - intent: post_graduate_diploma
   examples: |
-    - [postgraduate diploma](ent_program)
-    - i want details on [postgraduate diploma](ent_program) programs
-    - i want information on [postgraduate diploma](ent_program) programs
-    - Give me info on [postgraduate diploma](ent_program)
-    - I want to know about [postgraduate diploma](ent_program) in your college
-    - Does the college offer [postgraduate diploma](ent_program) course
-    - what are the various [postgraduatediploma](ent_program) programs
+    - [postgraduate diploma](ent_grade_level)
+    - i want details on [postgraduate diploma](ent_grade_level) programs
+    - i want information on [postgraduate diploma](ent_grade_level) programs
+    - Give me info on [postgraduate diploma](ent_grade_level)
+    - I want to know about [postgraduate diploma](ent_grade_level) in your college
+    - Does the college offer [postgraduate diploma](ent_grade_level) course
+    - what are the various [postgraduatediploma](ent_grade_level) programs
 
 - intent: post_graduate
   examples: |
-    - [postgraduate](ent_program)
-    - i want details on [postgraduate](ent_program) programs
-    - i want information on [postgraduate](ent_program) programs
-    - Give me info on [postgraduate](ent_program)
-    - I want to know about [postgraduate](ent_program) in your college
-    - Does the college offer [postgraduate](ent_program) course
-    - what are the various [postgraduate](ent_program) programs
-    - [post grad](ent_program)
-    - tell me about [postgraduate](ent_program) programs
-    - can you give me info on [postgraduate](ent_program) programs
-    - info on [postgraduate](ent_program) programs
+    - [postgraduate](ent_grade_level)
+    - i want details on [postgraduate](ent_grade_level) programs
+    - i want information on [postgraduate](ent_grade_level) programs
+    - Give me info on [postgraduate](ent_grade_level)
+    - I want to know about [postgraduate](ent_grade_level) in your college
+    - Does the college offer [postgraduate](ent_grade_level) course
+    - what are the various [postgraduate](ent_grade_level) programs
+    - [post grad](ent_grade_level)
+    - tell me about [postgraduate](ent_grade_level) programs
+    - can you give me info on [postgraduate](ent_grade_level) programs
+    - info on [postgraduate](ent_grade_level) programs
+
+- intent: program
+  examples: |
+    - [Bachelor of Arts](ent_program)
+    - [Bachelor of Science](ent_program)
+    - [Bachelor of Vocation](ent_program)
+    - [Master of Science](ent_program)
+    - [Master of Art](ent_program)
+    - [Aviation, Hospitality & Customer Service](ent_program)
+    - [aviation](ent_program)
+    - [hospitality](ent_program)
+    - [customer service](ent_program)
+    - [Computer Science](ent_program)
+    - [cs](ent_program)
+    - [Geography](ent_program)
+    - [geo](ent_program)
+    - [geo](ent_program)
+    - [Computer Science](ent_program)
+    - [BSC](ent_program)
+    - [BA](ent_program)
+    - [BVOC](ent_program)
+    - [MSc](ent_program)
+    - [MA](ent_program)
+    - i want to know [degree](ent_program) details
+    - give me [degree](ent_program) details
+    - i want to know details for [Bachelor of Vocation](ent_program)
+    - i want to know details for [Bachelor of Arts](ent_program)
+    - i want to know details for [Bachelor of Science](ent_program)
+    - i want to know details for [Master of Science](ent_program)
+    - i want to know details for [Master of Arts](ent_program)
+    - [bachelorofvocation](ent_program)
 
 - intent: degree
   examples: |
-    - [Bachelor of Arts](ent_degree)
-    - [Bachelor of Science](ent_degree)
-    - [Bachelor of Vocation](ent_degree)
-    - [Master of Science](ent_degree)
-    - [Master of Art](ent_degree)
-    - [Aviation, Hospitality & Customer Service](ent_degree)
-    - [aviation](ent_degree)
-    - [hospitality](ent_degree)
-    - [customer service](ent_degree)
+    - [Software Development](ent_degree)
     - [Computer Science](ent_degree)
-    - [cs](ent_degree)
+    - [Chemistry](ent_degree)
+    - [Biochemistry](ent_degree)
     - [Geography](ent_degree)
-    - [geo](ent_degree)
-    - [geo](ent_degree)
-    - [Computer Science](ent_degree)
-    - [BSC](ent_degree)
-    - [BA](ent_degree)
-    - [BVOC](ent_degree)
-    - [MSc](ent_degree)
-    - [MA](ent_degree)
-    - i want to know [degree](ent_degree) details
-    - give me [degree](ent_degree) details
-    - i want to know details for [Bachelor of Vocation](ent_degree)
-    - i want to know details for [Bachelor of Arts](ent_degree)
-    - i want to know details for [Bachelor of Science](ent_degree)
-    - i want to know details for [Master of Science](ent_degree)
-    - i want to know details for [Master of Arts](ent_degree)
-
-- intent: course
-  examples: |
-    - [Software Development](ent_course)
-    - [Computer Science](ent_course)
-    - [Chemistry](ent_course)
-    - [Biochemistry](ent_course)
-    - [Geography](ent_course)
-    - [Mathematics](ent_course)
-    - [Geology](ent_course)
-    - [Biotechonology](ent_course)
-    - [Botany](ent_course)
-    - [Physics](ent_course)
-    - [English](ent_course)
-    - [Economics](ent_course)
-    - [Hindi](ent_course)
-    - [Geography](ent_course)
-    - [History](ent_course)
-    - [French](ent_course)
-    - [Konkani](ent_course)
-    - [Marathi](ent_course)
-    - [Psychology](ent_course)
-    - [Philosophy](ent_course)
-    - [Sociology](ent_course)
-    - [Portuguese](ent_course)
-    - [Multimedia](ent_course)
-    - [VFX](ent_course)
-    - [Zoology](ent_course)
-    - [Economics](ent_course)
-    - i want to know about [softwaredevelopment](ent_course)
-    - tell me about [softwaredevelopment](ent_course)
-    - i want to know about [computerscience](ent_course)
-    - tell me about [computerscience](ent_course)
-    - i want to know details for [computer science](ent_course)
-    - give me [chemistry](ent_course) details
-    - i want to know about [Biochemistry](ent_course) 
-    - i want to know [Geography](ent_course) details
-    - I want to know about [Maths](ent_course) in your college
-    - give me [Geology](ent_course) details
-    - i want to know details for [Biotech](ent_course)
-    - i want to know details for [Physics](ent_course)
-    - I want to know about [Zoology](ent_course) in your college
-    - give me [English](ent_course) details 
-    - i want to know details for [Economics](ent_course)
-    - give me [Hindi](ent_course) details [History](ent_course) in your college
-    - i want to know details for [History](ent_course)
-    - I want to know about [French](ent_course) in your college
-    - i want to know [Konkani](ent_course) details
-    - i want to know details for [Marathi](ent_course)
-    - give me [Psychology](ent_course) details
-    - i want to know details for [Philosophy](ent_course)
-    - give me [Sociology](ent_course) details
-    - I want to know about [Portuguese](ent_course) in your college
-    - i want to know [Multimedia](ent_course) details
-    - give me [Virtual Reality VFX](ent_course) details
-    - I want to know about [Virtual Reality VFX](ent_course) in your college
-    - Give me info on [course](ent_course)
-    - I want to know about [course](ent_course) in your college
-    - what are the various [courses](ent_course) offered by your college
+    - [Mathematics](ent_degree)
+    - [Geology](ent_degree)
+    - [Biotechonology](ent_degree)
+    - [Botany](ent_degree)
+    - [Physics](ent_degree)
+    - [English](ent_degree)
+    - [Economics](ent_degree)
+    - [Hindi](ent_degree)
+    - [Geography](ent_degree)
+    - [History](ent_degree)
+    - [French](ent_degree)
+    - [Konkani](ent_degree)
+    - [Marathi](ent_degree)
+    - [Psychology](ent_degree)
+    - [Philosophy](ent_degree)
+    - [Sociology](ent_degree)
+    - [Portuguese](ent_degree)
+    - [Multimedia](ent_degree)
+    - [VFX](ent_degree)
+    - [Zoology](ent_degree)
+    - [Economics](ent_degree)
+    - i want to know about [softwaredevelopment](ent_degree)
+    - tell me about [softwaredevelopment](ent_degree)
+    - i want to know about [computerscience](ent_degree)
+    - tell me about [computerscience](ent_degree)
+    - i want to know details for [computer science](ent_degree)
+    - give me [chemistry](ent_degree) details
+    - i want to know about [Biochemistry](ent_degree) 
+    - i want to know [Geography](ent_degree) details
+    - I want to know about [Maths](ent_degree) in your college
+    - give me [Geology](ent_degree) details
+    - i want to know details for [Biotech](ent_degree)
+    - i want to know details for [Physics](ent_degree)
+    - I want to know about [Zoology](ent_degree) in your college
+    - give me [English](ent_degree) details 
+    - i want to know details for [Economics](ent_degree)
+    - give me [Hindi](ent_degree) details [History](ent_degree) in your college
+    - i want to know details for [History](ent_degree)
+    - I want to know about [French](ent_degree) in your college
+    - i want to know [Konkani](ent_degree) details
+    - i want to know details for [Marathi](ent_degree)
+    - give me [Psychology](ent_degree) details
+    - i want to know details for [Philosophy](ent_degree)
+    - give me [Sociology](ent_degree) details
+    - I want to know about [Portuguese](ent_degree) in your college
+    - i want to know [Multimedia](ent_degree) details
+    - give me [Virtual Reality VFX](ent_degree) details
+    - I want to know about [Virtual Reality VFX](ent_degree) in your college
+    - Give me info on [course](ent_degree)
+    - I want to know about [course](ent_degree) in your college
+    - what are the various [courses](ent_degree) offered by your college
     - i want to know course details
     - give me course details
     - could you provide me course deatils
-    - [Cs](ent_course)
-    - [Soft dev](ent_course)
-    - [chem](ent_course)
-    - [bio chem](ent_course)
-    - [geog](ent_course)
-    - [geo](ent_course)
-    - [Maths](ent_course)
-    - [Math](ent_course)
-    - [geol](ent_course)
-    - [Biotech](ent_course)
-    - [Bot](ent_course)
-    - [phy](ent_course)
-    - [eng](ent_course)
-    - [eco](ent_course)
-    - [hin](ent_course)
-    - [hind](ent_course)
-    - [fre](ent_course)
-    - [frncg](ent_course)
-    - [his](ent_course)
-    - [kon](ent_course)
-    - [konk](ent_course)
-    - [mar](ent_course)
-    - [psy](ent_course)
-    - [phil](ent_course)
-    - [socio](ent_course)
-    - [socio](ent_course)
-    - [por](ent_course)
-    - [multi](ent_course)
-    - [zoo](ent_course)
-    - [comp](ent_course)
-    - [comp sci](ent_course)
-    - [che](ent_course)
-    - [phys](ent_course)
-    - [ecnms](ent_course)
-    - [sd](ent_course)
-    - [software developing](ent_course)
+    - [Cs](ent_degree)
+    - [Soft dev](ent_degree)
+    - [chem](ent_degree)
+    - [bio chem](ent_degree)
+    - [geog](ent_degree)
+    - [geo](ent_degree)
+    - [Maths](ent_degree)
+    - [Math](ent_degree)
+    - [geol](ent_degree)
+    - [Biotech](ent_degree)
+    - [Bot](ent_degree)
+    - [phy](ent_degree)
+    - [eng](ent_degree)
+    - [eco](ent_degree)
+    - [hin](ent_degree)
+    - [hind](ent_degree)
+    - [fre](ent_degree)
+    - [frncg](ent_degree)
+    - [his](ent_degree)
+    - [kon](ent_degree)
+    - [konk](ent_degree)
+    - [mar](ent_degree)
+    - [psy](ent_degree)
+    - [phil](ent_degree)
+    - [socio](ent_degree)
+    - [socio](ent_degree)
+    - [por](ent_degree)
+    - [multi](ent_degree)
+    - [zoo](ent_degree)
+    - [comp](ent_degree)
+    - [comp sci](ent_degree)
+    - [che](ent_degree)
+    - [phys](ent_degree)
+    - [ecnms](ent_degree)
+    - [sd](ent_degree)
+    - [software developing](ent_degree)
 
 - intent: query
   examples: |

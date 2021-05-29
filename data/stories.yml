@@ -8,9 +8,9 @@ stories:
   - action: utter_help
   - action: program_form
   - slot_was_set:
+      - grade_level
       - program
       - degree
-      - course
       - query
   - action: action_handle_query
   - active_loop: null
@@ -20,9 +20,9 @@ stories:
   - intent: under_graduate
   - action: program_form
   - slot_was_set:
+      - grade_level
       - program
       - degree
-      - course
       - query
   - action: action_handle_query
   - active_loop: null
@@ -32,9 +32,9 @@ stories:
   - intent: diploma
   - action: program_form
   - slot_was_set:
+      - grade_level
       - program
       - degree
-      - course
       - query
   - action: action_handle_query
   - active_loop: null
@@ -44,9 +44,9 @@ stories:
   - intent: post_graduate
   - action: program_form
   - slot_was_set:
+      - grade_level
       - program
       - degree
-      - course
       - query
   - action: action_handle_query
   - active_loop: null
@@ -56,9 +56,9 @@ stories:
   - intent: phd
   - action: program_form
   - slot_was_set:
+      - grade_level
       - program
       - degree
-      - course
       - query
   - action: action_handle_query
   - active_loop: null
@@ -68,9 +68,21 @@ stories:
   - intent: post_graduate_diploma
   - action: program_form
   - slot_was_set:
+      - grade_level
       - program
       - degree
-      - course
+      - query
+  - action: action_handle_query
+  - active_loop: null
+
+- story: user asks for program
+  steps:
+  - intent: program
+  - action: program_form
+  - slot_was_set:
+      - grade_level
+      - program
+      - degree
       - query
   - action: action_handle_query
   - active_loop: null
@@ -80,21 +92,9 @@ stories:
   - intent: degree
   - action: program_form
   - slot_was_set:
+      - grade_level
       - program
       - degree
-      - course
-      - query
-  - action: action_handle_query
-  - active_loop: null
-
-- story: user asks for course
-  steps:
-  - intent: course
-  - action: program_form
-  - slot_was_set:
-      - program
-      - degree
-      - course
       - query
   - action: action_handle_query
   - active_loop: null
@@ -104,9 +104,9 @@ stories:
   - intent: query
   - action: program_form
   - slot_was_set:
+      - grade_level
       - program
       - degree
-      - course
       - query
   - action: action_handle_query
   - active_loop: null
