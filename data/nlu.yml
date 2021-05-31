@@ -278,6 +278,11 @@ nlu:
     - want to know more about the [fees](ent_query) structures
     - show me the [fees](ent_query) structure
     - [Fees](ent_query) structure
+    - [faq](ent_query)
+    - [FAQ](ent_query)
+    - [faqs](ent_query)
+    - tell me about the [faqs](ent_query)
+    - are the any [faqs](ent_query)
 
 - synonym: bachelorofarts 
   examples: |
@@ -488,3 +493,10 @@ nlu:
   examples: |
     - bot
     - botany
+
+- synonym: faq
+  examples: |
+    - faqs
+    - faq
+    - FAQ
+    - Frequently Asked Questions
