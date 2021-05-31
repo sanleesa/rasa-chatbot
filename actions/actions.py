@@ -30,14 +30,14 @@ class ActionAskGradeLevel(Action):
 
             if (degree is not None) and (program is None):
                 # query to get grade level from degree
-                results = dbcon.get_grade_from_degree(degree)
+                results = dbcon().get_grade_from_degree(degree)
                 if (results is None) or (len(results) == 0):
                     dispatcher.utter_message(
                         text=f"Sorry I couldn't find grade level for {degree}")
                     return [SlotSet('degree', None)]
             elif (program is not None):
                 # query to get grade level from program
-                results = dbcon.get_grade_from_program(program)
+                results = dbcon().get_grade_from_program(program)
                 if (results is None) or (len(results) == 0):
                     dispatcher.utter_message(
                         text=f"Sorry I couldn't find grade level for {program}")
@@ -52,7 +52,7 @@ class ActionAskGradeLevel(Action):
             for list in results:
                 buttons.append({"title": list[0], "payload": list[1]})
             dispatcher.utter_message(
-                text="Please select grade level", buttons=buttons)
+                text="Please select grade level", buttons=buttons, button_type="vertical")
 
         except Exception as ex:
             print(ex)
@@ -73,26 +73,26 @@ class ActionAskProgram(Action):
             program = tracker.get_slot('program')
             degree = tracker.get_slot('degree')
 
-            if (grade_level in ["diploma", "postgraduatediploma", "phd"]):
-                ret.append(SlotSet('degree', 'na'))
+            # if (grade_level in ["diploma", "postgraduatediploma", "phd"]):
+            #     ret.append(SlotSet('degree', 'na'))
 
-            if (degree is not None) and (program is None):
-                # query to get grade level from degree
-                results = dbcon.get_grade_from_degree(degree)
-                if (results is None) or (len(results) == 0):
-                    dispatcher.utter_message(
-                        text=f"Sorry I couldn't find grade level for {degree}")
-                    return [SlotSet('degree', None)]
-            else:
-                results = dbcon().get_program_list(grade_level)
-                if (results is None) or (len(results) == 0):
-                    dispatcher.utter_message(
-                        text="Sorry I couldn't find any programs :(")
-                    return []
+            # if (degree is not None) and (program is None):
+            #     # query to get grade level from degree
+            #     results = dbcon().get_grade_from_degree(degree)
+            #     if (results is None) or (len(results) == 0):
+            #         dispatcher.utter_message(
+            #             text=f"Sorry I couldn't find grade level for {degree}")
+            #         return [SlotSet('degree', None)]
+            # else:
+            results = dbcon().get_program_list(grade_level)
+            if (results is None) or (len(results) == 0):
+                dispatcher.utter_message(
+                    text="Sorry I couldn't find any programs :(")
+                return []
 
             for list in results:
                 buttons.append({"title": list[0], "payload": list[1]})
-            dispatcher.utter_message(text="Please select a program", buttons=buttons)
+            dispatcher.utter_message(text="Please select a program", buttons=buttons, button_type="vertical")
             return []
 
         except Exception as ex:
@@ -117,13 +117,13 @@ class ActionAskDegree(Action):
                 ret.append(SlotSet('degree', 'na'))
             buttons = []
 
-            if (degree is not None) and (program is None):
-                # query to get grade level from degree
-                results = dbcon.get_grade_from_degree(degree)
-                if (results is None) or (len(results) == 0):
-                    dispatcher.utter_message(
-                        text=f"Sorry I couldn't find grade level for {degree}")
-                    return [SlotSet('degree', None)]
+            # if (degree is not None) and (program is None):
+            #     # query to get grade level from degree
+            #     results = dbcon.get_grade_from_degree(degree)
+            #     if (results is None) or (len(results) == 0):
+            #         dispatcher.utter_message(
+            #             text=f"Sorry I couldn't find grade level for {degree}")
+            #         return [SlotSet('degree', None)]
             # elif (program is not None) and (degree is None):
             #     # query to get grade level from program
             #     results = dbcon.get_grade_from_program(program)
@@ -131,17 +131,17 @@ class ActionAskDegree(Action):
             #         dispatcher.utter_message(
             #             text=f"Sorry I couldn't find grade level for {program}")
             #         return [SlotSet('program', None)]
-            else:
-                results = dbcon().get_degree_list(grade_level, program)
-                if (results is None) or (len(results) == 0):
-                    dispatcher.utter_message(
-                        text="Sorry I couldn't find any degree :(")
-                    return []
+            # else:
+            results = dbcon().get_degree_list(grade_level, program)
+            if (results is None) or (len(results) == 0):
+                dispatcher.utter_message(
+                    text="Sorry I couldn't find any degree :(")
+                return []
 
             for list in results:
                 buttons.append({"title": list[0], "payload": list[1]})
             dispatcher.utter_message(
-                text="Please select a degree", buttons=buttons)
+                text="Please select a degree", buttons=buttons, button_type="vertical")
 
         except Exception as ex:
             print(ex)
@@ -168,7 +168,7 @@ class ActionAskQuery(Action):
                 for list in results:
                     buttons.append({"title": list[0], "payload": list[1]})
                 dispatcher.utter_message(
-                    text="What is your query pertaining to:", buttons=buttons)
+                    text="What is your query pertaining to:", buttons=buttons, button_type="vertical")
                 print(tracker.latest_action_name)
             else:
                 dispatcher.utter_message(
@@ -190,17 +190,31 @@ class ActionHandleQuery(Action):
             degree = tracker.get_slot('degree')
             query = tracker.get_slot('query')
             results = dbcon().get_query_response(grade_level, program, degree, query)
-            if (results is not None) or (results != []):
+            if (results[0][0] != ""):
                 dispatcher.utter_message(text=results[0][0])
             else:
-                if (query == "faqs"):
-                    dispatcher.utter_message(text=f"Sorry I couldn't find any FAQs for {degree}")
-                elif (query == "subjectdetails"):
-                    dispatcher.utter_message(text=f"Sorry I couldn't find any subject details for {degree}")
-                elif(query == "admissiondetails"):
-                    dispatcher.utter_message(text=f"Sorry I couldn't find any admission details for {degree}")
+                if (grade_level in ["diploma", "postgraduatediploma", "phd"]):
+                    if (query == "faq"):
+                        dispatcher.utter_message(text=f"Sorry I couldn't find any FAQs for {program.capitalize()}")
+                    elif (query == "subjectdetails"):
+                        dispatcher.utter_message(text=f"Sorry I couldn't find any subject details for {program.capitalize()}")
+                    elif(query == "admissiondetails"):
+                        dispatcher.utter_message(text=f"Sorry I couldn't find any admission details for {program.capitalize()}")
+                    elif(query == "fees"):
+                        dispatcher.utter_message(text=f"Sorry I couldn't find any fee details for {program.capitalize()}")
+                    else:
+                        dispatcher.utter_message(text=f"Sorry I couldn't find any query called {query.capitalize()}")
                 else:
-                    dispatcher.utter_message(text=f"Sorry I couldn't find any fee details for {degree}")
+                    if (query == "faq"):
+                        dispatcher.utter_message(text=f"Sorry I couldn't find any FAQs for {degree.capitalize()}")
+                    elif (query == "subjectdetails"):
+                        dispatcher.utter_message(text=f"Sorry I couldn't find any subject details for {degree.capitalize()}")
+                    elif(query == "admissiondetails"):
+                        dispatcher.utter_message(text=f"Sorry I couldn't find any admission details for {degree.capitalize()}")
+                    elif(query == "fees"):
+                        dispatcher.utter_message(text=f"Sorry I couldn't find any fee details for {degree.capitalize()}")
+                    else:
+                        dispatcher.utter_message(text=f"Sorry I couldn't find any query called {query.capitalize()}")
         except Exception as ex:
             print(ex)
         return []
@@ -254,10 +268,12 @@ class ValidateProgramForm(FormValidationAction):
         self, slot_value: Any, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict,
     ) -> Dict[Text, Any]:
         """Validate grade level value."""
-
         if (slot_value.lower() in self.grade_level_db()):
             # validation succeeded, set the value of the "grade level" slot to value
-            return {"grade_level": slot_value}
+            ret = {"grade_level": slot_value}
+            if (slot_value.lower() in ["diploma", "postgraduatediploma", "phd"]):
+                ret["degree"] = "na"
+            return ret
         else:
             # validation failed, set this slot to None so that the
             # user will be asked for the slot again
