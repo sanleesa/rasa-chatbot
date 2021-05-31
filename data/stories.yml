@@ -5,7 +5,7 @@ stories:
 - story: user greets
   steps:
   - intent: greet
-  - action: utter_help
+  - action: utter_welcome_message
   - action: program_form
   - slot_was_set:
       - grade_level
