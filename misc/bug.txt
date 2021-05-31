@@ -1,0 +1,2 @@
+1) slots don't reset after form is complete
+2) conflicted training data (computer science, hindi)

@@ -1,0 +1,64 @@
+Bot loaded. Type a message and press enter (use '/stop' to exit):
+Your input ->  diploma
+2021-05-29 22:42:16 DEBUG    rasa.core.lock_store  - Issuing ticket for conversation 'fcdede46950e426dba6df184fa53d752'.
+2021-05-29 22:42:16 DEBUG    rasa.core.lock_store  - Acquiring lock for conversation 'fcdede46950e426dba6df184fa53d752'.
+2021-05-29 22:42:16 DEBUG    rasa.core.lock_store  - Acquired lock for conversation 'fcdede46950e426dba6df184fa53d752'.
+2021-05-29 22:42:16 DEBUG    rasa.core.tracker_store  - Could not find tracker for conversation ID 'fcdede46950e426dba6df184fa53d752'.
+2021-05-29 22:42:16 DEBUG    rasa.core.processor  - Starting a new session for conversation ID 'fcdede46950e426dba6df184fa53d752'.
+2021-05-29 22:42:16 DEBUG    rasa.core.processor  - Policy prediction ended with events '[]'.
+2021-05-29 22:42:16 DEBUG    rasa.core.processor  - Action 'action_session_start' ended with events '[<rasa.shared.core.events.SessionStarted object at 0x0000016385607D30>, ActionExecuted(action: action_listen, policy: None, confidence: None)]'.
+2021-05-29 22:42:16 DEBUG    rasa.core.processor  - Current slot values:
+        grade_level: None
+        program: None
+        degree: None
+        query: None
+        requested_slot: None
+2021-05-29 22:42:16 DEBUG    rasa.nlu.classifiers.diet_classifier  - There is no trained model for 'ResponseSelector': The component is either not trained or didn't receive enough training data.
+2021-05-29 22:42:16 DEBUG    rasa.nlu.selectors.response_selector  - Adding following selector key to message property: default
+2021-05-29 22:42:16 DEBUG    rasa.core.processor  - Received user message 'diploma' with intent '{'id': -211278870853423188, 'name': 'diploma', 'confidence': 0.997140645980835}' and entities '[{'entity': 'ent_grade_level', 'start': 0, 'end': 7, 'confidence_entity': 0.6262549757957458, 'value': 'diploma', 'extractor': 'DIETClassifier'}]'
+2021-05-29 22:42:16 DEBUG    rasa.core.processor  - Current slot values:
+        grade_level: None
+        program: None
+        degree: None
+        query: None
+        requested_slot: None
+2021-05-29 22:42:16 DEBUG    rasa.core.processor  - Logged UserUtterance - tracker now has 4 events.
+2021-05-29 22:42:16 DEBUG    rasa.core.policies.memoization  - Current tracker state:
+[state 1] user intent: diploma | user entities: ('ent_grade_level',) | previous action name: action_listen
+2021-05-29 22:42:16 DEBUG    rasa.core.policies.memoization  - There is no memorised next action
+2021-05-29 22:42:16 DEBUG    rasa.core.policies.rule_policy  - Current tracker state:
+[state 1] user text: diploma | previous action name: action_listen
+2021-05-29 22:42:16 DEBUG    rasa.core.policies.rule_policy  - There is no applicable rule.
+2021-05-29 22:42:16 DEBUG    rasa.core.policies.rule_policy  - Current tracker state:
+[state 1] user intent: diploma | user entities: ('ent_grade_level',) | previous action name: action_listen
+2021-05-29 22:42:16 DEBUG    rasa.core.policies.rule_policy  - There is no applicable rule.
+2021-05-29 22:42:16 DEBUG    rasa.core.policies.ensemble  - Made prediction using user intent.
+2021-05-29 22:42:16 DEBUG    rasa.core.policies.ensemble  - Added `DefinePrevUserUtteredFeaturization(False)` event.
+2021-05-29 22:42:16 DEBUG    rasa.core.policies.ensemble  - Predicted next action using policy_1_TEDPolicy.
+2021-05-29 22:42:16 DEBUG    rasa.core.processor  - Predicted next action 'program_form' with confidence 1.00.
+2021-05-29 22:42:16 DEBUG    rasa.core.actions.forms  - Activated the form 'program_form'.
+2021-05-29 22:42:16 DEBUG    rasa.core.actions.forms  - No pre-filled required slots to validate.
+2021-05-29 22:42:16 DEBUG    rasa.core.actions.forms  - Validating user input 'UserUttered(text: diploma, intent: diploma, entities: diploma (Type: ent_grade_level, Role: None, Group: None), use_text_for_featurization: False)'.
+2021-05-29 22:42:16 DEBUG    rasa.core.actions.forms  - Extracted 'diploma' for extra slot 'grade_level'.
+2021-05-29 22:42:16 DEBUG    rasa.core.actions.forms  - Validating extracted slots: {'grade_level': 'diploma'}
+2021-05-29 22:42:16 DEBUG    rasa.core.actions.action  - Calling action endpoint to run action 'validate_program_form'.
+2021-05-29 22:42:19 DEBUG    rasa.core.actions.forms  - Request next slot 'degree'
+2021-05-29 22:42:19 DEBUG    rasa.core.actions.action  - Calling action endpoint to run action 'action_ask_degree'.
+2021-05-29 22:42:21 DEBUG    rasa.core.processor  - Policy prediction ended with events '[<rasa.shared.core.events.DefinePrevUserUtteredFeaturization object at 0x0000016385607970>]'.
+2021-05-29 22:42:21 DEBUG    rasa.core.processor  - Action 'program_form' ended with events '[<rasa.shared.core.events.ActiveLoop object at 0x00000163820129D0>, <rasa.shared.core.events.SlotSet object at 0x00000163856237F0>, <rasa.shared.core.events.SlotSet object at 0x0000016385628190>, <rasa.shared.core.events.SlotSet object at 0x0000016385615EB0>, <rasa.shared.core.events.SlotSet object at 0x00000163857CD790>, <rasa.shared.core.events.SlotSet object at 0x00000163857CDB50>]'.
+2021-05-29 22:42:21 DEBUG    rasa.core.processor  - Current slot values:
+        grade_level: diploma
+        program: aviation
+        degree: na
+        query: None
+        requested_slot: query
+2021-05-29 22:42:21 DEBUG    rasa.core.policies.memoization  - Current tracker state:
+[state 1] user intent: diploma | user entities: ('ent_grade_level',) | previous action name: action_listen
+[state 2] user intent: diploma | user entities: ('ent_grade_level',) | previous action name: program_form | active loop: {'name': 'program_form'} | slots: {'grade_level': (1.0,), 'program': (1.0,), 'degree': (1.0,)}
+2021-05-29 22:42:21 DEBUG    rasa.core.policies.memoization  - There is no memorised next action
+2021-05-29 22:42:21 DEBUG    rasa.core.policies.rule_policy  - Predicted 'action_listen' after loop 'program_form'.
+2021-05-29 22:42:21 DEBUG    rasa.core.policies.ensemble  - Predicted next action using policy_2_RulePolicy.
+2021-05-29 22:42:21 DEBUG    rasa.core.processor  - Predicted next action 'action_listen' with confidence 1.00.
+2021-05-29 22:42:21 DEBUG    rasa.core.processor  - Policy prediction ended with events '[]'.
+2021-05-29 22:42:21 DEBUG    rasa.core.processor  - Action 'action_listen' ended with events '[]'.
+2021-05-29 22:42:21 DEBUG    rasa.core.lock_store  - Deleted lock for conversation 'fcdede46950e426dba6df184fa53d752'.

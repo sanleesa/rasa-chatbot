@@ -1,0 +1,42 @@
+USER SELECTS Course details + yes
+1) user greets
+2) utter_welcome_message *
+3) utter_options_menu
+    - Course details
+    - Contact (email)
+4) /course_deatils
+5) run program_form
+6) utter_concluding_message
+    did that help
+    - yes
+    - no
+7) utter_thank_you_message
+8) action_restart
+
+USER SELECTS Course details + no
+1) user greets
+2) utter_welcome_message
+3) utter_options_menu
+    - Course details
+    - Contact (email)
+4) /course_deatils
+5) run program_form
+6) utter_concluding_message
+    did that help
+    - yes
+    - no
+7) utter_provide_feedback
+8) run action to accpect user feedback
+9) action_restart
+
+USER SELECTS Contact
+1) user greets
+2) utter_welcome_message
+3) utter_options_menu
+    - Course details
+    - Contact (email)
+4) /contact
+5) utter_list_of_contacts
+5) run email_form
+7) utter_thank_you_message
+8) action_restart
