@@ -219,6 +219,33 @@ class ActionHandleQuery(Action):
             print(ex)
         return []
 
+class ActionAskFeedback(Action):
+
+    def name(self):
+        return 'action_ask_feedback'
+
+    def run(self, dispatcher, tracker, domain):
+        try:
+            dispatcher.utter_message(text=f"Enter your feedback")
+        except Exception as ex:
+            print(ex)
+        return []
+
+class ActionProvideFeedback(Action):
+
+    def name(self):
+        return 'action_provide_feedback'
+
+    def run(self, dispatcher, tracker, domain):
+        try:
+            feedback = tracker.get_slot('feedback')
+            print("Feedback:",feedback)
+            dbcon().insert_user_feedback(feedback)
+            dispatcher.utter_message(text=f"Thank you for your feedback :)")
+        except Exception as ex:
+            print(ex)
+        return []
+
 
 class ValidateProgramForm(FormValidationAction):
     def name(self) -> Text:
