@@ -169,6 +169,16 @@ class DatabaseConnection():
         except Exception as err:
             print("Err:",err)
 
+    def insert_user_feedback(self, feedback):
+        try:
+            my_cursor = self.cursor
+            sql = """insert into user_feedback values(null, (%s))"""
+            my_cursor.execute(sql,(feedback,))
+            self.db.commit()
+            print("Data inserted successfully")
+        except Exception as err:
+            print("Err:",err)
+
     # def get_degree_from_program(self, program):
     #     try:
     #         my_cursor = self.cursor
