@@ -41,6 +41,27 @@ stories:
   - action: action_provide_feedback
   - active_loop: null
 
+- story: user greets + selects contact details
+  steps:
+  - intent: greet
+  - action: utter_welcome_message
+  - action: utter_start_menu
+  - intent: course_details
+  - action: program_form
+  - slot_was_set:
+      - grade_level
+      - program
+      - degree
+      - query
+  - action: action_handle_query
+  - action: utter_concluding_message
+  - intent: deny
+  - action: feedback_form
+  - slot_was_set:
+    - feedback
+  - action: action_provide_feedback
+  - active_loop: null
+
 # - story: user greets
 #   steps:
 #   - intent: greet
