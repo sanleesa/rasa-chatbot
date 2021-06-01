@@ -4,9 +4,10 @@ class DatabaseConnection():
 
     config = {
         "host": "localhost",
-        "user": "sanlee",
-        "password": "password",
-        "database": "rasachatbot"
+        "user": "root",
+        "password": "root",
+        "database": "chat_bot",
+        "auth_plugin": "mysql_native_password"
     }
 
     def __init__(self):
