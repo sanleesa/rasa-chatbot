@@ -39,6 +39,9 @@ slots:
   feedback:
     type: text
     influence_conversation: true
+  emailaddr:
+    type: text
+    influence_conversation: true
 
 responses:
   utter_greet:
@@ -121,6 +124,8 @@ forms:
   feedback_form:
     feedback:
     - type: from_text
+  email_form:
+    emailaddr: from_text
 
   # diploma_form:
   #   degree:
@@ -146,6 +151,7 @@ actions:
   - action_handle_query
   - validate_program_form
   - action_ask_feedback
+  - action_ask_email
   - action_provide_feedback
   #- utter_ask_program_form_program
   #- utter_ask_diploma_form_degree
