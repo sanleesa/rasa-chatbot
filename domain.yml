@@ -15,6 +15,7 @@ intents:
   - under_graduate
   - post_graduate
   - phd
+  - course_details
 
 entities:
   - ent_grade_level
@@ -35,6 +36,9 @@ slots:
   query:
     type: text
     influence_conversation: true
+  feedback:
+    type: text
+    influence_conversation: true
 
 responses:
   utter_greet:
@@ -42,16 +46,33 @@ responses:
   - text: "Hello!"
   - text: "Hi!"
 
+  utter_iamabot:
+    - text: "I am a chatbot powered with Rasa"
   utter_welcome_message:
-  - text: "Hi, my name is Tora and I'm here to help you with your queries on the different courses offered by the college."
+  - text: "Hi, my name is Tora and I'm here to help you with your queries on the different \
+          \ncourses offered by the college or I can help you get in touch with someone on the management."
 
-  utter_did_that_help:
+  utter_concluding_message:
   - text: "Was that helpful?"
     buttons:
       - title: "Yes"
-        payload: /affrim
+        payload: /affirm
       - title: "No"
         payload: /deny
+
+  utter_start_menu:
+  - text: "Select one of the options below:"
+    buttons:
+      - title: "Course details"
+        payload: /course_details
+      - title: "Get in touch with someone in administration"
+        payload: /contact
+
+  utter_thank_you_message:
+    - text: "Thank you"
+
+  utter_goodbye:
+    - text: "Bye"
 
   # utter_ask_program_form_program:
   # - text: "Hi, which program are you looking for?"
@@ -97,6 +118,9 @@ forms:
     query:
     - type: from_entity
       entity: ent_query
+  feedback_form:
+    feedback:
+    - type: from_text
 
   # diploma_form:
   #   degree:
@@ -109,14 +133,20 @@ forms:
   #     entity: ent_query
 
 actions:
+  - utter_welcome_message
+  - utter_concluding_message
+  - utter_start_menu
+  - utter_iamabot
+  - utter_thank_you_message
+  - utter_goodbye
   - action_ask_grade_level
   - action_ask_program
   - action_ask_degree
   - action_ask_query
   - action_handle_query
   - validate_program_form
-  - utter_welcome_message
-  - utter_did_that_help
+  - action_ask_feedback
+  - action_provide_feedback
   #- utter_ask_program_form_program
   #- utter_ask_diploma_form_degree
   #- utter_ask_query_form_query
