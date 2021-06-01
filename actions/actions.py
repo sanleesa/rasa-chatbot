@@ -246,6 +246,17 @@ class ActionProvideFeedback(Action):
             print(ex)
         return []
 
+class ActionAskEmail(Action):
+
+    def name(self):
+        return 'action_ask_email'
+    
+    def run(self, dispatcher, tracker, domain):
+        try:
+            pass
+        except Exception as ex:
+            print(ex)
+        return []
 
 class ValidateProgramForm(FormValidationAction):
     def name(self) -> Text:
