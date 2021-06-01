@@ -57,6 +57,11 @@ nlu:
     - am I talking to a bot?
     - am I talking to a human?
 
+- intent: course_details
+  examples: |
+    - course details
+    - course information
+
 - intent: grade_level
   examples: |
     - i want details on grade level
