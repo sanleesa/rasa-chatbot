@@ -2,10 +2,12 @@ version: "2.0"
 
 stories:
 
-- story: user greets
+- story: user greets + selects course details + affirm
   steps:
   - intent: greet
   - action: utter_welcome_message
+  - action: utter_start_menu
+  - intent: course_details
   - action: program_form
   - slot_was_set:
       - grade_level
@@ -13,11 +15,17 @@ stories:
       - degree
       - query
   - action: action_handle_query
+  - action: utter_concluding_message
+  - intent: affirm
+  - action: utter_thank_you_message
   - active_loop: null
 
-- story: user asks for undergraduate program
+- story: user greets + selects course details + deny
   steps:
-  - intent: under_graduate
+  - intent: greet
+  - action: utter_welcome_message
+  - action: utter_start_menu
+  - intent: course_details
   - action: program_form
   - slot_was_set:
       - grade_level
@@ -25,91 +33,122 @@ stories:
       - degree
       - query
   - action: action_handle_query
+  - action: utter_concluding_message
+  - intent: deny
+  - action: feedback_form
+  - slot_was_set:
+    - feedback
+  - action: action_provide_feedback
   - active_loop: null
 
-- story: user asks for diploma program
-  steps:
-  - intent: diploma
-  - action: program_form
-  - slot_was_set:
-      - grade_level
-      - program
-      - degree
-      - query
-  - action: action_handle_query
-  - active_loop: null
+# - story: user greets
+#   steps:
+#   - intent: greet
+#   - action: utter_welcome_message
+#   - action: program_form
+#   - slot_was_set:
+#       - grade_level
+#       - program
+#       - degree
+#       - query
+#   - action: action_handle_query
+#   - active_loop: null
 
-- story: user asks for postgraduate program
-  steps:
-  - intent: post_graduate
-  - action: program_form
-  - slot_was_set:
-      - grade_level
-      - program
-      - degree
-      - query
-  - action: action_handle_query
-  - active_loop: null
+# - story: user asks for undergraduate program
+#   steps:
+#   - intent: under_graduate
+#   - action: program_form
+#   - slot_was_set:
+#       - grade_level
+#       - program
+#       - degree
+#       - query
+#   - action: action_handle_query
+#   - active_loop: null
 
-- story: user asks for phd program
-  steps:
-  - intent: phd
-  - action: program_form
-  - slot_was_set:
-      - grade_level
-      - program
-      - degree
-      - query
-  - action: action_handle_query
-  - active_loop: null
+# - story: user asks for diploma program
+#   steps:
+#   - intent: diploma
+#   - action: program_form
+#   - slot_was_set:
+#       - grade_level
+#       - program
+#       - degree
+#       - query
+#   - action: action_handle_query
+#   - active_loop: null
 
-- story: user asks for postgraduate diploma program
-  steps:
-  - intent: post_graduate_diploma
-  - action: program_form
-  - slot_was_set:
-      - grade_level
-      - program
-      - degree
-      - query
-  - action: action_handle_query
-  - active_loop: null
+# - story: user asks for postgraduate program
+#   steps:
+#   - intent: post_graduate
+#   - action: program_form
+#   - slot_was_set:
+#       - grade_level
+#       - program
+#       - degree
+#       - query
+#   - action: action_handle_query
+#   - active_loop: null
 
-- story: user asks for program
-  steps:
-  - intent: program
-  - action: program_form
-  - slot_was_set:
-      - grade_level
-      - program
-      - degree
-      - query
-  - action: action_handle_query
-  - active_loop: null
+# - story: user asks for phd program
+#   steps:
+#   - intent: phd
+#   - action: program_form
+#   - slot_was_set:
+#       - grade_level
+#       - program
+#       - degree
+#       - query
+#   - action: action_handle_query
+#   - active_loop: null
 
-- story: user asks for degree
-  steps:
-  - intent: degree
-  - action: program_form
-  - slot_was_set:
-      - grade_level
-      - program
-      - degree
-      - query
-  - action: action_handle_query
-  - active_loop: null
+# - story: user asks for postgraduate diploma program
+#   steps:
+#   - intent: post_graduate_diploma
+#   - action: program_form
+#   - slot_was_set:
+#       - grade_level
+#       - program
+#       - degree
+#       - query
+#   - action: action_handle_query
+#   - active_loop: null
 
-- story: user asks for query
-  steps:
-  - intent: query
-  - action: program_form
-  - slot_was_set:
-      - grade_level
-      - program
-      - degree
-      - query
-  - action: action_handle_query
-  - active_loop: null
+# - story: user asks for program
+#   steps:
+#   - intent: program
+#   - action: program_form
+#   - slot_was_set:
+#       - grade_level
+#       - program
+#       - degree
+#       - query
+#   - action: action_handle_query
+#   - active_loop: null
+
+# - story: user asks for degree
+#   steps:
+#   - intent: degree
+#   - action: program_form
+#   - slot_was_set:
+#       - grade_level
+#       - program
+#       - degree
+#       - query
+#   - action: action_handle_query
+#   - active_loop: null
+
+# - story: user asks for query
+#   steps:
+#   - intent: query
+#   - action: program_form
+#   - slot_was_set:
+#       - grade_level
+#       - program
+#       - degree
+#       - query
+#   - action: action_handle_query
+#   - active_loop: null
 
 
 # - story: user selected diploma program
