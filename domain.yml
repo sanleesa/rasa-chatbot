@@ -16,6 +16,7 @@ intents:
   - post_graduate
   - phd
   - course_details
+  - contact
 
 entities:
   - ent_grade_level
@@ -40,6 +41,12 @@ slots:
     type: text
     influence_conversation: true
   emailaddr:
+    type: text
+    influence_conversation: true
+  subject:
+    type: text
+    influence_conversation: true
+  message:
     type: text
     influence_conversation: true
 
@@ -77,36 +84,6 @@ responses:
   utter_goodbye:
     - text: "Bye"
 
-  # utter_ask_program_form_program:
-  # - text: "Hi, which program are you looking for?"
-  #   buttons:
-  #     - title: "Undergraduate"
-  #       payload: "undergraduate"
-  #     - title: "Postgraduate"
-  #       payload: "postgraduate"
-  #     - title: "Postgraduate Diploma"
-  #       payload: "postgraduatediploma"
-  #     - title: "Diploma"
-  #       payload: "diploma"
-  #     - title: "Phd"
-  #       payload: "phd"
-
-  # utter_ask_diploma_form_degree:
-  #   - text: "Which course are you looking for?"
-  #     buttons:
-  #       - title: "Aviation, Hospitality & Customer Service"
-  #         payload: "/query{\"degree\":\"aviation\", \"course\":\"na\"}"
-
-  # utter_ask_query_form_query:
-  #   - text: "What would you like to know about?"
-  #     buttons:
-  #       - title: "Subject"
-  #         payload: "Subject"
-  #       - title: "Fees"
-  #         payload: "Fees"
-  #       - title: "Eligibility"
-  #         payload: "Eligibility"
-
 forms:
   program_form:
     grade_level:
@@ -125,17 +102,12 @@ forms:
     feedback:
     - type: from_text
   email_form:
-    emailaddr: from_text
-
-  # diploma_form:
-  #   degree:
-  #   - type: from_entity
-  #     entity: ent_degree
-      
-  # query_form:
-  #   query:
-  #   - type: from_entity
-  #     entity: ent_query
+    emailaddr:
+    - type: from_text
+    subject:
+    - type: from_text
+    message:
+    - type: from_text
 
 actions:
   - utter_welcome_message
@@ -151,7 +123,10 @@ actions:
   - action_handle_query
   - validate_program_form
   - action_ask_feedback
-  - action_ask_email
+  - action_ask_emailaddr
+  - action_ask_subject
+  - action_ask_message
+  - action_send_email
   - action_provide_feedback
   #- utter_ask_program_form_program
   #- utter_ask_diploma_form_degree
