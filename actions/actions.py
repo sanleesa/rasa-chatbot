@@ -3,8 +3,11 @@
 #
 # See this guide on how to implement these action:
 # https://rasa.com/docs/rasa/custom-actions
-from logging import NullHandler, setLoggerClass
+
 import re
+import smtplib
+from configparser import NoOptionError
+from logging import NullHandler, setLoggerClass
 from typing import Any, Text, Dict, List
 from dns.rdatatype import NULL
 from dns.tsig import validate
@@ -12,6 +15,8 @@ from rasa_sdk import Action, Tracker, FormValidationAction
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import AllSlotsReset, SlotSet, UserUtteranceReverted
 from rasa_sdk.types import DomainDict
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
 
 from databaseconnection import DatabaseConnection as dbcon
 
@@ -28,34 +33,39 @@ class ActionAskGradeLevel(Action):
             program = tracker.get_slot('program')
             degree = tracker.get_slot('degree')
 
-            if (degree is not None) and (program is None):
-                # query to get grade level from degree
-                results = dbcon().get_grade_from_degree(degree)
-                if (results is None) or (len(results) == 0):
-                    dispatcher.utter_message(
-                        text=f"Sorry I couldn't find grade level for {degree}")
-                    return [SlotSet('degree', None)]
-            elif (program is not None):
-                # query to get grade level from program
+            if (program is None) and (degree is None):
+                print("if 1")
                 results = dbcon().get_grade_from_program(program)
-                if (results is None) or (len(results) == 0):
-                    dispatcher.utter_message(
-                        text=f"Sorry I couldn't find grade level for {program}")
-                    return [SlotSet('program', None)]
+            elif (program is not None) and (degree is None):
+                print("if 2")
+                results = dbcon().get_grade_from_program(program)
+            elif (program is None) and (degree is not None):
+                print("if 3")
+                query1 = dbcon().get_program_from_degree_payload(degree)
+                results = dbcon().get_grade_from_program_tuple(query1)
+            elif (program is not None) and (degree is not None):
+                print("if 4")
+                query1 = dbcon().get_program_from_degree_payload(degree)
+                if (degree not in query1):
+                   return {"degree": None}
+                else:
+                    results = dbcon().get_grade_from_program(query1)
             else:
+                print("if 5")
                 results = dbcon().get_grade_level_list()
-                if (results is None) or (len(results) == 0):
-                    dispatcher.utter_message(
-                        text="Sorry I couldn't find any grade levels :(")
-                    return []
+
+            if (results is None) or (len(results) == 0):
+                dispatcher.utter_message(
+                    text="Sorry I couldn't find any grade levels :(")
+                return []
 
             for list in results:
                 buttons.append({"title": list[0], "payload": list[1]})
             dispatcher.utter_message(
-                text="Please select grade level", buttons=buttons, button_type="vertical")
+                text="Please select grade level:", buttons=buttons, button_type="vertical")
 
         except Exception as ex:
-            print(ex)
+            print("ActionAskGradeLevel:", ex)
         return []
 
 
@@ -70,7 +80,6 @@ class ActionAskProgram(Action):
             buttons = []
             results = None
             grade_level = tracker.get_slot('grade_level')
-            program = tracker.get_slot('program')
             degree = tracker.get_slot('degree')
 
             # if (grade_level in ["diploma", "postgraduatediploma", "phd"]):
@@ -84,7 +93,23 @@ class ActionAskProgram(Action):
             #             text=f"Sorry I couldn't find grade level for {degree}")
             #         return [SlotSet('degree', None)]
             # else:
-            results = dbcon().get_program_list(grade_level)
+
+            if (grade_level is not None) and (degree is None):
+                #results = dbcon().get_program_from_degree(degree)
+                print("1")
+                results = dbcon().get_program_list(grade_level)
+            elif (grade_level is not None) and (degree is not None):
+                print("2")
+                if (degree == 'na'):
+                    print("2.1")
+                    results = dbcon().get_program_list(grade_level)
+                else:
+                    print("2.5")
+                    results = dbcon().get_program_from_degree(degree)
+            else:
+                print("4")
+                results = dbcon().get_program_list(grade_level)
+
             if (results is None) or (len(results) == 0):
                 dispatcher.utter_message(
                     text="Sorry I couldn't find any programs :(")
@@ -92,7 +117,8 @@ class ActionAskProgram(Action):
 
             for list in results:
                 buttons.append({"title": list[0], "payload": list[1]})
-            dispatcher.utter_message(text="Please select a program", buttons=buttons, button_type="vertical")
+            dispatcher.utter_message(
+                text="Please select a program", buttons=buttons, button_type="vertical")
             return []
 
         except Exception as ex:
@@ -195,29 +221,40 @@ class ActionHandleQuery(Action):
             else:
                 if (grade_level in ["diploma", "postgraduatediploma", "phd"]):
                     if (query == "faq"):
-                        dispatcher.utter_message(text=f"Sorry I couldn't find any FAQs for {program.capitalize()}")
+                        dispatcher.utter_message(
+                            text=f"Sorry I couldn't find any FAQs for {program.capitalize()}")
                     elif (query == "subjectdetails"):
-                        dispatcher.utter_message(text=f"Sorry I couldn't find any subject details for {program.capitalize()}")
+                        dispatcher.utter_message(
+                            text=f"Sorry I couldn't find any subject details for {program.capitalize()}")
                     elif(query == "admissiondetails"):
-                        dispatcher.utter_message(text=f"Sorry I couldn't find any admission details for {program.capitalize()}")
+                        dispatcher.utter_message(
+                            text=f"Sorry I couldn't find any admission details for {program.capitalize()}")
                     elif(query == "fees"):
-                        dispatcher.utter_message(text=f"Sorry I couldn't find any fee details for {program.capitalize()}")
+                        dispatcher.utter_message(
+                            text=f"Sorry I couldn't find any fee details for {program.capitalize()}")
                     else:
-                        dispatcher.utter_message(text=f"Sorry I couldn't find any query called {query.capitalize()}")
+                        dispatcher.utter_message(
+                            text=f"Sorry I couldn't find any query called {query.capitalize()}")
                 else:
                     if (query == "faq"):
-                        dispatcher.utter_message(text=f"Sorry I couldn't find any FAQs for {degree.capitalize()}")
+                        dispatcher.utter_message(
+                            text=f"Sorry I couldn't find any FAQs for {degree.capitalize()}")
                     elif (query == "subjectdetails"):
-                        dispatcher.utter_message(text=f"Sorry I couldn't find any subject details for {degree.capitalize()}")
+                        dispatcher.utter_message(
+                            text=f"Sorry I couldn't find any subject details for {degree.capitalize()}")
                     elif(query == "admissiondetails"):
-                        dispatcher.utter_message(text=f"Sorry I couldn't find any admission details for {degree.capitalize()}")
+                        dispatcher.utter_message(
+                            text=f"Sorry I couldn't find any admission details for {degree.capitalize()}")
                     elif(query == "fees"):
-                        dispatcher.utter_message(text=f"Sorry I couldn't find any fee details for {degree.capitalize()}")
+                        dispatcher.utter_message(
+                            text=f"Sorry I couldn't find any fee details for {degree.capitalize()}")
                     else:
-                        dispatcher.utter_message(text=f"Sorry I couldn't find any query called {query.capitalize()}")
+                        dispatcher.utter_message(
+                            text=f"Sorry I couldn't find any query called {query.capitalize()}")
         except Exception as ex:
             print(ex)
         return []
+
 
 class ActionAskFeedback(Action):
 
@@ -231,6 +268,7 @@ class ActionAskFeedback(Action):
             print(ex)
         return []
 
+
 class ActionProvideFeedback(Action):
 
     def name(self):
@@ -239,26 +277,93 @@ class ActionProvideFeedback(Action):
     def run(self, dispatcher, tracker, domain):
         try:
             feedback = tracker.get_slot('feedback')
-            print("Feedback:",feedback)
+            print("Feedback:", feedback)
             dbcon().insert_user_feedback(feedback)
             dispatcher.utter_message(text=f"Thank you for your feedback :)")
         except Exception as ex:
             print(ex)
         return []
 
-class ActionAskEmail(Action):
+
+class ActionAskEmailaddr(Action):
 
     def name(self):
-        return 'action_ask_email'
-    
+        return 'action_ask_emailaddr'
+
     def run(self, dispatcher, tracker, domain):
         try:
-            pass
+            dispatcher.utter_message(
+                text=f"Enter your email this is so that person you want to email writes back to you")
         except Exception as ex:
             print(ex)
         return []
 
+
+class ActionAskSubject(Action):
+
+    def name(self):
+        return 'action_ask_subject'
+
+    def run(self, dispatcher, tracker, domain):
+        try:
+            dispatcher.utter_message(text=f"Enter a subject for your email:")
+        except Exception as ex:
+            print(ex)
+        return []
+
+
+class ActionAskMessage(Action):
+
+    def name(self):
+        return 'action_ask_message'
+
+    def run(self, dispatcher, tracker, domain):
+        try:
+            dispatcher.utter_message(text=f"Enter your email's message:")
+        except Exception as ex:
+            print(ex)
+        return []
+
+
+class ActionSendEmail(Action):
+
+    def name(self):
+        return 'action_send_email'
+
+    def run(self, dispatcher, tracker, domain):
+        try:
+            email = tracker.get_slot('emailaddr')
+            subject = tracker.get_slot('subject')
+            message = tracker.get_slot('message')
+            print('emailaddr:', email)
+            print('subject:', subject)
+            print('message:', message)
+
+            receiver_address = 'ssr024@chowgules.ac.in'
+
+            mail_content = message
+            sender_address = 'torachatbot@gmail.com'
+            sender_pass = 'Test4.?12#'
+            message = MIMEMultipart()
+            message['From'] = sender_address
+            message['To'] = receiver_address
+            message['Subject'] = subject
+            message.attach(MIMEText(mail_content, 'plain'))
+            session = smtplib.SMTP('smtp.gmail.com', 587)
+            session.starttls()
+            session.login(sender_address, sender_pass)
+            text = message.as_string()
+            session.sendmail(sender_address, receiver_address, text)
+            print("Email Sent")
+            session.quit()
+
+        except Exception as ex:
+            print(ex)
+        return []
+
+
 class ValidateProgramForm(FormValidationAction):
+
     def name(self) -> Text:
         return "validate_program_form"
 
@@ -363,3 +468,34 @@ class ValidateProgramForm(FormValidationAction):
             dispatcher.utter_message(
                 text=f"Sorry I couldn't find any information on {slot_value}")
             return {"query": None}
+
+
+class ValidateEmailForm(FormValidationAction):
+
+    def name(self) -> Text:
+        return "validate_email_form"
+
+    def validate_emailaddr(self, slot_value: Any, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict,
+                           ) -> Dict[Text, Any]:
+        """Validate Email Address."""
+        email = re.search("[\\w\\.]{2,}@[\\w]+\\.[\\w]{2,3}", slot_value)
+        if email != None:
+            return {"emailaddr": email.group(0)}
+        else:
+            return {"emailaddr": None}
+
+    def validate_subject(self, slot_value: Any, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict,
+                         ) -> Dict[Text, Any]:
+        """Validate Email Address."""
+        if slot_value != None:
+            return {"emailaddr": slot_value}
+        else:
+            return {"emailaddr": None}
+
+    def validate_message(self, slot_value: Any, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict,
+                         ) -> Dict[Text, Any]:
+        """Validate Email Address."""
+        if slot_value != None:
+            return {"emailaddr": slot_value}
+        else:
+            return {"emailaddr": None}
