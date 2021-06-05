@@ -46,21 +46,17 @@ stories:
   - intent: greet
   - action: utter_welcome_message
   - action: utter_start_menu
-  - intent: course_details
-  - action: program_form
+  - intent: contact
+  - action: email_form
   - slot_was_set:
-      - grade_level
-      - program
-      - degree
-      - query
-  - action: action_handle_query
-  - action: utter_concluding_message
-  - intent: deny
-  - action: feedback_form
-  - slot_was_set:
-    - feedback
-  - action: action_provide_feedback
+      - emailaddr
+      - subject
+      - message
+  - action: action_send_email
+  - action: utter_thank_you_message 
   - active_loop: null
+
+#action_send_email
 
 # - story: user greets
 #   steps:
