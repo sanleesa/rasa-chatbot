@@ -1,5 +1,6 @@
 import mysql.connector
 
+
 class DatabaseConnection():
 
     config = {
@@ -14,6 +15,8 @@ class DatabaseConnection():
         self.db = mysql.connector.connect(**self.config)
         self.cursor = self.db.cursor()
 
+# user query tables
+
     def insert_user_query(self, user_query):
         my_cursor = self.cursor
         sql = "INSERT INTO user_queries (query) VALUES (%s);"
@@ -21,7 +24,7 @@ class DatabaseConnection():
         my_cursor.execute(sql, (val,))
         self.db.commit()
         print("Data inserted successfully")
-    
+
     def get_response(self, user_query):
         my_cursor = self.cursor
         sql = "SELECT bot_responses FROM user_queries where query = (%s);"
@@ -30,6 +33,9 @@ class DatabaseConnection():
         results = my_cursor.fetchall()
         print(f"get_response found this as a response: {results}")
         return results
+
+
+# level 1,2,3,4 queries
 
     def get_all_grade_level(self):
         try:
@@ -40,7 +46,7 @@ class DatabaseConnection():
             print(f"get_all_grade_level found this as a response: {results}")
             return results
         except Exception as err:
-            print("Err:",err)
+            print("Err:", err)
 
     def get_all_program(self):
         try:
@@ -51,7 +57,7 @@ class DatabaseConnection():
             print(f"get_all_program found this as a response: {results}")
             return results
         except Exception as err:
-            print("Err:",err)
+            print("Err:", err)
 
     def get_all_degree(self):
         try:
@@ -62,7 +68,7 @@ class DatabaseConnection():
             print(f"get_all_degree found this as a response: {results}")
             return results
         except Exception as err:
-            print("Err:",err)
+            print("Err:", err)
 
     def get_all_query(self):
         try:
@@ -73,8 +79,7 @@ class DatabaseConnection():
             print(f"get_all_query found this as a response: {results}")
             return results
         except Exception as err:
-            print("Err:",err)
-
+            print("Err:", err)
 
     def get_grade_level_list(self):
         try:
@@ -85,7 +90,7 @@ class DatabaseConnection():
             print(f"get_grade_level_list found this as a response: {results}")
             return results
         except Exception as err:
-            print("Err:",err)
+            print("Err:", err)
 
     def get_program_list(self, program):
         try:
@@ -98,22 +103,37 @@ class DatabaseConnection():
             print(f"get_program_list found this as a response: {results}")
             return results
         except Exception as err:
-            print("Err:",err)
-    
+            print("Err:", err)
+
+    # def get_degree_list(self, grade_level, program):
+    #     try:
+    #         my_cursor = self.cursor
+    #         sql = """SELECT level_3.title, level_3.payload FROM level_3 
+    #         INNER JOIN level_2 on level_3.level_2_id_fk = level_2.level_2_id 
+    #         INNER JOIN level_1 on level_2.level_1_id_fk = level_1.level_1_id 
+    #         WHERE level_1.payload = (%s) AND level_2.payload = (%s);"""
+    #         my_cursor.execute(sql, (grade_level, program))
+    #         results = my_cursor.fetchall()
+    #         print(f"get_degree_list found this as a response: {results}")
+    #         return results
+    #     except Exception as err:
+    #         print("Err:", err)
+
     def get_degree_list(self, grade_level, program):
         try:
             my_cursor = self.cursor
-            sql = """SELECT level_3.title, level_3.payload FROM level_3 
-            INNER JOIN level_2 on level_3.level_2_id_fk = level_2.level_2_id 
-            INNER JOIN level_1 on level_2.level_1_id_fk = level_1.level_1_id 
-            WHERE level_1.payload = (%s) AND level_2.payload = (%s);"""
+            sql = """select l3.title, l3.payload
+                    from level_3 l3 LEFT JOIN
+                        level_2 l2 ON l3.level_2_id_fk = l2.level_2_id LEFT JOIN
+                        level_1 l1 ON l2.level_1_id_fk = l1.level_1_id
+                    where l1.payload = (%s) AND l2.payload = (%s);"""
             my_cursor.execute(sql, (grade_level, program))
             results = my_cursor.fetchall()
             print(f"get_degree_list found this as a response: {results}")
             return results
         except Exception as err:
-            print("Err:",err)
-    
+            print("Err:", err)
+
     def get_query_list(self, program, degree, course):
         try:
             my_cursor = self.cursor
@@ -127,8 +147,8 @@ class DatabaseConnection():
             print(f"get_query_list found this as a response: {results}")
             return results
         except Exception as err:
-            print("Err:",err)
-    
+            print("Err:", err)
+
     def get_query_response(self, program, degree, course, query):
         try:
             my_cursor = self.cursor
@@ -138,51 +158,143 @@ class DatabaseConnection():
             INNER JOIN level_2 ON level_2.level_2_id = level_3.level_2_id_fk 
             INNER JOIN level_1 on level_1.level_1_id = level_2.level_1_id_fk 
             WHERE level_1.payload = (%s) AND  level_2.payload = (%s) AND  level_3.payload = (%s) AND level_4.payload = (%s);"""
-            my_cursor.execute(sql, (program , degree, course, query))
+            my_cursor.execute(sql, (program, degree, course, query))
             results = my_cursor.fetchall()
             print(f"get_query_response found this as a response: {results}")
             return results
         except Exception as err:
-            print("Err:",err)
+            print("Err:", err)
 
-    def get_grade_from_degree(self, degree):
+    # query 1
+    def get_grade_from_program(self, program):
         try:
             my_cursor = self.cursor
-            sql = """SELECT title, payload FROM level_1 WHERE level_1_id IN (SELECT level_1_id_fk FROM level_2 WHERE level_2_id 
-            IN (SELECT level_2_id_fk FROM level_3 WHERE lower(payload) = (%s)))"""
-            my_cursor.execute(sql, (degree,))
+            sql = """(select l1.title, l1.payload 
+            from level_2 l2 LEFT JOIN
+            level_1 l1 ON l2.level_1_id_fk = l1.level_1_id
+            where l2.payload in (%s))
+            UNION
+            (select title, payload
+            from level_1 l1
+            where (select count(level_1_id_fk) cnt
+                            from level_2 l2
+                            where l2.payload in (%s)) = 0);
+            """
+            my_cursor.execute(sql, (program, program))
             results = my_cursor.fetchall()
-            print(f"get_program_from_course found this as a response: {results}")
+            print(
+                f"get_grade_from_program found this as a response: {results}")
             return results
         except Exception as err:
-            print("Err:",err)
-    
-    def get_grade_from_program(self, degree):
+            print("Err: get_grade_from_program", err)
+
+    # query 1 tuple
+    def get_grade_from_program_tuple(self, program):
+        try:
+            l = []
+            for i in program:
+                for j in i:
+                    l.append(j)
+            program_tuple = tuple(l)
+            print("Program:",program_tuple)
+            my_cursor = self.cursor
+            sql = """(select l1.title, l1.payload 
+            from level_2 l2 LEFT JOIN
+            level_1 l1 ON l2.level_1_id_fk = l1.level_1_id
+            where l2.payload in {})
+            UNION
+            (select title, payload
+            from level_1 l1
+            where (select count(level_1_id_fk) cnt
+                            from level_2 l2
+                            where l2.payload in {}) = 0);
+            """
+            my_cursor.execute(sql.format(program_tuple, program_tuple))
+            results = my_cursor.fetchall()
+            print(
+                f"get_grade_from_program found this as a response: {results}")
+            return results
+        except Exception as err:
+            print("Err: get_grade_from_program_tuple", err)
+
+    # query 2
+    def get_program_from_degree(self, degree):
         try:
             my_cursor = self.cursor
-            sql = """SELECT title, payload FROM level_1 WHERE level_1_id IN 
-            (SELECT level_1_id_fk FROM level_2 WHERE payload = (%s))"""
-            my_cursor.execute(sql, (degree,))
+            sql = """
+            (select l2.title, l2.payload from level_3 l3 LEFT JOIN
+            level_2 l2 ON l3.level_2_id_fk = l2.level_2_id where l3.payload in ((%s)))
+            UNION
+            (select title, payload from level_2 l2 where 
+            (select count(level_2_id_fk) cnt from level_3 l3 
+            where l3.payload in ((%s))) = 0);"""
+            my_cursor.execute(sql, (degree, degree))
             results = my_cursor.fetchall()
-            print(f"get_program_from_degree found this as a response: {results}")
+            print(
+                f"get_program_from_degree found this as a response: {results}")
             return results
         except Exception as err:
-            print("Err:",err)
+            print("Err: get_program_from_degree", err)
+
+    # query 2 payload
+    def get_program_from_degree_payload(self, degree):
+        try:
+            my_cursor = self.cursor
+            sql = """
+            (select l2.payload from level_3 l3 LEFT JOIN
+            level_2 l2 ON l3.level_2_id_fk = l2.level_2_id where l3.payload in ((%s)))
+            UNION
+            (select payload from level_2 l2 where 
+            (select count(level_2_id_fk) cnt from level_3 l3 
+            where l3.payload in ((%s))) = 0);"""
+            my_cursor.execute(sql, (degree, degree))
+            results = my_cursor.fetchall()
+            print(
+                f"get_program_from_degree found this as a response: {results}")
+            return results
+        except Exception as err:
+            print("Err: get_program_from_degree", err)
+
+    # def get_grade_from_degree(self, degree):
+    #     try:
+    #         my_cursor = self.cursor
+    #         sql = """SELECT title, payload FROM level_1 WHERE level_1_id IN (SELECT level_1_id_fk FROM level_2 WHERE level_2_id
+    #         IN (SELECT level_2_id_fk FROM level_3 WHERE lower(payload) = (%s)))"""
+    #         my_cursor.execute(sql, (degree,))
+    #         results = my_cursor.fetchall()
+    #         print(f"get_program_from_course found this as a response: {results}")
+    #         return results
+    #     except Exception as err:
+    #         print("Err:",err)
+
+    # def get_grade_from_program(self, degree):
+    #     try:
+    #         my_cursor = self.cursor
+    #         sql = """SELECT title, payload FROM level_1 WHERE level_1_id IN
+    #         (SELECT level_1_id_fk FROM level_2 WHERE payload = (%s))"""
+    #         my_cursor.execute(sql, (degree,))
+    #         results = my_cursor.fetchall()
+    #         print(f"get_program_from_degree found this as a response: {results}")
+    #         return results
+    #     except Exception as err:
+    #         print("Err:",err)
+
+# feedback query
 
     def insert_user_feedback(self, feedback):
         try:
             my_cursor = self.cursor
             sql = """insert into user_feedback values(null, (%s))"""
-            my_cursor.execute(sql,(feedback,))
+            my_cursor.execute(sql, (feedback,))
             self.db.commit()
             print("Data inserted successfully")
         except Exception as err:
-            print("Err:",err)
+            print("Err:", err)
 
     # def get_degree_from_program(self, program):
     #     try:
     #         my_cursor = self.cursor
-    #         sql = """SELECT title, payload FROM level_2 WHERE level_2_id IN (SELECT level_2_id_fk FROM level_3 
+    #         sql = """SELECT title, payload FROM level_2 WHERE level_2_id IN (SELECT level_2_id_fk FROM level_3
     #         WHERE lower(payload) = (%s))"""
     #         my_cursor.execute(sql, (program,))
     #         results = my_cursor.fetchall()
@@ -190,5 +302,3 @@ class DatabaseConnection():
     #         return results
     #     except Exception as err:
     #         print("Err:",err)
-
-    
