@@ -62,6 +62,12 @@ nlu:
     - course details
     - course information
 
+- intent: contact
+  examples: |
+    - contact
+    - get in touch
+    - reach out
+
 - intent: grade_level
   examples: |
     - i want details on grade level
@@ -149,12 +155,17 @@ nlu:
     - [aviation](ent_program)
     - [hospitality](ent_program)
     - [customer service](ent_program)
-    - [Computer Science](ent_program)
-    - [cs](ent_program)
-    - [Geography](ent_program)
-    - [geo](ent_program)
-    - [geo](ent_program)
-    - [Computer Science](ent_program)
+    - [Computer Science program](ent_program)
+    - [hind program](ent_program)
+    - [hind program](ent_program)
+    - [hin program](ent_program)
+    - [cs program](ent_program)
+    - [l2hindi](ent_program)
+    - [l2computerscience](ent_program)
+    - [l2geography](ent_program)
+    - [Geography program](ent_program)
+    - [geo program](ent_program)
+    - [geo program](ent_program)
     - [BSC](ent_program)
     - [BA](ent_program)
     - [BVOC](ent_program)
@@ -338,6 +349,12 @@ nlu:
     - cs
     - Computer science
 
+- synonym: l2computerscience
+  examples: |
+    - Comp sci program
+    - cs program
+    - Computer science program
+
 - synonym: chemistry
   examples: |
     - chemistry
@@ -361,6 +378,13 @@ nlu:
     - geog
     - Geog
     - GEOGRAPHY
+
+- synonym: l2geography
+  examples: |
+    - geography program
+    - geog program
+    - Geog program
+    - GEOGRAPHY program
 
 - synonym: mathematics
   examples: |
@@ -414,6 +438,13 @@ nlu:
     - hindi
     - HINDI
     - hin
+
+- synonym: l2hindi
+  examples: |
+    - hind program
+    - hindi program
+    - HINDI program
+    - hin program
 
 - synonym: history
   examples: |
