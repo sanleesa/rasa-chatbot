@@ -49,6 +49,9 @@ nlu:
     - don't like that
     - no way
     - not really
+    - nope
+    - nah
+    - maybe not
 
 - intent: bot_challenge
   examples: |
@@ -61,6 +64,7 @@ nlu:
   examples: |
     - course details
     - course information
+    - course deatil
 
 - intent: contact
   examples: |
@@ -300,14 +304,14 @@ nlu:
     - tell me about the [faqs](ent_query)
     - are the any [faqs](ent_query)
 
-- synonym: bachelorofarts 
+- synonym: l2bachelorofarts 
   examples: |
     - ba
     - BA
     - BACHELOR OF ARTS
     - bachelor of arts
 
-- synonym: bachelorofscience
+- synonym: l2bachelorofscience
   examples: |
     - BSC
     - Bachelor Science
@@ -315,7 +319,7 @@ nlu:
     - bsc
     - bachelor of science
 
-- synonym: bachelorofvocation
+- synonym: l2bachelorofvocation
   examples: |
     - BVOC
     - Bachelor Vocation
@@ -323,19 +327,21 @@ nlu:
     - bvoc
     - bachelor of vocation
 
-- synonym: masterofscience
+- synonym: l2masterofscience
   examples: |
     - MSC
     - Master Science
+    - Master of Science
     - msc
 
-- synonym: masterofarts
+- synonym: l2masterofarts
   examples: |
     - MA
     - Master Arts
+    - Master of Arts
     - ma
 
-- synonym: aviation
+- synonym: l2aviation
   examples: |
     - Aviation, Hospitality & Customer Service
     - hospitality
@@ -399,7 +405,7 @@ nlu:
     - geology
     - GEOLOGY
 
-- synonym: biotech
+- synonym: biotechnology
   examples: |
     - biotech
     - bio tech
@@ -536,3 +542,50 @@ nlu:
     - faq
     - FAQ
     - Frequently Asked Questions
+
+- synonym: subject
+  examples: |
+    - subs
+    - subjects
+    - subjcts 
+
+- synonym: fees
+  examples: |   
+    - fee
+    - fees
+    - Fees
+
+- synonym: admission
+  examples: |   
+    - admission
+    - admision
+    - admission process
+    - admission details
+
+- synonym: undergraduate
+  examples: |
+    - ug
+    - undergrad
+    - under graduate
+
+- synonym: phd
+  examples: |
+    - Doctor of Philosophy
+
+- synonym: diploma
+  examples: |
+    - dip
+    - diploma course
+
+- synonym: postgraduate
+  examples: |
+    - pg
+    - postgrad
+    - post graduate
+
+- synonym: postgraduatediploma
+  examples: |
+    - pgdc
+    - pgd
+    - postgrad diploma
+    - post graduate diploma
