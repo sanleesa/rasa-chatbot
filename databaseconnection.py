@@ -291,6 +291,21 @@ class DatabaseConnection():
         except Exception as err:
             print("Err:", err)
 
+
+# get email list
+    
+    def get_email_list(self):
+        try:
+            my_cursor = self.cursor
+            sql = """select users_name, email_address from email_address_directory;"""
+            my_cursor.execute(sql)
+            results = my_cursor.fetchall()
+            print(
+                f"get_email_list found this as a response: {results}")
+            return results
+        except Exception as err:
+            print("Err: get_email_list", err)
+
     # def get_degree_from_program(self, program):
     #     try:
     #         my_cursor = self.cursor
