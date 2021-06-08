@@ -43,6 +43,9 @@ slots:
   emailaddr:
     type: text
     influence_conversation: true
+  user_emailaddr:
+    type: text
+    influence_conversation: true
   subject:
     type: text
     influence_conversation: true
@@ -75,7 +78,7 @@ responses:
     buttons:
       - title: "Course details"
         payload: /course_details
-      - title: "Get in touch with someone in administration"
+      - title: "Contact administration"
         payload: /contact
 
   utter_thank_you_message:
@@ -104,6 +107,8 @@ forms:
   email_form:
     emailaddr:
     - type: from_text
+    user_emailaddr:
+    - type: from_text
     subject:
     - type: from_text
     message:
@@ -123,6 +128,7 @@ actions:
   - action_handle_query
   - validate_program_form
   - action_ask_feedback
+  - action_ask_user_emailaddr
   - action_ask_emailaddr
   - action_ask_subject
   - action_ask_message
