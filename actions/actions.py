@@ -34,24 +34,19 @@ class ActionAskGradeLevel(Action):
             degree = tracker.get_slot('degree')
 
             if (program is None) and (degree is None):
-                print("if 1")
                 results = dbcon().get_grade_from_program(program)
             elif (program is not None) and (degree is None):
-                print("if 2")
                 results = dbcon().get_grade_from_program(program)
             elif (program is None) and (degree is not None):
-                print("if 3")
                 query1 = dbcon().get_program_from_degree_payload(degree)
                 results = dbcon().get_grade_from_program_tuple(query1)
             elif (program is not None) and (degree is not None):
-                print("if 4")
                 query1 = dbcon().get_program_from_degree_payload(degree)
                 if (degree not in query1):
                    return {"degree": None}
                 else:
                     results = dbcon().get_grade_from_program(query1)
             else:
-                print("if 5")
                 results = dbcon().get_grade_level_list()
 
             if (results is None) or (len(results) == 0):
@@ -96,18 +91,13 @@ class ActionAskProgram(Action):
 
             if (grade_level is not None) and (degree is None):
                 #results = dbcon().get_program_from_degree(degree)
-                print("1")
                 results = dbcon().get_program_list(grade_level)
             elif (grade_level is not None) and (degree is not None):
-                print("2")
                 if (degree == 'na'):
-                    print("2.1")
                     results = dbcon().get_program_list(grade_level)
                 else:
-                    print("2.5")
                     results = dbcon().get_program_from_degree(degree)
             else:
-                print("4")
                 results = dbcon().get_program_list(grade_level)
 
             if (results is None) or (len(results) == 0):
@@ -292,6 +282,27 @@ class ActionAskEmailaddr(Action):
 
     def run(self, dispatcher, tracker, domain):
         try:
+            buttons = []
+            results = dbcon().get_email_list()
+            if (results != []):
+                for list in results:
+                    buttons.append({"title": list[0], "payload": list[1]})
+                dispatcher.utter_message(
+                    text="To who would you like to send an email to:", buttons=buttons, button_type="vertical")
+            else:
+                dispatcher.utter_message(
+                    text="Sorry I couldn't find any emails :(")
+        except Exception as ex:
+            print(ex)
+        return []
+
+class ActionAskUserEmailaddr(Action):
+
+    def name(self):
+        return 'action_ask_user_emailaddr'
+
+    def run(self, dispatcher, tracker, domain):
+        try:
             dispatcher.utter_message(
                 text=f"Enter your email this is so that person you want to email writes back to you")
         except Exception as ex:
@@ -332,16 +343,19 @@ class ActionSendEmail(Action):
 
     def run(self, dispatcher, tracker, domain):
         try:
-            email = tracker.get_slot('emailaddr')
+            receiver_email = tracker.get_slot('emailaddr')
+            user_email = tracker.get_slot('user_emailaddr')
             subject = tracker.get_slot('subject')
-            message = tracker.get_slot('message')
-            print('emailaddr:', email)
-            print('subject:', subject)
-            print('message:', message)
+            user_message = tracker.get_slot('message')
+            print("receiver_email:", receiver_email,"user_email:",user_email,"subject:",subject,"user_message:",user_message)
 
-            receiver_address = 'ssr024@chowgules.ac.in'
+            receiver_address = receiver_email
 
-            mail_content = message
+            mail_content = """ Hi you have received a messages from {}
+            \nMessage: {}
+            \nSent with Tora"""
+
+            mail_content = mail_content.format(user_email, user_message)
             sender_address = 'torachatbot@gmail.com'
             sender_pass = 'Test4.?12#'
             message = MIMEMultipart()
