@@ -1,3 +1,4 @@
 # rasa-chatbot
 
-This project is for my final year project it's still under devlopement
+This project was made as my final year project 
+This is a chatbot that answers queries for new candidates
