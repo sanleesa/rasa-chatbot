@@ -6,6 +6,7 @@ stories:
   steps:
   - intent: greet
   - action: utter_welcome_message
+  - action: utter_help
   - action: utter_start_menu
 
 - story: selects course details + affirm
@@ -52,6 +53,159 @@ stories:
       - message
   - action: action_send_email
   - action: utter_thank_you_message 
+  - action: action_restart
+
+- story: user asks for grade level + affirm
+  steps:
+  - intent: grade_level
+  - action: program_form
+  - slot_was_set:
+      - grade_level
+      - program
+      - degree
+      - query
+  - action: action_handle_query
+  - action: utter_concluding_message
+  - intent: affirm
+  - action: utter_thank_you_message
+  #- active_loop: null
+  - action: action_restart
+
+- story: user asks for program + affirm
+  steps:
+  - intent: program
+  - action: program_form
+  - slot_was_set:
+      - grade_level
+      - program
+      - degree
+      - query
+  - action: action_handle_query
+  - action: utter_concluding_message
+  - intent: affirm
+  - action: utter_thank_you_message
+  #- active_loop: null
+  - action: action_restart
+
+- story: user asks for program + deny
+  steps:
+  - intent: program
+  - action: program_form
+  - slot_was_set:
+      - grade_level
+      - program
+      - degree
+      - query
+  - action: action_handle_query
+  - action: utter_concluding_message
+  - intent: deny
+  - action: feedback_form
+  - slot_was_set:
+    - feedback
+  - action: action_provide_feedback
+  - action: action_restart
+
+- story: user asks for degree + affirm
+  steps:
+  - intent: degree
+  - action: program_form
+  - slot_was_set:
+      - grade_level
+      - program
+      - degree
+      - query
+  - action: action_handle_query
+  - action: utter_concluding_message
+  - intent: affirm
+  - action: utter_thank_you_message
+  #- active_loop: null
+  - action: action_restart
+
+- story: user asks for degree + deny
+  steps:
+  - intent: degree
+  - action: program_form
+  - slot_was_set:
+      - grade_level
+      - program
+      - degree
+      - query
+  - action: action_handle_query
+  - action: utter_concluding_message
+  - intent: deny
+  - action: feedback_form
+  - slot_was_set:
+    - feedback
+  - action: action_provide_feedback
+  - action: action_restart
+
+
+- story: user asks for postgraduate  + affirm
+  steps:
+  - intent: post_graduate
+  - action: program_form
+  - slot_was_set:
+      - grade_level
+      - program
+      - degree
+      - query
+  - action: action_handle_query
+  - action: utter_concluding_message
+  - intent: affirm
+  - action: utter_thank_you_message
+  #- active_loop: null
+  - action: action_restart
+
+- story: user asks for postgraduate program + deny
+  steps:
+  - intent: post_graduate
+  - action: program_form
+  - slot_was_set:
+      - grade_level
+      - program
+      - degree
+      - query
+  - action: action_handle_query
+  - action: utter_concluding_message
+  - intent: deny
+  - action: feedback_form
+  - slot_was_set:
+    - feedback
+  - action: action_provide_feedback
+  - action: action_restart
+
+- story: user asks for postgraduate diploma program + deny
+  steps:
+  - intent: post_graduate_diploma
+  - action: program_form
+  - slot_was_set:
+      - grade_level
+      - program
+      - degree
+      - query
+  - action: action_handle_query
+  - action: utter_concluding_message
+  - intent: affirm
+  - action: utter_thank_you_message
+  #- active_loop: null
+  - action: action_restart
+
+- story: user asks for postgraduate diploma program + deny
+  steps:
+  - intent: post_graduate_diploma
+  - action: program_form
+  - slot_was_set:
+      - grade_level
+      - program
+      - degree
+      - query
+  - action: action_handle_query
+  - action: utter_concluding_message
+  - intent: deny
+  - action: feedback_form
+  - slot_was_set:
+    - feedback
+  - action: action_provide_feedback
   - action: action_restart
 
 - story: user asks for undergraduate program + affirm
@@ -122,40 +276,6 @@ stories:
   - action: action_provide_feedback
   - action: action_restart
 
-- story: user asks for postgraduate program + affirm
-  steps:
-  - intent: postgraduate
-  - action: program_form
-  - slot_was_set:
-      - grade_level
-      - program
-      - degree
-      - query
-  - action: action_handle_query
-  - action: utter_concluding_message
-  - intent: affirm
-  - action: utter_thank_you_message
-  #- active_loop: null
-  - action: action_restart
-
-- story: user asks for postgraduate program + deny
-  steps:
-  - intent: postgraduate
-  - action: program_form
-  - slot_was_set:
-      - grade_level
-      - program
-      - degree
-      - query
-  - action: action_handle_query
-  - action: utter_concluding_message
-  - intent: deny
-  - action: feedback_form
-  - slot_was_set:
-    - feedback
-  - action: action_provide_feedback
-  - action: action_restart
-
 - story: user asks for phd program + affirm
   steps:
   - intent: phd
@@ -189,95 +309,3 @@ stories:
     - feedback
   - action: action_provide_feedback
   - action: action_restart
-
-- story: user asks for postgraduate diploma program + affirm
-  steps:
-  - intent: phd
-  - action: program_form
-  - slot_was_set:
-      - grade_level
-      - program
-      - degree
-      - query
-  - action: action_handle_query
-  - action: utter_concluding_message
-  - intent: affirm
-  - action: utter_thank_you_message
-  #- active_loop: null
-  - action: action_restart
-
-- story: user asks for postgraduate diploma program + deny
-  steps:
-  - intent: phd
-  - action: program_form
-  - slot_was_set:
-      - grade_level
-      - program
-      - degree
-      - query
-  - action: action_handle_query
-  - action: utter_concluding_message
-  - intent: deny
-  - action: feedback_form
-  - slot_was_set:
-    - feedback
-  - action: action_provide_feedback
-  - action: action_restart
-
-- story: user asks for program + affirm
-  steps:
-  - intent: program
-  - action: program_form
-  - slot_was_set:
-      - grade_level
-      - program
-      - degree
-      - query
-  - action: action_handle_query
-  - action: utter_concluding_message
-  - intent: affirm
-  - action: utter_thank_you_message
-  #- active_loop: null
-  - action: action_restart
-
-# - story: user asks for 
-#   steps:
-#   - intent: program
-#   - action: program_form
-#   - slot_was_set:
-#       - grade_level
-#       - program
-#       - degree
-#       - query
-#   - action: action_handle_query
-#   - active_loop: null
-
-# - story: user asks for query
-#   steps:
-#   - intent: query
-#   - action: program_form
-#   - slot_was_set:
-#       - grade_level
-#       - program
-#       - degree
-#       - query
-#   - action: action_handle_query
-#   - active_loop: null
-
-
-# - story: user selected diploma program
-#   steps:
-#   - intent: diploma
-#   - action: diploma_form
-#   - slot_was_set:
-#       - degree
-#   - active_loop: null
-
-# - story: user selected the query
-#   steps:
-#   - intent: query
-#   - action: query_form
-#   - slot_was_set:
-#       - query
-#   - action: action_handle_query
-#   - active_loop: null
