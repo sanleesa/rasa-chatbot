@@ -16,6 +16,9 @@ nlu:
     - goodmorning
     - goodevening
     - good afternoon
+    - yo
+    - sup
+    - whats up
 
 - intent: goodbye
   examples: |
@@ -88,7 +91,7 @@ nlu:
 
 - intent: diploma
   examples: |
-    - [diploma](ent_grade_level)
+    - [diploma](ent_grade_level) 
     - i want details on [diploma](ent_grade_level) programs
     - i want information on [diploma](ent_grade_level) programs
     - Give me info on [diploma](ent_grade_level)
@@ -98,6 +101,8 @@ nlu:
     - what are the various [diploma](ent_grade_level) programs
     - I want to know more about [diploma](ent_grade_level)
     - give me details on [diploma](ent_grade_level)
+    - [dip](ent_grade_level) 
+    - [diploma course](ent_grade_level)
 
 - intent: under_graduate
   examples: |
@@ -113,6 +118,7 @@ nlu:
     - what are the various [undergraduate](ent_grade_level) programs
     - provide me info on [undergraduate](ent_grade_level) programs
     - info on [undergraduate](ent_grade_level) programs
+    - i want to know about all [ug](ent_grade_level) programs
 
 - intent: phd
   examples: |
@@ -133,6 +139,10 @@ nlu:
     - I want to know about [postgraduate diploma](ent_grade_level) in your college
     - Does the college offer [postgraduate diploma](ent_grade_level) course
     - what are the various [postgraduatediploma](ent_grade_level) programs
+    - [pgdc](ent_grade_level)
+    - [postgrad diploma](ent_grade_level)
+    - [pgd](ent_grade_level)
+    - [post graduate diploma](ent_grade_level)
 
 - intent: post_graduate
   examples: |
@@ -147,6 +157,8 @@ nlu:
     - tell me about [postgraduate](ent_grade_level) programs
     - can you give me info on [postgraduate](ent_grade_level) programs
     - info on [postgraduate](ent_grade_level) programs
+    - [postgrad](ent_grade_level)
+    - [post graduate](ent_grade_level)
 
 - intent: program
   examples: |
@@ -160,8 +172,11 @@ nlu:
     - [hospitality](ent_program)
     - [customer service](ent_program)
     - [Computer Science program](ent_program)
+    - [Comp sci program](ent_program)
+    - [cs program](ent_program)
+    - [Computer science program](ent_program)
     - [hind program](ent_program)
-    - [hind program](ent_program)
+    - [hindi program](ent_program)
     - [hin program](ent_program)
     - [cs program](ent_program)
     - [l2hindi](ent_program)
@@ -175,6 +190,7 @@ nlu:
     - [BVOC](ent_program)
     - [MSc](ent_program)
     - [MA](ent_program)
+    - [computer science program](ent_program)
     - i want to know [degree](ent_program) details
     - give me [degree](ent_program) details
     - i want to know details for [Bachelor of Vocation](ent_program)
@@ -183,6 +199,10 @@ nlu:
     - i want to know details for [Master of Science](ent_program)
     - i want to know details for [Master of Arts](ent_program)
     - [bachelorofvocation](ent_program)
+    - [Bachelor Science](ent_program)
+    - [Bachelor Vocation](ent_program)
+    - [Master Science](ent_program)
+    - [geog program](ent_program)
 
 - intent: degree
   examples: |
@@ -281,6 +301,21 @@ nlu:
     - [ecnms](ent_degree)
     - [sd](ent_degree)
     - [software developing](ent_degree)
+    - [che](ent_degree)
+    - [bio tech](ent_degree)
+    - [ecnmcs](ent_degree)
+    - [Hist](ent_degree)
+    - [frnch](ent_degree)
+    - [psycho](ent_degree)
+    - [port](ent_degree)
+    - [MULTI MEDIA](ent_degree)
+    - [Visual Effects](ent_degree)
+    - [Visual eff](ent_degree)
+    - [visualeffects](ent_degree)
+    - [VR VFX](ent_degree)
+    - [VFX](ent_degree)
+    - [VR](ent_degree)
+    - [software dev](ent_degree)
 
 - intent: query
   examples: |
@@ -292,7 +327,7 @@ nlu:
     - [Admission Details](ent_query)
     - could you tell me what the [admission](ent_query) process
     - [fees](ent_query)
-    - [Fees](ent_query)
+    - [Fee](ent_query)
     - Give me info of [fees](ent_query)
     - I want to know about [fees](ent_query) in your college
     - want to know more about the [fees](ent_query) structures
@@ -303,7 +338,20 @@ nlu:
     - [faqs](ent_query)
     - tell me about the [faqs](ent_query)
     - are the any [faqs](ent_query)
+    - [admission process](ent_query)
+    - [admision](ent_query)
 
+- intent: start
+  examples: |
+    - /start
+    - start
+
+- intent: restart
+  examples: |
+    - /restart
+    - restart
+    - reset
+    
 - synonym: l2bachelorofarts 
   examples: |
     - ba
@@ -351,7 +399,6 @@ nlu:
   examples: |
     - CS
     - Comp sci
-    - COMP
     - cs
     - Computer science
 
@@ -398,6 +445,7 @@ nlu:
     - math
     - MATH
     - MATHS
+    - Mathematics
 
 - synonym: geology
   examples: |
@@ -505,6 +553,8 @@ nlu:
     - Portugal
     - PORTUGUESE
     - portuguese
+    - por
+    - port
 
 - synonym: multimedia 
   examples: |
@@ -525,11 +575,13 @@ nlu:
     - vfx
     - virtual reality vfx
 
-- synonym: software development
+- synonym: softwaredevelopment
   examples: |
     - sd
     - soft dev
+    - software dev
     - software developing
+    - Software Development
 
 - synonym: botany
   examples: |
