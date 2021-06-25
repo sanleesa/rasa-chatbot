@@ -17,6 +17,8 @@ intents:
   - phd
   - course_details
   - contact
+  - start
+  - restart
 
 entities:
   - ent_grade_level
@@ -61,9 +63,17 @@ responses:
 
   utter_iamabot:
     - text: "I am a chatbot powered with Rasa"
+
   utter_welcome_message:
   - text: "Hi, my name is Tora and I'm here to help you with your queries on the different \
           \ncourses offered by the college or I can help you get in touch with someone on the management."
+
+  utter_help:
+  - text: "If you need to reset the bot at point type \
+          \n'/restart'"
+
+  utter_start_message:
+  - text: "Try saying 'Hi' to start a conversation."
 
   utter_concluding_message:
   - text: "Was that helpful?"
