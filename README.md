@@ -1,4 +1,3 @@
 # rasa-chatbot
 
-This project was made as my final year project 
-This is a chatbot that answers queries for new candidates
+The main purpose of the project is to supply an easy and simple way for interested candidates to have their queries answered. The benefit when using the chatbot is that there's very little to no need for a human, everything is handled by the bot itself. The bot also saves time for candidates by not having to browse through the college website which can take longer to retrieve the desired information. This ensures that the individual doesn’t have to be compelled to wait for a human to respond back to them. We have additionally enforced a way for an applicant to get intouch with the administration so it becomes easy for them to contact someone in charge if needed.
