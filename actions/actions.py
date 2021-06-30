@@ -4,7 +4,7 @@
 # See this guide on how to implement these action:
 # https://rasa.com/docs/rasa/custom-actions
 
-import re
+import re 
 import smtplib
 from configparser import NoOptionError
 from logging import NullHandler, setLoggerClass
